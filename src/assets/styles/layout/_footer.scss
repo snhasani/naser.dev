@@ -1,0 +1,36 @@
+/**
+ * Footer
+ * 1. Make it slightly smaller than copy text
+ */
+.site-footer {
+  font-size: 90%; /* 1 */
+  padding: 80px 0 20px;
+  text-align: center;
+
+  @include respond-to('medium') {
+    text-align: initial;
+  }
+}
+
+.site-footer > .social-links {
+  @include respond-to('medium') {
+    float: right;
+  }
+}
+
+/**
+ * Footer copyright
+ */
+.copyright {
+  color: $medium-grey;
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
+.site-footer > .copyright {
+  @include respond-to('medium') {
+    float: left;
+    line-height: 2;
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,122 @@
+
+/**
+ * Sidebar
+ */
+.sidebar {
+  text-align: center;
+
+  @include respond-to('medium') {
+    float: left;
+    width: 40%;
+  }
+
+  @include respond-to('large') {
+    width: 35%;
+    padding: 0 20px;
+  }
+}
+
+.sidebar__header {
+  padding: 40px 20px;
+}
+
+/**
+ * Sidebar title
+ */
+.sidebar__title {
+  margin: 0 0 30px;
+  line-height: 1;
+
+  /**
+   * Header title link
+   */
+  > a {
+    color: inherit;
+    font-weight: normal;
+  }
+}
+
+.fonts-loaded .sidebar__title > a {
+  font-family: 'naser@earth', 'iran-sans', sans-serif;
+}
+
+/**
+ * logo at-sign sign
+ */
+.sidebar__title__at-sign {
+  color: darken($light-grey, 20%);
+}
+
+/**
+ * Blinking carret
+ */
+.blink {
+  color: $secondary-color;
+  font-weight: bold;
+  animation: blink 1s infinite steps(1);
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+}
+
+/**
+ * sidebar about section
+ */
+.sidebar-about {
+  &__text {
+    color: red;
+  }
+}
+
+.sidebar-about__inner {
+  padding: 0 20px;
+}
+
+/**
+ * Avatar
+ */
+.avatar {
+  border-radius: 50%;
+  margin-bottom: 20px;
+  max-height: 150px;
+}
+
+.sidebar-about__title {
+  line-height: 1;
+  margin: 30px 0;
+  white-space: nowrap;
+}
+
+/**
+ * sidebar about section - title
+ */
+.sidebar-about__title > a {
+  @extend %animation-underline;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.sidebar-about__comment {
+  @extend .grey-text;
+  font-size: 1.3rem;
+  margin: 0 auto;
+  line-height: 2;
+  max-width: 360px;
+}
+
+.sidebar-about > .block-section {
+  background-color: lighten($medium-grey, 40%);
+  color: $dark-grey;
+  margin-top: 40px;
+  padding: 20px;
+
+  @include respond-to('large') {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+
+  @include respond-to('wide') {
+    background-color: transparent;
+  }
+}

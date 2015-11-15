@@ -1,0 +1,29 @@
+---
+layout: default
+title: "Blog"
+tags:
+  - blog
+  - writing
+  - articles
+---
+
+<header class="post-header">
+	<h1 class="post-title">آخرین نوشته‌ها</h1>
+</header>
+
+<ul class="articles  list">
+{% for post in paginator.posts %}
+  {% unless post.preview %}
+    {% include post-list.html post=post %}
+  {% endunless %}
+{% endfor %}
+</ul>
+
+<ul class="pagination">
+  {% if paginator.next_page %}
+    <li><a href="{{ paginator.next_page_path }}"><span class="pagination__icon">▶</span> بعدی</a></li>
+  {% endif %}
+  {% if paginator.previous_page %}
+    <li><a href="{{ paginator.previous_page_path }}">قبلی <span class="pagination__icon">◀</span> </a></li>
+  {% endif %}
+</ul>

@@ -1,0 +1,36 @@
+
+
+.post-header {
+  margin: 40px 0;
+  text-align: center;
+
+  @include respond-to('medium') {
+    margin-top: 50px;
+  }
+}
+
+.post-title {
+  font-size: 2.4rem;
+  line-height: 2;
+  margin: 0 0 20px;
+
+  @include respond-to('tablet') {
+    font-size: 2.8rem;
+  }
+
+  @include respond-to('large') {
+    font-size: 3.2rem;
+  }
+}
+
+/**
+ * Date from in the post page
+ */
+.post-meta,
+.post-tags {
+  color: $medium-grey;
+}
+
+.post-content {
+  line-height: 2;
+}

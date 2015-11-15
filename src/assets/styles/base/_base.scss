@@ -1,0 +1,49 @@
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ * 1. For avoid horizontal scroll
+ */
+body {
+  overflow-x: hidden; // 1
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $main-color;
+  text-decoration: none;
+}
+
+p a {
+  @extend %static-link-underline;
+}
+
+/**
+ * Basic styles for images
+ * 1. Warning, potentially dangerous if using inline images
+ * 2. Prevent image from being taller than viewport
+ */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* 1 */
+  max-height: 80vh; /* 2 */
+  margin: 0 auto;
+}

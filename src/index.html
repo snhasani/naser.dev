@@ -1,0 +1,23 @@
+---
+layout: home
+tags:
+  - Naser Hasani
+  - blog
+  - front-end
+---
+
+<div class="latest-posts">
+
+	<h2 class="latest-posts__title">آخرین مطالب وبلاگ</h2>
+
+	<ul class="articles  list">
+		{% for post in site.posts limit:3 %}
+			{% include post-list.html %}
+		{% endfor %}
+	</ul>
+
+	<p class="latest-posts__readmore-link"><a href="/blog/">جُستن باقی مطالب ↩</a></p>
+
+</div>
+
+

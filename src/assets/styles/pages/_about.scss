@@ -1,0 +1,21 @@
+
+.about-me__header {
+  margin: 10px 0 40px;
+
+  @include respond-to('medium') {
+    margin-top: 50px;
+  }
+}
+
+.about-me__prologue > p {
+  @extend .grey-text;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.interisting-list {
+  > dt {
+    font-size: 1.6rem;
+    margin-top: 30px;
+  }
+}

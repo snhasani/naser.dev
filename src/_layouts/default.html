@@ -1,0 +1,21 @@
+
+<!doctype html>
+<!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" -->
+<html lang="fa" dir="rtl" class="fonts-loaded">
+<!--#else -->
+<html lang="fa" dir="rtl">
+<!--#endif -->
+
+  {% include head.html %}
+
+  <body data-page="default">
+
+    <div class="page-wrapper container">
+
+		{% include header.html %}
+
+		<div class="page-content">
+			{{ content }}
+		</div>
+
+		{% include footer.html %}

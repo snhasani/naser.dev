@@ -1,0 +1,56 @@
+/**
+ * List component (e.g. home, speaking)
+ * 1. Undo default styling
+ */
+.list {
+  padding: 0; /* 1 */
+  margin: 0; /* 1 */
+  list-style: none; /* 1 */
+  clear: both;
+}
+
+/**
+ * List item
+ */
+.list__item {
+  margin: 10px 0;
+  padding: 20px 0;
+}
+
+/**
+ * Remove bottom border on last item
+ */
+.list__item:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/**
+ * List item primary content, emphasized
+ * 1. Reset any weight (if any)
+ */
+.list__primary-content {
+  margin: 0 0 5px;
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: normal; /* 1 */
+
+  @include respond-to('tablet') {
+    margin-bottom: 10px;
+    font-size: 2.4rem;
+  }
+
+  @include respond-to('large') {
+    font-size: 2.6rem;
+  }
+}
+
+/**
+ * List item secondary content
+ */
+.list__secondary-content {
+  color: $medium-grey;
+  display: block;
+  margin: 0 0 5px;
+  font-size: 12px;
+}

@@ -1,0 +1,14 @@
+
+<li class="article  list__item">
+
+	<p class="article__date  list__secondary-content"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | jdate: "%A %d %b %Y" | habify}}</time></p>
+
+	<div class="article__title  list__primary-content">
+		<a class="article__link" href="{{ post.url }}">{{ post.title }}</a>
+	</div>
+
+	<p class="article__excerpt  list__secondary-content">
+		{{ post.excerpt | remove: '<p>' | remove: '</p>' }} <a class="article__readmore" href="{{ post.url }}">(ادامه مطلب ↩)</a>
+	</p>
+
+</li>

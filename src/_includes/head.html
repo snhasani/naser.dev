@@ -1,0 +1,62 @@
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article:
+http://ogp.me/ns/article#">
+
+  <!-- Global stuff -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+  <!-- app theme -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta id="theme-color" name="theme-color" content="black">
+
+  <!-- Robots & indexing -->
+  <meta name="robots" content="index,follow">
+  <meta name="revisit-after" content="1 days">
+
+  <!-- Page specific content -->
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  {% if page.tags %}
+  <meta name="keywords" content="{{ page.tags|join: ',' }}" />
+  {% endif %}
+  <meta name="author" content="Seyed Naser Hasani - سید ناصر حسنی">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/rss" | prepend: site.baseurl | prepend: site.url }}" />
+
+  <!-- Favicon -->
+  <!-- <link rel="apple-touch-icon" href="assets/images/favicons"> -->
+  <!-- <link rel="icon" href="/favicon.png"> -->
+  <!--[if IE]><link rel="shortcut icon" href="/favicon.ico"><![endif]-->
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
+  <meta property="og:site_name" content="naser.xyz" />
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@snhasani">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:creator" content="@snhasani">
+
+	<!-- <style>
+		body { font-family: 'Arial', sans-serif;}
+		.fonts-loaded body { font-family: "iran-sans", sans-serif; }
+		.fonts-loaded .site-header__logo,
+		.fonts-loaded .sidebar__title > a {  font-family: 'naser@earth', 'iran-sans', sans-serif; }
+	</style> -->
+	<!-- Stylesheets -->
+	<!-- build:css(.tmp) /assets/styles/main.css -->
+		<link rel="stylesheet" href="{{ "/assets/styles/main.css" | prepend: site.baseurl }}">
+	<!-- endbuild -->
+
+</head>

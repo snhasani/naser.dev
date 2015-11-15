@@ -1,0 +1,8 @@
+{
+  "name": "naser.xyz",
+  "private": true,
+  "dependencies": {
+    "sass-mq": "~3.2.4"
+  },
+  "overrides": {}
+}

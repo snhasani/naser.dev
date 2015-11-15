@@ -1,0 +1,116 @@
+
+:root {
+  font-size: 62.5%;
+}
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: $dark-grey;
+}
+
+.fonts-loaded body { font-family: $text-font-stack }
+
+/**
+ * Apply some basic styles to main headings
+ * 1. Poor man's vertical rhythm
+ */
+h1 {
+  font-size: 3.6rem;
+  margin-top: 10px; /* 1 */
+  margin-bottom: 50px; /* 1 */
+}
+
+/**
+ * Headings level 2
+ * 1. Enable position context for anchor links
+ * 2. Clear any pull-image / pull-quote
+ * 3. Poor man's vertical rhythm
+ */
+h2 {
+  position: relative; /* 1 */
+  clear: both; /* 2 */
+  margin-top: 70px; /* 3 */
+  margin-bottom: 20px; /* 3 */
+}
+
+/**
+ * Headingds level 3
+ * 1. Poor man's vertical rhythm
+ */
+h3 {
+  margin-bottom: 40px; /* 1 */
+}
+
+.h3 {
+  font-size: 2.4rem;
+  line-height: 2;
+}
+
+/**
+ * Select links living inside headings with no class
+ * It turns out Markdown generated headings have no class
+ * 1. Put it slightly off in the left margin
+ */
+h2:not([class]) a {
+  position: absolute; /* 1 */
+  left: -25px; /* 1 */
+  text-decoration: none;
+  color: $light-grey;
+}
+
+/**
+ * Make the anchor link highlighter when hovering the heading
+ */
+h2:hover a,
+h2:active a {
+  color: $secondary-color;
+}
+
+/**
+ * Basic styles for paragraphs
+ */
+p {
+  font-size: 1.4rem;
+}
+
+/**
+ * Poor man's vertical rhythm
+ */
+p, ul, ol {
+  margin-bottom: 25px;
+}
+
+/**
+ * Poor man's vertical rhythm
+ */
+li {
+  margin-bottom: 10px;
+}
+
+dl {
+  font-size: 1.3rem;
+  line-height: 2;
+}
+
+
+/**
+ * sidebar about section - text
+ */
+.grey-text {
+  color: $medium-grey;
+  font-size: 1.6rem;
+  line-height: 2;
+  margin: 0;
+}
+
+.block-text {
+  display: block;
+
+  @media screen and (min-width: 480px) and (max-width: 900px) {
+    display: inline;
+  }
+}

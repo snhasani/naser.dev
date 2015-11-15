@@ -1,0 +1,79 @@
+
+
+# Site settings
+title: naser.xyz
+motto: "درباره همه چیز، اما بیشتر توسعه رابط کاربری و هنر"
+author: Seyed Naser Hasani
+fullname: "سید ناصر حسنی"
+
+email: snhasani@gmail.com
+url: "http://naser.xyz"
+twitter_username: snhasani
+github_username:  snhasani
+
+keywords: "کامپیوتر، بوتسترپ, بوتستراپ, فریمورک، لینوکس, برنامه‌نویسی، جاوااسکریپت، علم, اینترنت, آموزش, طاحی, css, html, scss, sass, javascript, nodejs, frontend, front-end, application, mobile, native, vanilla, cordova, bootstrap, phongap, android, npm, git, app, ios, linux, opensource, framework, dev-tools"
+description: >
+  سایت شخصی سید ناصر حسنی.
+long_description: >
+  می‌نویسم؛ بیشترش درباره‌ی تجربیاتم توی حوزه‌ی فرونت اند و برنامه سازی توسط جاوااسکریپته. گاه گداری هم از ستما، تیاتر، ادبیات و کلا هر چیزی که بهم مربوط باشه و نباشه.
+
+copyright: "Commons Attribution 4.0 International"
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: post
+      author: "سید ناصر حسنی"
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "drafts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: post
+      author: "سید ناصر حسنی"
+
+
+# Where things are
+source:          ./src
+destination:  ./public
+#favicon: "img/favicon.png"
+
+
+# Handling Reading
+encoding:       "utf-8"
+include:          [".htaccess"]
+keep_files:     [".git", "assets"]
+exclude:         ["assets", "node_modules", "gulpfile.js", "package.json", "webpack.config.js"]
+
+
+# Conversion
+markdown: kramdown
+highlighter: pygments
+
+
+# Serving
+port:    8080
+
+
+# Outputting
+permalink: pretty
+paginate_path: /blog/page:num
+paginate: 5
+timezone: Asia/Tehran
+
+
+# Build settings
+sass:
+  style: :compressed
+
+
+# Plugins
+gems:
+  - jalalidate
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-sitemap
+

@@ -1,0 +1,8 @@
+- label: وبلاگ
+  url: /blog/
+# - label: Coding
+#   url: /projects/
+# - label: Speaking
+#   url: /speaking/
+- label: درباره من
+  url: /about/
