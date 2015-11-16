@@ -39,6 +39,7 @@ node_modules
 bower_components
 
 .tmp
+public
 #test/bower_components
 
 # Others Files to ignore

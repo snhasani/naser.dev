@@ -1,6 +1,5 @@
 /* jshint devel:true */
 'use strict';
-
 // require('./module/rAF');
 // var fastclick = require('fastclick');
 // var _ = require('./helpers/helpers');

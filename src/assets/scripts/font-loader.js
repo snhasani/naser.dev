@@ -10,29 +10,23 @@ var initFonts = function() {
     return;
   }
 
-  var iranSans = new FontFaceObserver('iran-sans');
+  var iranSans = new FontFaceObserver('Iran Sans Light');
 
-  if (sessionStorage.fontsLoaded || localStorage.fontsLoaded) {
-    document.documentElement.classList.add('fonts-loaded');
-  } else {
-
-    Promise
-    .resolve( iranSans.check('ایران', 1000) )
-    .then(function(){
-      document.documentElement.classList.add('fonts-loaded');
-      sessionStorage.fontsLoaded = true;
-    })
-    .catch(function() {
-      loadFont('iran-sans',
-        '/assets/fonts/iranian-sans/iran-sans-light.woff',
-        '/assets/fonts/iranian-sans/iran-sans-light.woff2',
-        function() {
-          document.documentElement.classList.add('fonts-loaded');
-          localStorage.fontsLoaded = true;
-        }
-      );
-    });
-  }
+  Promise
+  .resolve( iranSans.check('ایران') )
+  .then(function(){
+    console.log('then');
+    document.documentElement.className += ' fonts-loaded';
+  })
+  .catch(function() {
+    loadFont('Iran Sans Light',
+      '/assets/fonts/iranian-sans/iran-sans-light.woff',
+      '/assets/fonts/iranian-sans/iran-sans-light.woff2',
+      function() {
+        document.documentElement.className += ' fonts-loaded';
+      }
+    );
+  });
 }
 
 module.exports = initFonts;

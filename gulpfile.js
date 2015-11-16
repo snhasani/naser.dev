@@ -42,7 +42,7 @@ gulp.task('styles', function () {
       includePaths: ['.'],
       onError: console.error.bind(console, 'Sass error:')
     }))
-    .pipe($.if(argv.prod, ($.postcss([ require('autoprefixer-core')(browserList) ]))))
+    .pipe($.postcss([ require('autoprefixer-core')(browserList) ]))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest( path.tmp + 'styles/'))
     .pipe(reload({stream: true}));
