@@ -9,7 +9,6 @@
 @import "base/base";
 @import "base/helpers";
 @import "base/typography";
-@import "base/webfonts";
 
 @import "layout/header";
 @import "layout/sidebar";
@@ -24,7 +23,7 @@
 @import "components/code";
 @import "components/blockquote";
 @import "components/table";
-@import "components/syntax-highlighting";
+@import "components/light-switch";
 
 @import "pages/page";
 @import "pages/home";

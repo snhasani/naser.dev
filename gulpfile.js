@@ -35,7 +35,7 @@ gulp.task('webpack', function() {
 
 gulp.task('styles', function () {
   return gulp.src( path.src + 'styles/main.scss')
-    .pipe($.sourcemaps.init())
+    //.pipe($.sourcemaps.init())
     .pipe($.sass({
       outputStyle: 'nested',
       precision: 10,
@@ -43,7 +43,7 @@ gulp.task('styles', function () {
       onError: console.error.bind(console, 'Sass error:')
     }))
     .pipe($.postcss([ require('autoprefixer-core')(browserList) ]))
-    .pipe($.sourcemaps.write())
+    //.pipe($.sourcemaps.write())
     .pipe(gulp.dest( path.tmp + 'styles/'))
     .pipe(reload({stream: true}));
 });
@@ -58,7 +58,8 @@ gulp.task('jshint', function () {
 
 gulp.task('jekyll', function () {
   return gulp.src('_config.yml')
-    .pipe($.shell([ 'jekyll build --config <%= file.path %>' ]))
+    .pipe($.if(argv.dev, $.shell([ 'jekyll build --config <%= file.path %>' ])))
+    .pipe($.if(argv.prod, $.shell([ 'JEKYLL_ENV=production jekyll build --config <%= file.path %>' ])))
     .pipe(reload({stream: true}));
 });
 

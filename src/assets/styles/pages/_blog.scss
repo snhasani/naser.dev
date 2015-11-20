@@ -7,35 +7,46 @@
 
 .article__title > a {
   @extend %animation-underline;
-  @extend %pink-hover;
   color: inherit;
 }
 
 .article__excerpt {
   font-size: 1.3rem;
-  margin-top: 20px;
+  line-height: 1.8;
+  margin: 0;
+
+  @include themify('dark') {
+    color: #aaa;
+  }
+}
+
+[data-page=home] .article__excerpt {
+  display: none;
 
   @include respond-to('medium') {
-    border-right: 5px solid #ccc;
-    padding-right: 10px;
+    display: block;
   }
+}
+
+.article__excerpt > a {
+  @extend  %bg-underline;
 }
 
 /**
  * Article icons on the home page
  * 1. Magic number, sorry :(
  */
-.article__icon {
-  display: inline;
+// .article__icon {
+//   display: inline;
 
-  @include respond-to('medium') {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-80%); /* 1 */
-    opacity: 0.35;
-  }
-}
+//   @include respond-to('medium') {
+//     position: absolute;
+//     right: 0;
+//     top: 50%;
+//     transform: translateY(-80%); /* 1 */
+//     opacity: 0.35;
+//   }
+// }
 
 // .article__link {
 //   position: relative;

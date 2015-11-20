@@ -1,30 +1,18 @@
 
-    <footer class="site-footer  clearfix" role="contentinfo">
+	<footer class="site-footer  container clearfix" role="contentinfo" dir="ltr">
 
-	    <div class="social-links">
-	    	<a class="nav__item" href="https://github.com/snhasani" target="blank">GitHub</a>
-	    	<a class="nav__item" href="http://twitter.com/snhasani" target="blank">Twitter</a></li>
-	    	<a class="nav__item" href="/rss/">RSS</a>
-	    </div>
+		<nav class="nav social-links" role="navigation">
+			<ul class="clearfix">
+				{% for item in site.data.footer_nav %}
+				<li class="nav__item"><a href="{{ item.url }}" target="blank">{{ item.label }}</a></li>
+				{% endfor %}
+			</ul>
+		</nav>
 
-		<p class="copyright" dir=ltr>&copy;&nbsp;{{ 'now' | date: '%Y' }} Seyed Naser Hasani.</p>
+		<p class="copyright">&copy;&nbsp;{{ 'now' | date: '%Y' }} Seyed Naser Hasani.</p>
+	</footer>
 
-  </footer>
+</div><!-- end /.container -->
 
-  </div> <!-- end /.container -->
+{% include global-footer.html %}
 
-    <!-- build:js(.tmp) /assets/scripts/main.js async defer -->
-      <script src="{{ "/assets/scripts/main.js" | prepend: site.baseurl }}" async defer></script>
-    <!-- endbuild -->
-
-    <!-- <script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='https://www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-45098305-5','auto');ga('send','pageview');
-    </script> -->
-  </body>
-
-</html>

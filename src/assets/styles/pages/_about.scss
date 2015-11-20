@@ -1,6 +1,7 @@
 
 .about-me__header {
   margin: 10px 0 40px;
+  text-align: center;
 
   @include respond-to('medium') {
     margin-top: 50px;
@@ -8,7 +9,7 @@
 }
 
 .about-me__prologue > p {
-  @extend .grey-text;
+  @extend .large-text--dark;
   font-size: 1.4rem;
   margin-bottom: 20px;
 }

@@ -43,3 +43,19 @@
     @content;
   }
 }
+
+/// Themify
+/// @param {String} - Theme name
+@mixin themify($theme) {
+  // Create a selector (e.g. `.theme-unicorn .media`)
+  .#{$theme} & {
+    // Output user content
+    @content;
+  }
+}
+
+/// @param {Number} $base-font-size - The base font size of element
+/// @param {Number} $absolute-size - The absolute unit which want to change to relative
+@function em($base-font-size, $absolute-size) {
+  @return $absolute-size / ($root-font-size * $base-font-size) + em;
+}

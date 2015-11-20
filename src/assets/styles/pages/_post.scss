@@ -1,7 +1,7 @@
 
 
 .post-header {
-  margin: 40px 0;
+  margin: 40px auto;
   text-align: center;
 
   @include respond-to('medium') {
@@ -28,9 +28,19 @@
  */
 .post-meta,
 .post-tags {
-  color: $medium-grey;
+  color: $dark-grey;
+
+  @include themify('dark') {
+    color: #9e9e9e;
+  }
 }
 
-.post-content {
-  line-height: 2;
+.post-content > p {
+  @extend .container;
+  line-height: 2.2; // 30px
+  margin-bottom: 25px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }

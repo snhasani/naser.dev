@@ -3,12 +3,23 @@
  * 1. Make it slightly smaller than copy text
  */
 .site-footer {
+  color: $dark-grey;
   font-size: 90%; /* 1 */
-  padding: 80px 0 20px;
+  padding: 60px 0 20px;
   text-align: center;
+
+  @include themify('dark') {
+    color: #9e9e9e;
+  }
 
   @include respond-to('medium') {
     text-align: initial;
+  }
+
+  @media (max-width: 900px) {
+    @include themify($theme) {
+      padding-top: 60px !important;
+    }
   }
 }
 
@@ -22,7 +33,6 @@
  * Footer copyright
  */
 .copyright {
-  color: $medium-grey;
   font-size: 1.4rem;
   margin-bottom: 0;
 }

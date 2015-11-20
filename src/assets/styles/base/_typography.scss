@@ -1,4 +1,15 @@
 
+@font-face {
+    font-family: 'Iran Sans Light';
+    src: url('../fonts/iranian-sans/iran-sans-light.woff2') format('woff2'),
+            url('../fonts/iranian-sans/iran-sans-light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/**
+ * Base font size 62.5% = 10px => 1em, 1rem = 10px
+ */
 :root {
   font-size: 62.5%;
 }
@@ -8,8 +19,8 @@
  */
 body {
   font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: $dark-grey;
+  font-size: 1.3rem;
+  // line-height: 2.2;
 }
 
 .fonts-loaded body { font-family: $text-font-stack }
@@ -68,20 +79,18 @@ h2:not([class]) a {
 h2:hover a,
 h2:active a {
   color: $secondary-color;
+
+  @include themify('dark') {
+    color: $secondary-color--dark;
+  }
 }
 
 /**
  * Basic styles for paragraphs
  */
 p {
-  font-size: 1.4rem;
-}
-
-/**
- * Poor man's vertical rhythm
- */
-p, ul, ol {
-  margin-bottom: 25px;
+  font-size: 1.3rem;
+  line-height: 2;
 }
 
 /**
@@ -96,16 +105,11 @@ dl {
   line-height: 2;
 }
 
-
 /**
- * sidebar about section - text
+ * Helper class
  */
-.grey-text {
-  color: $medium-grey;
-  font-size: 1.6rem;
-  line-height: 2;
-  margin: 0;
-}
+
+.large-text { font-size: 1.6rem }
 
 .block-text {
   display: block;
@@ -113,4 +117,27 @@ dl {
   @media screen and (min-width: 480px) and (max-width: 900px) {
     display: inline;
   }
+}
+
+body {
+  position: relative;
+}
+
+body:after {
+  position: absolute;
+  width: auto;
+  height: auto;
+  z-index: 9999;
+  content: '';
+  display: block;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('http://basehold.it/image.php?height=13') repeat top left;
+}
+
+body:active:after {
+  display: none;
 }

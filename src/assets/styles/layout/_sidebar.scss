@@ -3,7 +3,12 @@
  * Sidebar
  */
 .sidebar {
+  color: #666;
   text-align: center;
+
+  @include themify('dark') {
+    color: #aaa;
+  }
 
   @include respond-to('medium') {
     float: left;
@@ -20,52 +25,7 @@
   padding: 40px 20px;
 }
 
-/**
- * Sidebar title
- */
-.sidebar__title {
-  margin: 0 0 30px;
-  line-height: 1;
-
-  /**
-   * Header title link
-   */
-  > a {
-    color: inherit;
-    font-weight: normal;
-  }
-}
-
-/**
- * logo at-sign sign
- */
-.sidebar__title__at-sign {
-  color: darken($light-grey, 20%);
-}
-
-/**
- * Blinking carret
- */
-.blink {
-  color: $secondary-color;
-  font-weight: bold;
-  animation: blink 1s infinite steps(1);
-
-  @keyframes blink {
-    50% { opacity: 0; }
-  }
-}
-
-/**
- * sidebar about section
- */
-.sidebar-about {
-  &__text {
-    color: red;
-  }
-}
-
-.sidebar-about__inner {
+.block-inner {
   padding: 0 20px;
 }
 
@@ -74,7 +34,7 @@
  */
 .avatar {
   border-radius: 50%;
-  margin-bottom: 20px;
+  display: inline-block;
   max-height: 150px;
 }
 
@@ -89,23 +49,46 @@
  */
 .sidebar-about__title > a {
   @extend %animation-underline;
+  color: $main-color;
+  display: inline;
   font-size: 3rem;
   font-weight: bold;
+
+  @include themify('dark') {
+    color: $nili;
+  }
+
+  &:hover {
+    color: $main-color;
+
+    @include themify('dark') {
+      color: $nili;
+    }
+  }
 }
 
 .sidebar-about__comment {
-  @extend .grey-text;
+  color: #666;
   font-size: 1.3rem;
   margin: 0 auto;
-  line-height: 2;
   max-width: 360px;
+
+  > a { @extend %bg-underline; }
+
+  @include themify('dark') {
+    color: #9e9e9e;
+  }
 }
 
-.sidebar-about > .block-section {
-  background-color: lighten($medium-grey, 40%);
-  color: $dark-grey;
+.sidebar__about > .block-section {
+  background-color: $light-grey;
+  color: #444;
   margin-top: 40px;
   padding: 20px;
+
+  @include themify('dark') {
+    background-color: #3c3c3c;
+  }
 
   @include respond-to('large') {
     margin-right: -20px;
@@ -114,5 +97,9 @@
 
   @include respond-to('wide') {
     background-color: transparent;
+
+    @include themify('dark') {
+      background-color: transparent;
+    }
   }
 }

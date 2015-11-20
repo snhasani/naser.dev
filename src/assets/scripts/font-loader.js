@@ -5,18 +5,19 @@ var loadFont = require('./module/sm-font-loader');
 
 var initFonts = function() {
 
-  if( document.documentElement.className.indexOf( "fonts-loaded" ) > -1 ){
-    console.log('we\'re good; fonts loaded already');
-    return;
-  }
+  // if( window.localStorage.fontsLoaded ){
+  //   document.documentElement.className += ' fonts-loaded';
+  //   console.log('we\'re good; fonts loaded already');
+  //   return;
+  // }
 
   var iranSans = new FontFaceObserver('Iran Sans Light');
 
   Promise
-  .resolve( iranSans.check('ایران') )
+  .resolve( iranSans.check('ایران', 5000) )
   .then(function(){
-    console.log('then');
     document.documentElement.className += ' fonts-loaded';
+    window.localStorage.fontsLoaded = 'true';
   })
   .catch(function() {
     loadFont('Iran Sans Light',
@@ -24,6 +25,7 @@ var initFonts = function() {
       '/assets/fonts/iranian-sans/iran-sans-light.woff2',
       function() {
         document.documentElement.className += ' fonts-loaded';
+        window.localStorage.fontsLoaded = 'true';
       }
     );
   });

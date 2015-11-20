@@ -1,10 +1,9 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
 	{% include head.html %}
 
-	<body data-page="home">
+	<body  data-page="home">
 
 		<div class="page-wrapper">
 
@@ -12,40 +11,45 @@
 
 				<header class="sidebar__header">
 
-					<h1 class="sidebar__title {% if page.url == '/' %}  is-active{% endif %}" role="logo">
-						<a href="/" dir="ltr">naser<span class="sidebar__title__at-sign">@</span>earth<span class="blink">_</span></a>
-						</h1>
+					{% include logo.html %}
 
-					<nav role="navigation">
-						{% for item in site.data.nav %}
-							<a href="{{ item.url }}" class="nav__item">{{ item.label }}</a>
-						{% endfor %}
+					<nav role="navigation" class="nav">
+						<ul class="clearfix">
+							{% for item in site.data.header_nav %}
+							<li class="nav__item"><a href="{{ item.url }}">{{ item.label }}</a></li>
+							{% endfor %}
+						</ul>
 					</nav>
 
 				</header>
 
-				<section class="sidebar-about">
-					<div class="sidebar-about__inner">
+				<section class="sidebar__about">
+					<div class="block-inner">
 						<a href="https://instagram.com/snhasani"><img class="avatar" src="{{ "/assets/images/naser.xyz-avatar-bw.jpg" | prepend: site.baseurl }}" alt="Photo Seyed Naser Hasani - avatar - selfi" /></a>
 
-						<p class="grey-text">سلام، من</p>
-						<div class="sidebar-about__title"><a href="https://twitter.com/snhasani">سید ناصر حسنی</a></div>
-						<p class="grey-text">هستم؛ یه توسعه دهنده‌ی فری‌لنس، <span class="block-text">رابط-کاربری (Front-End).</span></p>
+						<p class="large-text">سلام، من</p>
+						<h1 class="sidebar-about__title"><a href="https://twitter.com/snhasani">سید ناصر حسنی</a></h1>
+						<p class="large-text">هستم؛ یه توسعه دهنده‌ی فری‌لنس، <span class="block-text">رابط-کاربری (Front-End).</span></p>
 					</div>
 
 					<div class="block-section">
-						<p class="grey-text sidebar-about__comment">اگه خواستید بیشتر درباره‌ی من بدونید یا با من تماس بگیرید، می‌تونید به <a href="/about/">اینجا</a> یه سری بزنید.</p>
+						<p class="sidebar-about__comment">اگه خواستید بیشتر درباره‌ی من بدونید یا با من تماس بگیرید، می‌تونید به <a href="/about/">اینجا</a> یه سری بزنید.</p>
 					</div>
 
 				</section><!--end / .sidebar-about -->
 
-				<footer class="home-footer">
-					<div class="social-links">
-						<a class="nav__item" href="https://github.com/snhasani" target="blank">GitHub</a>
-						<a class="nav__item" href="http://twitter.com/snhasani" target="blank">Twitter</a>
-						<a class="nav__item" href="/rss/">RSS</a>
-					</div>
-					<p class="copyright" dir="ltr">&copy;&nbsp;{{ 'now' | date: '%Y' }} Seyed Naser Hasani.</p>
+				<footer class="home-footer" dir="ltr">
+
+					<nav class="nav social-links" role="navigation">
+						<ul class="clearfix">
+							{% for item in site.data.footer_nav %}
+							<li class="nav__item"><a href="{{ item.url }}" target="blank">{{ item.label }}</a></li>
+							{% endfor %}
+						</ul>
+					</nav>
+
+					<p class="copyright">&copy;&nbsp;{{ 'now' | date: '%Y' }} Seyed Naser Hasani.</p>
+
 				</footer>
 
 			</aside>
@@ -54,19 +58,5 @@
 
 		</div><!--end / .page-wrapper -->
 
-		<!-- build:js(.tmp) /assets/scripts/main.js async defer -->
-		<script src="{{ "/assets/scripts/main.js" | prepend: site.baseurl }}" async defer></script>
-		<!-- endbuild -->
 
-		<!-- <script>
-		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-		function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-		e.src='https://www.google-analytics.com/analytics.js';
-		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-		ga('create','UA-45098305-5','auto');ga('send','pageview');
-		</script> -->
-
-	</body>
-
-</html>
+		{% include global-footer.html %}

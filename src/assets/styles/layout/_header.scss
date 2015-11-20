@@ -12,26 +12,82 @@
   }
 }
 
+
 /**
- * Header title
- * 1. Poor man's vertical rhythm
- * 2. Same size as copy text
+ * Header
  */
-.site-header__logo {
-  color: #333;
-  display: block;
-  font-weight: normal;
-  line-height: 1; /* 1 */
-  margin: 0 0 30px; /* 1 */
-  font-size: 3.6rem; /* 2 */
+.site-header {
+  padding: 40px 0 30px;
+  text-align: center;
+  z-index: 1;
 
   @include respond-to('medium') {
-    float: left;
-    margin: 0;
+    padding-top: 30px;
+    text-align: initial;
   }
 }
 
-.fonts-loaded .sidebar__title > a,
-.fonts-loaded .site-header__logo {
-    font-family: 'Custom Source Sans Pro', 'Iran Sans Light', sans-serif;
+
+/**
+ * logo
+ */
+.logo {
+  display: inline-block;
+  margin-bottom: 30px;
+
+  @include respond-to('medium') {
+    margin-bottom: 20px;
+  }
+
+  [data-page=default] & {
+    @include respond-to('medium') {
+      float: left;
+      margin: 0;
+    }
+  }
+}
+
+.logo > svg {
+  fill: #444;
+  height: 33px;
+  width: 180px;
+
+  @include themify($theme) {
+    fill: #ddd;
+  }
+}
+
+
+/**
+ * logo at-sign sign
+ */
+.logo__atsign {
+  fill: $medium-grey;
+
+  @include themify($theme) {
+    fill: #666;
+  }
+}
+
+
+.logo__underline {
+  fill: $secondary-color;
+  animation: blink 1s infinite steps(1);
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+}
+
+
+.site-header .nav__item.nav__item {
+
+  @include themify('dark') {
+    color: #aaa;
+  }
+
+  &:hover {
+      color:$secondary-color--dark;
+  }
+
 }

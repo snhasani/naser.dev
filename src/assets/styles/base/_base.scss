@@ -20,19 +20,33 @@ html {
  * 1. For avoid horizontal scroll
  */
 body {
+  // background-color: #F7F7F7;
+  color: $zoghali;
   overflow-x: hidden; // 1
+  transition: all .3s ease;
+
+  @include themify($theme) {
+    background-color: $zoghali;
+    color: #ddd;
+  }
 }
 
 /**
  * Basic styles for links
  */
 a {
-  color: $main-color;
+  color: $secondary-color;
   text-decoration: none;
-}
 
-p a {
-  @extend %static-link-underline;
+  @include themify('dark') {
+    color: $secondary-color--dark;
+  }
+
+  &:hover {
+    @include themify('dark') {
+      color: $secondary-color--dark;
+    }
+  }
 }
 
 /**

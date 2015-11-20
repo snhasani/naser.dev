@@ -55,6 +55,7 @@
  * 1. Position context for pseudo-element
  */
 %animation-underline {
+  display: inline-block;
   transition: 0.15s;
   position: relative; /* 1 */
 
@@ -84,10 +85,6 @@
   &:hover::before {
     transform: scaleX(1);
   }
-}
-
-
-%pink-hover {
 
   &::before {
     transition: transform 0.1s;
@@ -95,12 +92,30 @@
 
   &:hover {
     color: $secondary-color;
+
+    @include themify('dark') {
+      color: $secondary-color--dark;
+    }
   }
+
 }
 
-
-%static-link-underline {
-  border-bottom: 1px solid;
+%bg-underline {
   color: inherit;
-  line-height: initial;
+  padding-bottom: 1px;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 15%, #ddd 1%,rgba(0, 0, 0, 0) 18%);
+
+  @include themify('dark') {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 15%, #555 1%,rgba(0, 0, 0, 0) 18%);
+  }
+
+  &:hover {
+    background-image: linear-gradient(to top,rgba(0,0,0,0) 15%,rgba($secondary-color,.3) 15%,rgba($secondary-color,.3) 18%,rgba(0,0,0,0) 18%);
+    color: $secondary-color;
+
+    @include themify('dark') {
+      background-image: linear-gradient(to top,rgba(0,0,0,0) 15%,rgba($secondary-color--dark,.5) 15%,rgba($secondary-color--dark,.5) 18%,rgba(0,0,0,0) 18%);
+      color: $secondary-color--dark;
+    }
+  }
 }

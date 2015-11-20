@@ -2,6 +2,18 @@
 /// @type Length
 $max-width: 800px;
 
+/// Zoghali
+/// @type Color
+$zoghali: #333;
+
+/// Firoozee
+/// @type Color
+$firoozee: #00CCFF;
+
+/// Nili - A nice blue for dark material
+/// @type Color
+$nili: #009DFF;
+
 /// green-blue 50/50
 /// @type Color
 $greenblue: #00B1AD;
@@ -16,7 +28,7 @@ $yellow: #fc0;
 
 /// Hot Pink
 /// @type Color
-$pink: #FF0037;
+$hotpink: #FF0037;
 
 /// Main color
 /// @type Color
@@ -24,15 +36,19 @@ $main-color: $blue;
 
 /// Secondary color
 /// @type Color
-$secondary-color: $pink;
+$secondary-color: $hotpink;
+
+/// Dark Theme Secondary color
+/// @type Color
+$secondary-color--dark: #FFC107;
 
 /// Dark grey
 /// @type Color
-$dark-grey: #444;
+$dark-grey: #888;
 
 /// Medium grey
 /// @type Color
-$medium-grey: #888;
+$medium-grey: #CCC;
 
 /// Light grey
 /// @type Color
@@ -57,3 +73,5 @@ $text-font-stack: "Iran Sans Light", "Arial", sans-serif;
 /// Code font stack
 /// @type List
 $code-font-stack: "Source Code Pro", "Courier New", monospace;
+
+$theme: "dark";

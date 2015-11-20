@@ -1,12 +1,14 @@
 
-<header class="site-header clearfix">
+<header class="site-header  container clearfix">
 
-	<a class="site-header__logo" href="/" dir="ltr" role="logo">naser<span class="sidebar__title__at-sign">@</span>earth<span class="blink">_</span></a>
+	{% include logo.html %}
 
-	<nav role="navigation" class="site-header__nav">
-		{% for item in site.data.nav %}
-			<a href="{{ item.url | prepend: site.baseurl }}" class="nav__item">{{ item.label }}</a>
+	<nav role="navigation" class="nav">
+    <ul class="clearfix">
+		{% for item in site.data.header_nav %}
+			<li class="nav__item"><a href="{{ item.url }}">{{ item.label }}</a></li>
 		{% endfor %}
+		</ul>
 	</nav>
 
 </header>

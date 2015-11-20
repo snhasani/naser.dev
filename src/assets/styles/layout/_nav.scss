@@ -1,22 +1,43 @@
 /**
  * Main Header Navigation
  */
-.nav {
+.site-header > .nav {
   @include respond-to('medium') {
     float: right;
   }
 }
 
 /**
+ * Navigation list
+ * 1. Undo default styles
+ */
+.nav > ul {
+  list-style: none; /* 1 */
+  margin: 0; /* 1 */
+  padding: 0; /* 1 */
+}
+
+/**
  * Navigation links
  */
 .nav__item {
-  @extend %animation-underline;
-  @extend %pink-hover;
-  color: $medium-grey;
   display: inline-block;
+  color: #666;
   font-size: 16px;
   line-height: 2;
+  margin: 0;
   padding: 0 10px;
-  white-space: nowrap;
+
+  @include themify('dark') {
+    color: #aaa;
+  }
+}
+
+.nav__item:hover > a {
+  @extend %animation-underline;
+  color: inherit;
+}
+
+.nav__item > a {
+  color: inherit;
 }
