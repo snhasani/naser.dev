@@ -5,44 +5,47 @@
   background: #ccc;
   border-radius: 50px;
   cursor: pointer;
-  display: block;
-  width: 60px;
-  height: 30px;
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
+  margin: 0 auto;
+  text-align: initial;
+  width: $double-spacing-unit;
+  height: $base-spacing-unit;
+  position: relative;
   transition: background .3s ease;
+  will-change: transform;
 
   @include themify('dark') {
     background: #151515;
   }
 
-  [data-page=home] > & {
+  [data-page=home] & {
     @include themify('dark') {
       background: #212121;
     }
   }
 
-  @media screen and (max-width: 768px) {
-    display: none;
+  [data-page=default] & {
+    @include mq($from: desktop) {
+      @include sass-theme-switch-fixed;
+    }
   }
 }
 
 .theme-switch__button {
-  background: white;
+  background: $body-bgc;
   border-radius: 50%;
-  box-shadow: 0px 1.5px 6px 0px #666;
   display: block;
   width: 17px;
   height: 17px;
-  margin-right: 10px;
-  position: relative;
-  top:6px;
-  transition:.3s margin-left ease;
+  position: absolute;
+  top: 4px;
+  box-shadow: 0px 1.5px 6px 0px #666;
+  transform: translateX(7px);
+  transition: all .13s ease;
+  will-change: transform;
 
   @include themify('dark') {
-    background: #333;
+    background: $body-bgc--dark;
     box-shadow: 0px 1.5px 6px 0px #000;
-    margin-right: 33px;
+    transform: translateX(28px);
   }
 }

@@ -1,13 +1,14 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header  container">
+<article class="post double-mb" itemscope itemtype="http://schema.org/BlogPosting">
 
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+  <header class="post-header text-center container">
 
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | jdate: "%A %d %b %Y" | habify}}</time>{% if page.author %} - <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+    <h1 class="post-title half-mb" itemprop="name headline">{{ page.title }}</h1>
+
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | jdate: "%d %b %Y" | habify}}</time>{% if page.author %} توسط <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a href="{{ site.baseurl | urljoin: "/about" }}" itemprop="name">{{ page.author }}</a></span>{% endif %}{% if page.category_fa  %} در دسته‌ی: <a href="{{ site.baseurl | urljoin: "/blog/category/" }}{{ page.category }}">{{ page.category_fa }}</a>{% endif %}</p>
 
   </header>
 
@@ -16,3 +17,17 @@ layout: default
   </div>
 
 </article>
+
+{% include partials/tags.html %}
+
+{% include partials/share-links.html %}
+
+{% include partials/post-nav-links.html %}
+
+<div class="text-center double-mb"><a href="#top" class="go-top">بازگشت به بالای صفحه</a></div>
+
+{% if jekyll.environment == "production" %}
+	{% unless page.comments == false %}
+		{% include partials/comments.html %}
+	{% endunless %}
+{% endif %}

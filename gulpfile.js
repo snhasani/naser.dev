@@ -4,7 +4,7 @@
 var gulp = require('gulp');
 var argv = require('yargs').argv;
 var $ = require('gulp-load-plugins')();
-var modRewrite = require('connect-modrewrite');
+var runSequence = require('run-sequence');
 var browserSync = require("browser-sync").create();
 var reload = browserSync.reload;
 var webpackConfig = require("./webpack.config.js");
@@ -37,39 +37,59 @@ gulp.task('styles', function () {
   return gulp.src( path.src + 'styles/main.scss')
     //.pipe($.sourcemaps.init())
     .pipe($.sass({
-      outputStyle: 'nested',
+      outputStyle: 'expended',
       precision: 10,
       includePaths: ['.'],
       onError: console.error.bind(console, 'Sass error:')
     }))
-    .pipe($.postcss([ require('autoprefixer-core')(browserList) ]))
+    .pipe($.postcss([
+      require('postcss-will-change'),
+      require('autoprefixer-core')(browserList),
+      require("css-mqpacker")({
+        sort: true
+      })
+    ]))
     //.pipe($.sourcemaps.write())
     .pipe(gulp.dest( path.tmp + 'styles/'))
     .pipe(reload({stream: true}));
 });
 
-gulp.task('jshint', function () {
-  return gulp.src(['gulpfile.js',  path.src + 'scripts/**/*.js'])
-    .pipe(reload({stream: true, once: true}))
-    .pipe($.jshint())
-    .pipe($.jshint.reporter('jshint-stylish'))
-    .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
+gulp.task('critical', function () {
+  return gulp.src( path.src + 'styles/critical-*.scss')
+    .pipe($.sass({
+      outputStyle: 'compressed',
+      precision: 10,
+      includePaths: ['.'],
+      onError: console.error.bind(console, 'Sass error:')
+    }))
+    .pipe($.postcss([
+      require('postcss-will-change'),
+      require('autoprefixer-core')(browserList),
+      require("css-mqpacker")({
+        sort: true
+      })
+    ]))
+    .pipe(gulp.dest(  'src/_includes/assets/'))
+});
+
+gulp.task( 'js-uglify', function() {
+  return gulp.src([
+      path.tmp + 'scripts/main.js',
+      path.src + 'scripts/prism.js'
+    ])
+    .pipe( $.uglify() )
+    .pipe( gulp.dest( path.dist + 'scripts/' ) );
 });
 
 gulp.task('jekyll', function () {
   return gulp.src('_config.yml')
-    .pipe($.if(argv.dev, $.shell([ 'jekyll build --config <%= file.path %>' ])))
+    .pipe($.if(argv.dev, $.shell([ 'jekyll build --drafts --config <%= file.path %>' ])))
     .pipe($.if(argv.prod, $.shell([ 'JEKYLL_ENV=production jekyll build --config <%= file.path %>' ])))
     .pipe(reload({stream: true}));
 });
 
 gulp.task('html', ['webpack', 'styles', 'jekyll'], function () {
   var assets = $.useref.assets({searchPath: ['.tmp', 'src', '.']});
-  // var baseurl = ''
-  // var htmlPattern = /(href|src)(=["|']?\/)([^\/])/gi;
-  // var htmlReplacement = '$1$2' + baseurl + '/$3';
-  // var cssPattern = /(url\(['|"]?\/)([^\/])/gi;
-  // var cssReplacement = '$1' + baseurl + '/$2';
 
   return gulp.src('public/**/*.html')
     .pipe(assets)
@@ -77,9 +97,7 @@ gulp.task('html', ['webpack', 'styles', 'jekyll'], function () {
     .pipe($.if('*.css', $.csso()))
     .pipe(assets.restore())
     .pipe($.useref())
-    .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
-    // .pipe($.if('*.html', $.replace(htmlPattern, htmlReplacement)))
-    // .pipe($.if('*.css', $.replace(cssPattern, cssReplacement)))
+    .pipe($.if('*.html', $.minifyHtml({conditionals: true, comments: true, loose: true})))
     .pipe(gulp.dest('public'));
 });
 
@@ -160,11 +178,16 @@ gulp.task('wiredep', function () {
     .pipe(gulp.dest('src'));
 });
 
-gulp.task('build', ['html', 'images', 'fonts', 'extras'], function () {
-  return gulp.src('public/**/*')
-    .pipe($.size({title: 'build', gzip: true}));
+gulp.task('build', function(callback) {
+  runSequence('clean', 'critical',
+    ['html', 'images', 'fonts', 'extras'],
+    'js-uglify',
+    function() {
+      return gulp.src('public/**/*')
+        .pipe($.size({title: 'build', gzip: true}));
+    });
 });
 
-gulp.task('default', ['clean'], function () {
+gulp.task('default', function () {
   gulp.start('build');
 });

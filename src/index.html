@@ -1,20 +1,33 @@
 ---
 layout: home
 tags:
-  - Naser Hasani
+  - Web
+  - javascript
+  - css3
+  - html5
   - blog
   - front-end
+  - programing
+  - rwd
+  - SPA
+  - application
 ---
+
+{% assign posts_limit = 5 %}
 
 <div class="latest-posts">
 
+	<h2 class="latest-posts__title double-mb">آخرین نوشته‌ها</h2>
+
 	<ul class="articles  list">
-		{% for post in site.posts limit:3 %}
-			{% include post-list.html %}
+		{% for post in site.posts limit:posts_limit %}
+			{% include partials/post-list.html %}
 		{% endfor %}
 	</ul>
 
-	<div><a class="latest-posts__readmore-link" href="/blog/">جُستن باقی مطالب ↩</a></div>
+	{% if site.posts.size > posts_limit  %}
+	<h4 class="latest-posts__readmore"><a class="" href="{{ site.baseurl | urljoin: "/blog/page2/" }}">جُستن باقی نوشته‌ها ↩</a>
+	{% endif %}</h4>
 
 </div>
 

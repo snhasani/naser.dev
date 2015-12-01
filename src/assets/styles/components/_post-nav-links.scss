@@ -1,0 +1,29 @@
+
+.post-nav-links {
+
+  > div {
+    @include mq($from: tablet) {
+      margin-bottom: 0;
+      width: 50%;
+    }
+  }
+
+  strong { display: block; }
+
+  a { @extend %animation-underline; }
+
+  > .previous {
+    @include mq($from: tablet) {
+      float: left;
+      padding-right: em($half-spacing-unit);
+      text-align: left;
+    }
+  }
+
+  > .next {
+    @include mq($from: tablet) {
+      float: right;
+      padding-left: em($half-spacing-unit);
+    }
+  }
+}

@@ -1,0 +1,33 @@
+
+.share-links__item {
+  color: #666;
+  float: right;
+  width: 50%;
+
+  @include themify('dark') {
+    color: #aaa;
+  }
+
+  &:nth-child(n+3) {
+    margin-bottom: 0;
+  }
+
+  @include mq($from: 'mobileLandscape') {
+    @include font-size(15px);
+    width: auto;
+    float: none;
+    display: inline-block;
+    margin-left: em($double-spacing-unit);
+    margin-bottom: 0;
+
+    &:last-of-type {
+      margin-left: 0;
+    }
+  }
+}
+
+.share-links__item > a {
+    @extend %animation-underline;
+    @extend %sass-hover-underline-color;
+    white-space: nowrap;
+}

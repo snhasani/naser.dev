@@ -3,7 +3,7 @@
 // require('./module/rAF');
 // var fastclick = require('fastclick');
 // var _ = require('./helpers/helpers');
-var fontLoader = require('./font-loader')
+var fontLoader = require('./module/font-loader')
 
 var _init = false
 

@@ -1,33 +1,12 @@
 
-
 .post-header {
-  margin: 40px auto;
-  text-align: center;
-
-  @include respond-to('medium') {
-    margin-top: 50px;
-  }
-}
-
-.post-title {
-  font-size: 2.4rem;
-  line-height: 2;
-  margin: 0 0 20px;
-
-  @include respond-to('tablet') {
-    font-size: 2.8rem;
-  }
-
-  @include respond-to('large') {
-    font-size: 3.2rem;
-  }
+  margin: 0 auto rem($base-spacing-unit * 3);
 }
 
 /**
  * Date from in the post page
  */
-.post-meta,
-.post-tags {
+.post-meta {
   color: $dark-grey;
 
   @include themify('dark') {
@@ -35,12 +14,53 @@
   }
 }
 
-.post-content > p {
-  @extend .container;
-  line-height: 2.2; // 30px
-  margin-bottom: 25px;
+.post-tag {
+  background-color: darken($body-bgc, 3%);
+  color: #555;
+  border-radius: 3px;
+  display: inline-block;
+  margin-left: em($half-spacing-unit / 2);
+  margin-bottom: rem($half-spacing-unit);
+  padding: em(5px) em(10px);
+  white-space: nowrap;
 
-  &:last-of-type {
-    margin-bottom: 0;
+  @include themify('dark') {
+      background-color: darken($body-bgc--dark, 3%);
+      color: #999;
+    }
+
+  &:hover,
+  &:active {
+    background-color: darken($body-bgc, 6%);
+    color: #333;
+
+    @include themify('dark') {
+      background-color: darken($body-bgc--dark, 6%);
+      color: #ccc;
+    }
   }
+}
+
+.post-content p {
+    @include mq($from: desktop) {
+      @include font-size(14px);
+    }
+}
+
+.post-content > p:first-of-type {
+    @extend .container;
+}
+
+.post-content a {
+  color: $secondary-color;
+
+  @include themify('dark') {
+    color: $secondary-color--dark;
+  }
+}
+
+.go-top {
+  @extend .post-tag;
+  display: inline;
+  margin: 0;
 }

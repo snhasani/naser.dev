@@ -1,0 +1,16 @@
+
+<header class="site-header  container text-center clearfix">
+
+	{% include partials/logo.html %}
+
+	<nav role="navigation" class="nav">
+    <ul class="list">
+		{% for item in site.data.header_nav %}
+			{% if page.label !=  item.label %}
+				<li class="nav__item"><a href="{{ site.baseurl | urljoin: item.url }}">{{ item.label }}</a></li>
+			{% endif %}
+		{% endfor %}
+		</ul>
+	</nav>
+
+</header>

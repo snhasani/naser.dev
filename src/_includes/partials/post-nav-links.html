@@ -1,0 +1,12 @@
+
+	<div class="post-nav-links container double-mb clearfix">
+
+			{% if page.previous.url %}
+				<div class="previous base-mb"><strong>مطلب قبلی</strong><a href="{{ site.baseurl | urljoin: page.previous.url }}">{{ page.previous.title }} <span class="pagination__icon">◀</span></a></div>
+			{% endif %}
+
+			{% if page.next.url %}
+				<div class="next"><strong>مطلب بعدی</strong><a href="{{ site.baseurl | urljoin: page.next.url }}"><span class="pagination__icon">▶</span> {{ page.next.title }}</a></div>
+			{% endif %}
+
+	</div>

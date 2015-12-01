@@ -1,0 +1,68 @@
+/*------------------------------------*\
+    #COLORS
+\*------------------------------------*/
+
+/// Zoghali
+/// @type Color
+$zoghali: #333;
+
+/// Firoozee
+/// @type Color
+$firoozee: #00CCFF;
+
+/// Nili - A nice blue for dark material
+/// @type Color
+$nili: #009DFF;
+
+/// green-blue 50/50
+/// @type Color
+$greenblue: #00B1AD;
+
+/// Hot Blue
+/// @type Color
+$blue: #0081D2;
+
+/// hot yellow
+/// @type Color
+$hotyellow: #FFC107;
+
+/// Hot Pink
+/// @type Color
+$hotpink: #FF0037;
+
+/// Main color
+/// @type Color
+$main-color: $blue;
+
+/// Secondary color
+/// @type Color
+$secondary-color: $hotpink;
+
+/// Dark Theme Secondary color
+/// @type Color
+$secondary-color--dark: $hotyellow;
+
+/// Dark grey
+/// @type Color
+$dark-grey: #888;
+
+/// Medium grey
+/// @type Color
+$medium-grey: #CCC;
+
+/// Light grey
+/// @type Color
+$light-grey: #EEE;
+
+/// CSSWIZARDLY color
+$brand-color:   #f43059; //pink
+$color-brand:       $brand-color;
+$color-pink:        $color-brand;
+$color-gray:        #333;
+$color-gray-light:  #999;
+$color-gray-ui:     #ddd;
+$color-green:       #859900;
+$color-highlight:   #fff;
+$color-tint:        #f2f2f2;
+$color-positive:    #3f990f;
+$color-negative:    #9f102e;

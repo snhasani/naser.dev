@@ -1,0 +1,48 @@
+
+/**
+ * logo
+ */
+.logo {
+  @include font-size(52px);
+  display: inline-block;
+
+  [data-page=default] & {
+    @include mq($from: medium) {
+      float: left;
+      margin: 0;
+    }
+  }
+}
+
+.logo > svg {
+  fill: #444;
+  height: 33px;
+  max-width: 180px;
+  width: 100%;
+
+  @include themify($theme) {
+    fill: #ddd;
+  }
+}
+
+
+/**
+ * logo at-sign sign
+ */
+.logo__atsign {
+  fill: $medium-grey;
+
+  @include themify($theme) {
+    fill: #666;
+  }
+}
+
+
+.logo__underline {
+  fill: $hotpink;
+  animation: blink 1s infinite steps(1);
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+}

@@ -29,7 +29,7 @@ blockquote > :last-child {
  * Make images inside blockquotes left floated starting medium screens
  */
 blockquote img {
-  @include respond-to('medium') {
+  @include mq($from: medium) {
     float: left;
     max-width: 33%;
     margin-right: 20px;

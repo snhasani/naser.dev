@@ -1,43 +1,56 @@
-/**
- * Main Header Navigation
- */
-.site-header > .nav {
-  @include respond-to('medium') {
-    float: right;
-  }
-}
-
-/**
- * Navigation list
- * 1. Undo default styles
- */
-.nav > ul {
-  list-style: none; /* 1 */
-  margin: 0; /* 1 */
-  padding: 0; /* 1 */
-}
 
 /**
  * Navigation links
  */
 .nav__item {
-  display: inline-block;
+  @include font-size(15px);
   color: #666;
-  font-size: 16px;
-  line-height: 2;
-  margin: 0;
-  padding: 0 10px;
+  display: inline-block;
+  margin: 0 em($half-spacing-unit);
+  white-space: nowrap;
 
   @include themify('dark') {
     color: #aaa;
   }
 }
 
-.nav__item:hover > a {
+.nav__item > a {
   @extend %animation-underline;
-  color: inherit;
+  @extend %sass-hover-underline-color;
 }
 
-.nav__item > a {
-  color: inherit;
+
+/*----------  single page header navigation  ----------*/
+
+
+/**
+ *  Main Header Navigation
+ *  1. Poor man's vertical rhythm
+ */
+.site-header > .nav {
+  @include mq($from: medium) {
+    float: right;
+    padding-top: em(17px); /* 1 */
+  }
 }
+
+/**
+ *  Remove both side margin in float navigation
+ */
+[data-page=default] {
+  .nav__item {
+    @include mq($from: medium) {
+      margin-left: rem($base-spacing-unit);
+      margin-right: 0;
+    }
+  }
+}
+
+/**
+ *  Add margin bottom to items on small screen for usability of touch area
+ */
+ .site-header .nav__item {
+    @include mq($until: mobileLandscape) {
+      margin-bottom: rem($half-spacing-unit);
+    }
+  }

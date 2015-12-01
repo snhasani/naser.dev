@@ -4,74 +4,51 @@
  */
 .sidebar {
   color: #666;
-  text-align: center;
 
   @include themify('dark') {
     color: #aaa;
   }
 
-  @include respond-to('medium') {
+  @include mq($from: medium) {
     float: left;
-    width: 40%;
-  }
-
-  @include respond-to('large') {
     width: 35%;
-    padding: 0 20px;
+    padding: 0 em($half-spacing-unit);
   }
 }
 
 .sidebar__header {
-  padding: 40px 20px;
+  margin-bottom: rem($half-spacing-unit * 3);
+  padding: em($base-spacing-unit) em($half-spacing-unit) 0;
 }
 
 .block-inner {
-  padding: 0 20px;
-}
-
-/**
- * Avatar
- */
-.avatar {
-  border-radius: 50%;
-  display: inline-block;
-  max-height: 150px;
-}
-
-.sidebar-about__title {
-  line-height: 1;
-  margin: 30px 0;
-  white-space: nowrap;
+  padding: 0 em($half-spacing-unit);
 }
 
 /**
  * sidebar about section - title
  */
-.sidebar-about__title > a {
-  @extend %animation-underline;
+
+.sidebar-about__title {
+  @include font-size(30px);
   color: $main-color;
-  display: inline;
-  font-size: 3rem;
-  font-weight: bold;
+  margin: 0 0 rem($base-spacing-unit);
 
   @include themify('dark') {
     color: $nili;
   }
 
-  &:hover {
-    color: $main-color;
-
-    @include themify('dark') {
-      color: $nili;
-    }
+  > a {
+    @extend %animation-underline;
+    color: inherit;
   }
 }
 
 .sidebar-about__comment {
+  @include font-size(11px);
   color: #666;
-  font-size: 1.3rem;
   margin: 0 auto;
-  max-width: 360px;
+  max-width: 320px;
 
   > a { @extend %bg-underline; }
 
@@ -81,22 +58,22 @@
 }
 
 .sidebar__about > .block-section {
-  background-color: $light-grey;
+  background-color: darken($body-bgc, 3%);
   color: #444;
-  margin-top: 40px;
-  padding: 20px;
+  padding: em($base-spacing-unit) em($half-spacing-unit);
 
   @include themify('dark') {
-    background-color: #3c3c3c;
+    background-color: darken($body-bgc--dark, 3%);
   }
 
-  @include respond-to('large') {
-    margin-right: -20px;
-    margin-left: -20px;
+  @include mq($from: medium) {
+    margin-right: -#{em($half-spacing-unit)};
+    margin-left: -#{em($half-spacing-unit)};
   }
 
-  @include respond-to('wide') {
+  @include mq($from: 'wide') {
     background-color: transparent;
+    padding: 0;
 
     @include themify('dark') {
       background-color: transparent;

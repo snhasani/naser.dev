@@ -1,3 +1,100 @@
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+
+/**
+ * The usual...
+ */
+h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,
+dl,ol,ul,
+form,fieldset,legend,
+table,th,td,caption,
+hr{
+  margin:0;
+  padding:0;
+}
+
+/**
+ * Give a help cursor to elements that give extra info on `:hover`.
+ */
+// abbr[title],dfn[title]{
+//   cursor:help;
+// }
+
+/**
+ * Remove underlines from potentially troublesome elements.
+ */
+// u,ins{
+//   text-decoration:none;
+// }
+
+/**
+ * Apply faux underline via `border-bottom`.
+ */
+// ins{
+//   border-bottom:1px solid;
+// }
+
+/**
+ * Give form elements some cursor interactions...
+ */
+label,
+input,
+textarea,
+button,
+select,
+option{
+  cursor:pointer;
+}
+
+textarea:active,
+textarea:focus{
+  cursor:text;
+  outline:none;
+}
+
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/*
+ * Set border-box instead content-box.
+ */
+
+input[type="search"],
+input[type="input"] {
+  box-sizing: border-box;
+}
+
+
+/*
+ * Reset naturally left-to-right input direction in right-to-left language.
+ */
+
+input[name="username"],
+input[type="password"],
+input[type="url"] {
+  direction: ltr !important;
+}
+
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -7,27 +104,13 @@
  */
 
 ::-moz-selection {
-	background: #b3d4fc;
-	text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 ::selection {
-	background: #b3d4fc;
-	text-shadow: none;
-}
-
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-	display: block;
-	height: 1px;
-	border: 0;
-	border-top: 1px solid #ccc;
-	margin: 1em 0;
-	padding: 0;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 
@@ -43,46 +126,16 @@ iframe,
 img,
 svg,
 video {
-	vertical-align: middle;
+  vertical-align: middle;
 }
 
 
 /*
- * Remove default fieldset styles.
+ * Browser Upgrade Prompt
  */
-
-fieldset {
-	border: 0;
-	margin: 0;
-	padding: 0;
-}
-
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-	resize: vertical;
-}
-
-/*
- * Set border-box instand content-box.
- */
-
-input[type="search"],
-input[type="input"] {
-	box-sizing: border-box;
-}
-
-
-/* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
-
-.browserupgrade {
-	margin: 0.2em 0;
-	background: #ccc;
-	color: #000;
-	padding: 0.2em 0;
-}
+// .browserupgrade {
+// 	margin: 0.2em 0;
+// 	background: #ccc;
+// 	color: #000;
+// 	padding: 0.2em 0;
+// }

@@ -1,16 +1,26 @@
 <!DOCTYPE html>
+<!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" -->
+<html lang="fa" dir="rtl" class="fonts-loaded">
+<!--#else -->
 <html lang="fa" dir="rtl">
+<!--#endif -->
 
-  {% include head.html %}
+{% include master/head.html %}
 
-  <body data-page="default">
+	<body id="top" data-page="default">
 
-    <div class="page-wrapper">
+		<div class="page-wrapper">
 
-		{% include header.html %}
+			{% include master/header.html %}
 
-		<div class="page-content">
-			{{ content }}
-		</div>
+			<div class="double-mb" role="main">
+				{{ content }}
+			</div>
 
-		{% include footer.html %}
+			<footer class="site-footer  container text-center clearfix" role="contentinfo" dir="ltr">
+				{% include master/footer.html %}
+			</footer>
+
+		</div><!-- end /.container -->
+
+	{% include master/global-footer.html %}

@@ -1,8 +1,11 @@
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
 /**
- * Set up a decent box model on the root element
+ * 1. Set up a decent box model on the root element
  */
 html {
-  box-sizing: border-box;
+  box-sizing: border-box; // 1
 }
 
 /**
@@ -16,18 +19,20 @@ html {
 }
 
 /**
- * Basic styles for links
- * 1. For avoid horizontal scroll
+ * Basic styles for document body
+ * 1. Remove horizontal scroll
+ * 2. For smooth theme changing
  */
 body {
-  // background-color: #F7F7F7;
-  color: $zoghali;
+  background-color: $body-bgc;
+  color: $doc-text-color;
+  margin: 0;
   overflow-x: hidden; // 1
-  transition: all .3s ease;
+  transition: .25s; // 2
 
   @include themify($theme) {
-    background-color: $zoghali;
-    color: #ddd;
+    background-color: $body-bgc--dark;
+    color: $doc-text-color--dark;
   }
 }
 
@@ -40,12 +45,6 @@ a {
 
   @include themify('dark') {
     color: $secondary-color--dark;
-  }
-
-  &:hover {
-    @include themify('dark') {
-      color: $secondary-color--dark;
-    }
   }
 }
 

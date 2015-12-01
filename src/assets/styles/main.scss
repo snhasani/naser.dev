@@ -1,34 +1,68 @@
 @charset 'utf-8';
 
-// @import "vendor/prism";
 @import "vendor/normalize";
+
+// // bower:scss
+@import "bower_components/sass-mq/_mq.scss";
+// endbower
 
 @import "utils/variables";
 @import "utils/mixins";
 
-@import "base/base";
-@import "base/helpers";
-@import "base/typography";
+@if $build == "dev" {
 
-@import "layout/header";
-@import "layout/sidebar";
-@import "layout/nav";
-@import "layout/main";
-@import "layout/footer";
+  @import "base/base";
+  @import "utils/tools";
+  @import "base/helpers";
+  @import "base/reset";
+  @import "base/shared";
+  @import "base/fonts";
+  @import "base/typography";
 
-@import "components/figure";
-@import "components/pagination";
-@import "components/images";
-@import "components/list";
-@import "components/code";
-@import "components/blockquote";
-@import "components/table";
-@import "components/light-switch";
+  @import "layout/header";
+  @import "layout/logo";
+  @import "layout/sidebar";
+  @import "layout/nav";
+  @import "layout/footer";
 
-@import "pages/page";
-@import "pages/home";
-@import "pages/blog";
-@import "pages/post";
-@import "pages/about";
+  // @import "components/figure";
+  @import "components/pagination";
+  // @import "components/images";
+  @import "components/list";
+  @import "components/code";
+  @import "components/blockquote";
+  @import "components/table";
+  @import "components/light-switch";
+  @import "components/share-links";
+  @import "components/post-nav-links";
 
-@import "base/shame";
+  @import "pages/page";
+  @import "pages/home";
+  @import "pages/blog";
+  @import "pages/post";
+  @import "pages/about";
+
+  @import "base/shame";
+
+  @import "vendor/debug";
+
+} @else {
+
+  @import "utils/tools";
+  @import "base/fonts";
+
+  @import "layout/footer";
+
+  // @import "components/figure";
+  @import "components/pagination";
+  // @import "components/images";
+  @import "components/list";
+  @import "components/code";
+  @import "components/blockquote";
+  @import "components/table";
+  @import "components/light-switch";
+  @import "components/share-links";
+  @import "components/post-nav-links";
+
+  @import "base/shame";
+}

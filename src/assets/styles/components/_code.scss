@@ -1,3 +1,271 @@
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+bash+ruby+css-extras+git+java+php+python+jsx+sass+scss+scheme+sql+yaml&plugins=line-numbers+autolinker+show-language+jsonp-highlight */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: black;
+  text-shadow: 0 1px white;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+@media print {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: $code-bgc;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+
+.token.punctuation {
+  color: #999;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #690;
+}
+
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string,
+  .token.variable {
+    // color: #a67f59;
+    // background: hsla(0, 0%, 100%, .5);
+    color: #E91E63; //   <- pink
+  }
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a;
+}
+
+.token.function {
+  color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #e90;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token a {
+  color: inherit;
+}
+
+pre.line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+  position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid darken($code-bgc, 25%);
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+  .line-numbers-rows > span {
+    pointer-events: none;
+    display: block;
+    counter-increment: linenumber;
+  }
+
+    .line-numbers-rows > span:before {
+      content: counter(linenumber);
+      color: darken($code-bgc, 25%);
+      display: block;
+      padding-right: 0.8em;
+      text-align: right;
+    }
+
+
+
+/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript+bash+ruby+css-extras+git+java+php+python+jsx+sass+scss+scheme+sql+yaml&plugins=line-numbers+autolinker+show-language+jsonp-highlight */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+@include themify('dark') {
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    color: #f8f8f2;
+    text-shadow: none;
+  }
+
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
+    background: $code-bgc--dark;
+  }
+
+  .token.punctuation {
+    color: #f8f8f2;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    color: #f92672;
+  }
+
+  .token.boolean,
+  .token.number {
+    color: #ae81ff;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted {
+    color: #a6e22e;
+  }
+
+  // .token.operator,
+  // .token.entity,
+  // .token.url,
+  // .language-css .token.string,
+  // .style .token.string,
+  // .token.variable {
+  //   color: #f8f8f2;
+  // }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.function {
+    color: #e6db74;
+  }
+
+  .token.keyword {
+    color: #66d9ef;
+  }
+
+  .token.regex,
+  .token.important {
+    color: #fd971f;
+  }
+
+  .line-numbers .line-numbers-rows {
+    border-right-color: lighten($code-bgc--dark, 25%);
+  }
+
+    .line-numbers-rows > span:before {
+      color: lighten($code-bgc--dark, 25%);
+    }
+
+} // dark
+
+
+.code-wrapper {
+    background: $code-bgc; //#E8E8E8
+
+    @include themify('dark') {
+      background: $code-bgc--dark;
+    }
+}
+
 /**
  * Force the correct font-stack on all code elements, overriding Prism.js
  */
@@ -9,101 +277,16 @@ code {
  * Make code blocks slightly smaller
  */
 pre > code {
-  font-size: 1.4rem;
-  line-height: 2 !important;
+  @include font-size(14px);
 }
 
 /**
  * Poor man's vertical rhythm
  * 1. Overrides browser style
- * 2. Reset right-to-lift direction
  */
 pre {
+  direction: ltr;
   margin: 0; /* 1 */
-  direction: ltr; /* 2 */
-
-  @include respond-to('medium') {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: calc(800px - 20px);
-  }
+  padding: 2em 0;
+  overflow: auto;
 }
-
-
-/**
- * Syntax highlighting styles
- * Monokai
- */
-.highlight {
-    background: $light-grey; //#E8E8E8
-    margin: 30px 0;
-    padding: 20px;
-
-    @include themify('dark') {
-      background: #222;
-    }
-
-  .hll { background-color: #ffffcc }
-  .c { color: #408080; font-style: italic } /* Comment */
-  .err { border: 1px solid #FF0000 } /* Error */
-  .k { color: #008000; font-weight: bold } /* Keyword */
-  .o { color: #666666 } /* Operator */
-  .cm { color: #408080; font-style: italic } /* Comment.Multiline */
-  .cp { color: #BC7A00 } /* Comment.Preproc */
-  .c1 { color: #408080; font-style: italic } /* Comment.Single */
-  .cs { color: #408080; font-style: italic } /* Comment.Special */
-  .gd { color: #A00000 } /* Generic.Deleted */
-  .ge { font-style: italic } /* Generic.Emph */
-  .gr { color: #FF0000 } /* Generic.Error */
-  .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-  .gi { color: #00A000 } /* Generic.Inserted */
-  .go { color: #888888 } /* Generic.Output */
-  .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-  .gs { font-weight: bold } /* Generic.Strong */
-  .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-  .gt { color: #0044DD } /* Generic.Traceback */
-  .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-  .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-  .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-  .kp { color: #008000 } /* Keyword.Pseudo */
-  .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-  .kt { color: #B00040 } /* Keyword.Type */
-  .m { color: #666666 } /* Literal.Number */
-  .s { color: #BA2121 } /* Literal.String */
-  .na { color: #7D9029 } /* Name.Attribute */
-  .nb { color: #008000 } /* Name.Builtin */
-  .nc { color: #0000FF; font-weight: bold } /* Name.Class */
-  .no { color: #880000 } /* Name.Constant */
-  .nd { color: #AA22FF } /* Name.Decorator */
-  .ni { color: #999999; font-weight: bold } /* Name.Entity */
-  .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
-  .nf { color: #0000FF } /* Name.Function */
-  .nl { color: #A0A000 } /* Name.Label */
-  .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
-  .nt { color: #008000; font-weight: bold } /* Name.Tag */
-  .nv { color: #19177C } /* Name.Variable */
-  .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
-  .w { color: #bbbbbb } /* Text.Whitespace */
-  .mb { color: #666666 } /* Literal.Number.Bin */
-  .mf { color: #666666 } /* Literal.Number.Float */
-  .mh { color: #666666 } /* Literal.Number.Hex */
-  .mi { color: #666666 } /* Literal.Number.Integer */
-  .mo { color: #666666 } /* Literal.Number.Oct */
-  .sb { color: #BA2121 } /* Literal.String.Backtick */
-  .sc { color: #BA2121 } /* Literal.String.Char */
-  .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-  .s2 { color: #BA2121 } /* Literal.String.Double */
-  .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
-  .sh { color: #BA2121 } /* Literal.String.Heredoc */
-  .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
-  .sx { color: #008000 } /* Literal.String.Other */
-  .sr { color: #BB6688 } /* Literal.String.Regex */
-  .s1 { color: #BA2121 } /* Literal.String.Single */
-  .ss { color: #19177C } /* Literal.String.Symbol */
-  .bp { color: #008000 } /* Name.Builtin.Pseudo */
-  .vc { color: #19177C } /* Name.Variable.Class */
-  .vg { color: #19177C } /* Name.Variable.Global */
-  .vi { color: #19177C } /* Name.Variable.Instance */
-  .il { color: #666666 } /* Literal.Number.Integer.Long */
-}
-

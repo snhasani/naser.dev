@@ -1,58 +1,88 @@
+/*------------------------------------*\
+    $SETTINGS
+\*------------------------------------*/
+
+/// Build
+$build: 'dev';
+// $build: 'prod';
+
+/// Debug
+$layout-debug: false;
+$vertical-rhythm: false;
+
+/// Default colors library
+@import "colors";
+
+
 /// Container max-width
 /// @type Length
 $max-width: 800px;
 
-/// Zoghali
-/// @type Color
-$zoghali: #333;
 
-/// Firoozee
-/// @type Color
-$firoozee: #00CCFF;
+/// Golden Ratio -> 1.61803398875
+/// @type Number
+$golden-ratio: 2;
 
-/// Nili - A nice blue for dark material
-/// @type Color
-$nili: #009DFF;
 
-/// green-blue 50/50
-/// @type Color
-$greenblue: #00B1AD;
+/// Base font size
+/// @type Number
+$base-font-size:    13px!default;
 
-/// Hot Blue
-/// @type Color
-$blue: #0081D2;
+/// Base line height - related to golden ratio
+/// @type Number
+$base-line-height:  $base-font-size * $golden-ratio!default;
 
-/// jekyll yellow
-/// @type Color
-$yellow: #fc0;
+/// Ratio of base line height for vertical rhythm
+/// @type Number
+$line-height-ratio: $base-line-height / $base-font-size;
 
-/// Hot Pink
-/// @type Color
-$hotpink: #FF0037;
+/// Base space unit for margin, padding and etc. This is set Magic Number
+/// @type Number
+$base-spacing-unit: $base-line-height!default;
+$half-spacing-unit: $base-spacing-unit / 2!default;
+$double-spacing-unit: $base-spacing-unit * 2!default;
 
-/// Main color
-/// @type Color
-$main-color: $blue;
+/// Regular font stack
+/// @type List
+$text-font-stack: "Arial", "Tahoma", sans-serif;
 
-/// Secondary color
-/// @type Color
-$secondary-color: $hotpink;
+/// Farsi regular web-font stack
+/// @type List
+$farsi-text-font-stack: "Iran Sans Light", $text-font-stack;
 
-/// Dark Theme Secondary color
-/// @type Color
-$secondary-color--dark: #FFC107;
+/// Code font stack
+/// @type List
+$code-font-stack: "Source Code Pro", "Courier New", monospace;
 
-/// Dark grey
-/// @type Color
-$dark-grey: #888;
+/// Opposite theme name
+/// @type String
+$theme: "dark";
 
-/// Medium grey
+/// Document Body background color
 /// @type Color
-$medium-grey: #CCC;
+$body-bgc: #F9F9F9;
 
-/// Light grey
+/// Document Text color
 /// @type Color
-$light-grey: #EEE;
+$doc-text-color: $zoghali;
+
+/// Document Body background color - dark theme
+/// @type Color
+$body-bgc--dark: $zoghali;
+
+/// Document Text color - dark theme
+/// @type Color
+$doc-text-color--dark: #ddd;
+
+
+/// Code background - dark theme
+/// @type Color
+$code-bgc: darken($body-bgc, 3%);
+
+/// Code background - dark theme
+/// @type Color
+$code-bgc--dark: darken($body-bgc--dark, 3%);
+
 
 /// Breakpoints
 /// @type Map
@@ -66,12 +96,46 @@ $breakpoints: (
   'wide': (min-width: 1280px)
 );
 
-/// Regular font stack
-/// @type List
-$text-font-stack: "Iran Sans Light", "Arial", sans-serif;
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$mq-breakpoints: (
+    mobile:  320px,
+    tablet:  768px,
+    medium: 900px,
+    desktop: 1024px,
+    wide:    1280px,
 
-/// Code font stack
-/// @type List
-$code-font-stack: "Source Code Pro", "Courier New", monospace;
+    // Tweakpoints
+    desktopAd: 810px,
+    mobileLandscape: 480px
+);
 
-$theme: "dark";
+// Define the breakpoint from the $mq-breakpoints list that should
+// be used as the target width when outputting a static stylesheet
+// (i.e. when $mq-responsive is set to 'false').
+$mq-static-breakpoint: desktop;
+
+// If you want to display the currently active breakpoint in the top
+// right corner of your site during development, add the breakpoints
+// to this list, ordered by width, e.g. (mobile, tablet, desktop).
+
+// $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
+
+
+/*------------------------------------*\
+    $FONT-SIZES
+\*------------------------------------*/
+/**
+ * Font-sizes (in pixels). Refer to relevant sections for their implementations.
+ */
+
+$h1-size:           30px!default; // .alpha
+$h2-size:           26px!default; // .beta
+$h3-size:           22px!default; // .gamma
+$h4-size:           18px!default; // .delta
+$h5-size:           14px!default; // .epsilon
+$h6-size:           10px!default; // .zeta
+
+$milli-size:        13px!default;
+$micro-size:      11px!default;

@@ -1,3 +1,19 @@
+
+.half-mb {
+  margin-bottom: rem($half-spacing-unit);
+}
+
+.base-mb {
+  margin-bottom: rem($base-spacing-unit);
+}
+
+.double-mb {
+  margin-bottom: rem($double-spacing-unit);
+}
+
+.text-center { text-align: center }
+
+
 /**
  * Clear inner floats
  */
@@ -27,7 +43,7 @@
  * 1. Needed in WebKit-based browsers because of an implementation bug;
  *    See: https://code.google.com/p/chromium/issues/detail?id=457146
  */
-.hide-text {
+%hide-text {
   overflow: hidden;
   padding: 0; /* 1 */
   text-indent: 101%;
@@ -39,7 +55,7 @@
  * Shamelessly borrowed from HTML5Boilerplate:
  * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
  */
-.visually-hidden {
+%visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -48,74 +64,4 @@
   padding: 0;
   position: absolute;
   width: 1px;
-}
-
-/**
- * add animated underline to link on hover and visited form
- * 1. Position context for pseudo-element
- */
-%animation-underline {
-  display: inline-block;
-  transition: 0.15s;
-  position: relative; /* 1 */
-
-  /**
-   * Underline
-   * 1. Same transition as link
-   * 2. Full width below content
-   * 3. Same color as link
-   * 4. Scaled down to 0 to be invisible
-   */
-  &::before {
-    content: '';
-    transition: inherit; /* 1 */
-    position: absolute; /* 2 */
-    top: 100%; /* 2 */
-    left: 0; /* 2 */
-    right: 0; /* 2 */
-    height: 1px;
-    background: currentcolor; /* 3 */
-    transform: scaleX(0); /* 4 */
-  }
-
-  /**
-   * Display underline on hover
-   */
-  &:active::before,
-  &:hover::before {
-    transform: scaleX(1);
-  }
-
-  &::before {
-    transition: transform 0.1s;
-  }
-
-  &:hover {
-    color: $secondary-color;
-
-    @include themify('dark') {
-      color: $secondary-color--dark;
-    }
-  }
-
-}
-
-%bg-underline {
-  color: inherit;
-  padding-bottom: 1px;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 15%, #ddd 1%,rgba(0, 0, 0, 0) 18%);
-
-  @include themify('dark') {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 15%, #555 1%,rgba(0, 0, 0, 0) 18%);
-  }
-
-  &:hover {
-    background-image: linear-gradient(to top,rgba(0,0,0,0) 15%,rgba($secondary-color,.3) 15%,rgba($secondary-color,.3) 18%,rgba(0,0,0,0) 18%);
-    color: $secondary-color;
-
-    @include themify('dark') {
-      background-image: linear-gradient(to top,rgba(0,0,0,0) 15%,rgba($secondary-color--dark,.5) 15%,rgba($secondary-color--dark,.5) 18%,rgba(0,0,0,0) 18%);
-      color: $secondary-color--dark;
-    }
-  }
 }

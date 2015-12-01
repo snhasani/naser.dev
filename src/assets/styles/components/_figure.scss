@@ -4,10 +4,10 @@
  * 2. Clear inner floats
  */
 .figure {
-  margin: 0 -20px 40px; /* 1 */
+  margin: 0 em(-$base-spacing-unit) rem($double-spacing-unit); /* 1 */
   overflow: hidden; /* 2 */
 
-  @include respond-to('medium') {
+  @include mq($from: medium) {
     margin: 0 -40px 40px;
   }
 }
@@ -29,7 +29,7 @@
 .figure--left {
   @extend .figure;
 
-  @include respond-to('medium') {
+  @include mq($from: medium) {
     float: left;
     margin-right: 20px;
   }
@@ -48,7 +48,7 @@
 .figure--right {
   @extend .figure;
 
-  @include respond-to('medium') {
+  @include mq($from: medium) {
     float: right;
     margin-left: 20px;
   }
@@ -62,7 +62,7 @@
 .figure--right {
   margin-bottom: 40px; /* 1 */
 
-  @include respond-to('medium') {
+  @include mq($from: medium) {
     max-width: 250px;
   }
 

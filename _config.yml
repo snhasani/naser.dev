@@ -1,21 +1,17 @@
 
-
 # Site settings
-title: naser.xyz
-motto: "درباره همه چیز، اما بیشتر توسعه رابط کاربری و هنر"
+title: "naser.xyz | Seyed Naser Hasani"
+url: "https://naser.xyz"
+
 author: Seyed Naser Hasani
 fullname: "سید ناصر حسنی"
-
 email: snhasani@gmail.com
-url: "http://naser.xyz"
-twitter_username: snhasani
-github_username:  snhasani
 
 keywords: "کامپیوتر، بوتسترپ, بوتستراپ, فریمورک، لینوکس, برنامه‌نویسی، جاوااسکریپت، علم, اینترنت, آموزش, طاحی, css, html, scss, sass, javascript, nodejs, frontend, front-end, application, mobile, native, vanilla, cordova, bootstrap, phongap, android, npm, git, app, ios, linux, opensource, framework, dev-tools"
 description: >
-  سایت شخصی سید ناصر حسنی.
+  سایت شخصی سید ناصر حسنی - نوشته های درباره‌ی برنامه‌نویسی، هنر و اجتماع.
 long_description: >
-  می‌نویسم؛ بیشترش درباره‌ی تجربیاتم توی حوزه‌ی فرونت اند و برنامه سازی توسط جاوااسکریپته. گاه گداری هم از ستما، تیاتر، ادبیات و کلا هر چیزی که بهم مربوط باشه و نباشه.
+  می‌نویسم؛ بیشترش درباره‌ی تجربیاتم توی حوزه‌ی فرونت اند و برنامه سازی توسط جاوااسکریپته. گاه گداری هم از سنیما، تیاتر، ادبیات و کلا هر چیزی که به هنر و اجتماع مربوط باشه و نباشه.
 
 copyright: "Commons Attribution 4.0 International"
 
@@ -46,12 +42,11 @@ destination:  ./public
 encoding:       "utf-8"
 include:          [".htaccess"]
 keep_files:     [".git", "assets"]
-exclude:         ["assets", "node_modules", "gulpfile.js", "package.json", "webpack.config.js"]
+exclude:         ["assets", "node_modules", "gulpfile.js", "package.json", "bower.json", "webpack.config.js"]
 
 
 # Conversion
 markdown: kramdown
-highlighter: pygments
 
 
 # Serving
@@ -59,7 +54,8 @@ port:    8080
 
 
 # Outputting
-permalink: pretty
+# baseurl: /barkhat
+permalink: /blog/:year/:title/
 paginate_path: /blog/page:num
 paginate: 5
 timezone: Asia/Tehran

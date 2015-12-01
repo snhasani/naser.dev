@@ -2,7 +2,7 @@
 [data-page=home] > .page-wrapper {
   position: relative;
 
-  @include respond-to('medium') {
+  @include mq($from: medium) {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row-reverse;
@@ -13,31 +13,23 @@
   }
 }
 
-[data-page=default] > .page-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
-}
-
-
 [data-page=home] .main {
-  padding: 40px 20px 125px;
-  text-align: center;
-  transition: border .3s ease;
+  padding: 0 $base-spacing-unit (3*$base-spacing-unit);
+  transition: border .25s;
 
-  @include respond-to('medium') {
-    border-left: 3px solid #F7F7F7;
-    width: 60%;
-    padding-bottom: 40px;
+  @include mq($from: medium) {
+    border-left: 3px solid darken($body-bgc, 2%);
+    width: 65%;
+    padding-top: $half-spacing-unit * 3;
+    padding-bottom: $double-spacing-unit;
     text-align: initial;
 
     @include themify('dark') {
-      border-left-color: #2F2F2F
+      border-left-color: darken($body-bgc--dark, 1%)
     }
   }
 
-  @include respond-to('large') {
+  @include mq($from: desktop) {
     width: 65%;
   }
 }
@@ -47,27 +39,32 @@
   max-width: 600px;
 }
 
-.latest-posts__readmore-link {
-  @extend %animation-underline;
-  color: inherit;
-  display: inline-block;
-  font-size: 1.6rem;
-  margin-bottom: 30px;
-
-  @media screen and (max-width: 768px ) {
-      color: $secondary-color;
-
-      @include themify('dark') {
-        color: $secondary-color--dark;
-      }
+.latest-posts__title {
+  @include mq($from: medium) {
+    display: none;
   }
+}
 
-  @include respond-to('medium') {
+.latest-posts__readmore {
+  @include font-size(16px, 0);
+  line-height: 2.4375; /* 39/16 */
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: rem($half-spacing-unit * 9);
+
+  @include mq($from: medium) {
+    line-height: 1.625; /* 26/16 */
     margin: 0;
+    text-align: left;
+  }
+}
 
-    @include themify('dark') {
-      color: inherit;
-    }
+ .latest-posts__readmore > a {
+  @extend %animation-underline;
+  color: $secondary-color;
+
+  @include themify('dark') {
+    color: $secondary-color--dark;
   }
 }
 
@@ -75,16 +72,47 @@
  * Home page Footer
  */
 .home-footer {
-  padding: 60px 0 20px;
+  padding-bottom: rem($base-spacing-unit);
   position: absolute;
   bottom: 0;
   right: 0;
   width: 100%;
 
-  @include respond-to('medium') {
+  @include mq($from: medium) {
     position: static;
     right: auto;
     bottom: auto;
-    padding-top: 40px;
+    padding-top: 0;
+  }
+}
+
+.home-footer > .copyright {
+      @extend .base-mb;
+}
+
+/**
+ * Poor man's media query
+ */
+@include mq(640px, 900px) {
+  [data-page=home] .theme-switch {
+    @include sass-theme-switch-fixed;
+  }
+
+  .home-footer > .copyright {
+    margin-bottom: 0;
+  }
+
+  .latest-posts__readmore {
+    margin-bottom: rem($half-spacing-unit * 5);
+  }
+}
+
+@media screen and (min-width: ( (1200/16) * 1em) ) {
+  [data-page=home] .theme-switch {
+    @include sass-theme-switch-fixed;
+  }
+
+  .home-footer > .copyright {
+    margin-bottom: 0;
   }
 }

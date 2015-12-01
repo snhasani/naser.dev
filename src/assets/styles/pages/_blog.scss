@@ -1,18 +1,33 @@
 /**
  * List item on the home page
  */
-// .article {
-//   position: relative;
-// }
+
+[data-page=default] .article {
+  margin-bottom: rem($base-spacing-unit * 3);
+}
 
 .article__title > a {
-  @extend %animation-underline;
-  color: inherit;
+    @extend %animation-underline;
+    @extend %sass-hover-underline-color;
+}
+
+[data-page=home] .article__title {
+  @include themify('dark') {
+    font-weight: normal;
+  }
+}
+
+.article__date,
+.article__excerpt {
+  color: #666;
+  margin-bottom: 0;
+
+  @include themify('dark') {
+    color: #9e9e9e;
+  }
 }
 
 .article__excerpt {
-  font-size: 1.3rem;
-  line-height: 1.8;
   margin: 0;
 
   @include themify('dark') {
@@ -23,7 +38,7 @@
 [data-page=home] .article__excerpt {
   display: none;
 
-  @include respond-to('medium') {
+  @include mq($from: medium) {
     display: block;
   }
 }
@@ -31,51 +46,3 @@
 .article__excerpt > a {
   @extend  %bg-underline;
 }
-
-/**
- * Article icons on the home page
- * 1. Magic number, sorry :(
- */
-// .article__icon {
-//   display: inline;
-
-//   @include respond-to('medium') {
-//     position: absolute;
-//     right: 0;
-//     top: 50%;
-//     transform: translateY(-80%); /* 1 */
-//     opacity: 0.35;
-//   }
-// }
-
-// .article__link {
-//   position: relative;
-
-//   /**
-//    * Checkmark for visited links
-//    * 1. Same color as background, `transparent` does not work
-//    * 2. Absolutely positioned on the right to prevent underline on hover
-//    * 3. Slight offset to give some space between mark and text
-//    * 4. Actual checkmark content
-//    * 5. Slightly reduced size, without messing with alignment
-//    */
-//   &::after {
-//     color: white; /* 1 */
-//     margin-left: 10px; /* 3 */
-//     content: '\2714'; /* 4 */
-//     transform: scale(0.7); /* 5 */
-
-//     @include respond-to('medium') {
-//       position: absolute; /* 2 */
-//       left: 100%; /* 2 */
-//       top: 0; /* 2 */
-//     }
-//   }
-
-//   /**
-//    * When visited, color checkmark
-//    */
-//   &:visited::after {
-//     color: $medium-grey;
-//   }
-// }

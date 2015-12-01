@@ -4,7 +4,7 @@
  */
 .pull-image--left,
 .pull-image--right {
-  @include respond-to('medium') {
+  @include mq($from: medium) {
     max-width: 250px;
     margin-bottom: 40px; /* 1 */
   }
@@ -18,7 +18,7 @@
  * Left floated images
  */
 .pull-image--left {
-  @include respond-to('medium') {
+  @include mq($from: medium) {
     float: left;
     margin-right: 20px;
   }
@@ -28,7 +28,7 @@
  * Right floated images
  */
 .pull-image--right {
-  @include respond-to('medium') {
+  @include mq($from: medium) {
     float: right;
     margin-left: 20px;
   }

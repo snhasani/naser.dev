@@ -1,143 +1,46 @@
 
-@font-face {
-    font-family: 'Iran Sans Light';
-    src: url('../fonts/iranian-sans/iran-sans-light.woff2') format('woff2'),
-            url('../fonts/iranian-sans/iran-sans-light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-}
-
-/**
- * Base font size 62.5% = 10px => 1em, 1rem = 10px
- */
-:root {
-  font-size: 62.5%;
-}
+@import "headings";
 
 /**
  * Basic typography style for copy text
  */
-body {
-  font-family: 'Arial', sans-serif;
-  font-size: 1.3rem;
-  // line-height: 2.2;
-}
-
-.fonts-loaded body { font-family: $text-font-stack }
-
-/**
- * Apply some basic styles to main headings
- * 1. Poor man's vertical rhythm
- */
-h1 {
-  font-size: 3.6rem;
-  margin-top: 10px; /* 1 */
-  margin-bottom: 50px; /* 1 */
+html {
+  font:#{($base-font-size/16px)*1rem}/#{$line-height-ratio} $text-font-stack;
 }
 
 /**
- * Headings level 2
- * 1. Enable position context for anchor links
- * 2. Clear any pull-image / pull-quote
- * 3. Poor man's vertical rhythm
+ * Helper class for set web-fonts after its loaded
  */
-h2 {
-  position: relative; /* 1 */
-  clear: both; /* 2 */
-  margin-top: 70px; /* 3 */
-  margin-bottom: 20px; /* 3 */
-}
-
-/**
- * Headingds level 3
- * 1. Poor man's vertical rhythm
- */
-h3 {
-  margin-bottom: 40px; /* 1 */
-}
-
-.h3 {
-  font-size: 2.4rem;
-  line-height: 2;
-}
-
-/**
- * Select links living inside headings with no class
- * It turns out Markdown generated headings have no class
- * 1. Put it slightly off in the left margin
- */
-h2:not([class]) a {
-  position: absolute; /* 1 */
-  left: -25px; /* 1 */
-  text-decoration: none;
-  color: $light-grey;
-}
-
-/**
- * Make the anchor link highlighter when hovering the heading
- */
-h2:hover a,
-h2:active a {
-  color: $secondary-color;
-
-  @include themify('dark') {
-    color: $secondary-color--dark;
-  }
+.fonts-loaded body {
+  font-family: $farsi-text-font-stack;
 }
 
 /**
  * Basic styles for paragraphs
  */
 p {
-  font-size: 1.3rem;
-  line-height: 2;
+  margin: 0 0 rem($base-spacing-unit);
 }
 
 /**
  * Poor man's vertical rhythm
  */
-li {
-  margin-bottom: 10px;
-}
-
-dl {
-  font-size: 1.3rem;
-  line-height: 2;
+dd {
+  @extend .base-mb;
 }
 
 /**
  * Helper class
  */
 
-.large-text { font-size: 1.6rem }
+.large-text {
+  @include font-size(15px);
+}
 
 .block-text {
   display: block;
 
-  @media screen and (min-width: 480px) and (max-width: 900px) {
+  @include mq(mobileLandscape, medium) {
     display: inline;
   }
-}
-
-body {
-  position: relative;
-}
-
-body:after {
-  position: absolute;
-  width: auto;
-  height: auto;
-  z-index: 9999;
-  content: '';
-  display: block;
-  pointer-events: none;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: url('http://basehold.it/image.php?height=13') repeat top left;
-}
-
-body:active:after {
-  display: none;
 }

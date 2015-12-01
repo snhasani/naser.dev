@@ -1,0 +1,26 @@
+{% assign post = page %}
+{% if post.tags.size > 0 %}
+		{% capture tags_content %} {% endcapture %}
+		{% for post_tag in post.tags %}
+				{% for data_tag in site.data.tags %}
+						{% if data_tag.slug == post_tag %}
+								{% assign tag = data_tag %}
+						{% endif %}
+				{% endfor %}
+				{% if tag %}
+						{% capture tags_content_temp %}
+							{{ tags_content }}
+								<a class="post-tag" href="{{ site.baseurl | urljoin: "/blog/tag/" }}{{ tag.slug }}/">{{ tag.name }}</a>
+						{% endcapture %}
+						{% assign tags_content = tags_content_temp %}
+				{% endif %}
+		{% endfor %}
+{% else %}
+		{% assign tags_content = '' %}
+{% endif %}
+
+<div class="post-meta container base-mb">
+	<div class="post-tags">
+		{{ tags_content }}
+	</div>
+</div>

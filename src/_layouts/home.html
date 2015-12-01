@@ -1,62 +1,20 @@
 <!DOCTYPE html>
+<!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" -->
+<html lang="fa" dir="rtl" class="fonts-loaded">
+<!--#else -->
 <html lang="fa" dir="rtl">
+<!--#endif -->
 
-	{% include head.html %}
+	{% include master/head.html %}
 
 	<body  data-page="home">
 
 		<div class="page-wrapper">
 
-			<aside class="sidebar" role="complementary">
+			{% include home/index-sidebar.html %}
 
-				<header class="sidebar__header">
-
-					{% include logo.html %}
-
-					<nav role="navigation" class="nav">
-						<ul class="clearfix">
-							{% for item in site.data.header_nav %}
-							<li class="nav__item"><a href="{{ item.url }}">{{ item.label }}</a></li>
-							{% endfor %}
-						</ul>
-					</nav>
-
-				</header>
-
-				<section class="sidebar__about">
-					<div class="block-inner">
-						<a href="https://instagram.com/snhasani"><img class="avatar" src="{{ "/assets/images/naser.xyz-avatar-bw.jpg" | prepend: site.baseurl }}" alt="Photo Seyed Naser Hasani - avatar - selfi" /></a>
-
-						<p class="large-text">سلام، من</p>
-						<h1 class="sidebar-about__title"><a href="https://twitter.com/snhasani">سید ناصر حسنی</a></h1>
-						<p class="large-text">هستم؛ یه توسعه دهنده‌ی فری‌لنس، <span class="block-text">رابط-کاربری (Front-End).</span></p>
-					</div>
-
-					<div class="block-section">
-						<p class="sidebar-about__comment">اگه خواستید بیشتر درباره‌ی من بدونید یا با من تماس بگیرید، می‌تونید به <a href="/about/">اینجا</a> یه سری بزنید.</p>
-					</div>
-
-				</section><!--end / .sidebar-about -->
-
-				<footer class="home-footer" dir="ltr">
-
-					<nav class="nav social-links" role="navigation">
-						<ul class="clearfix">
-							{% for item in site.data.footer_nav %}
-							<li class="nav__item"><a href="{{ item.url }}" target="blank">{{ item.label }}</a></li>
-							{% endfor %}
-						</ul>
-					</nav>
-
-					<p class="copyright">&copy;&nbsp;{{ 'now' | date: '%Y' }} Seyed Naser Hasani.</p>
-
-				</footer>
-
-			</aside>
-
-			<div class="main">{{ content }}</div>
+			<div class="main text-center">{{ content }}</div>
 
 		</div><!--end / .page-wrapper -->
 
-
-		{% include global-footer.html %}
+		{% include master/global-footer.html %}

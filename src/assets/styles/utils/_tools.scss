@@ -1,0 +1,80 @@
+
+
+
+/**
+ * add animated underline to link on hover and visited form
+ * 1. Position context for pseudo-element
+ */
+%animation-underline {
+  transition: transform 0.15s;
+  position: relative; /* 1 */
+
+  /**
+   * Underline
+   * 1. Same transition as link
+   * 2. Full width below content
+   * 3. Same color as link
+   * 4. Scaled down to 0 to be invisible
+   */
+  &::before {
+    transition: inherit; /* 1 */
+    position: absolute; /* 2 */
+    top: 100%; /* 2 */
+    left: 0; /* 2 */
+    right: 0; /* 2 */
+    height: 1px;
+    background: currentcolor; /* 3 */
+    transform: scaleX(0); /* 4 */
+  }
+
+  /**
+   * Display underline on hover
+   */
+  &:active::before,
+  &:hover::before {
+    transform: scaleX(1);
+  }
+
+
+
+@include mq($from: desktop) {
+  display: inline-block;
+
+  &::before {
+    content: '';
+  }
+}
+
+}
+
+%sass-hover-underline-color {
+  color: inherit;
+
+  &:hover {
+    color: $secondary-color;
+
+    @include themify('dark') {
+      color: $secondary-color--dark;
+    }
+  }
+}
+
+%bg-underline {
+  color: inherit;
+  padding-bottom: 1px;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 15%, #ddd 1%,rgba(0, 0, 0, 0) 18%);
+
+  @include themify('dark') {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 15%, #555 1%,rgba(0, 0, 0, 0) 18%);
+  }
+
+  &:hover {
+    background-image: linear-gradient(to top,rgba(0,0,0,0) 15%,rgba($secondary-color,.3) 15%,rgba($secondary-color,.3) 18%,rgba(0,0,0,0) 18%);
+    color: $secondary-color;
+
+    @include themify('dark') {
+      background-image: linear-gradient(to top,rgba(0,0,0,0) 15%,rgba($secondary-color--dark,.5) 15%,rgba($secondary-color--dark,.5) 18%,rgba(0,0,0,0) 18%);
+      color: $secondary-color--dark;
+    }
+  }
+}

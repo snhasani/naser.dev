@@ -4,27 +4,18 @@
  */
 .site-footer {
   color: $dark-grey;
-  font-size: 90%; /* 1 */
-  padding: 60px 0 20px;
-  text-align: center;
 
   @include themify('dark') {
     color: #9e9e9e;
   }
 
-  @include respond-to('medium') {
+  @include mq($from: medium) {
     text-align: initial;
-  }
-
-  @media (max-width: 900px) {
-    @include themify($theme) {
-      padding-top: 60px !important;
-    }
   }
 }
 
 .site-footer > .social-links {
-  @include respond-to('medium') {
+  @include mq($from: medium) {
     float: right;
   }
 }
@@ -32,15 +23,11 @@
 /**
  * Footer copyright
  */
-.copyright {
-  font-size: 1.4rem;
-  margin-bottom: 0;
-}
 
 .site-footer > .copyright {
-  @include respond-to('medium') {
+  @include mq($from: medium) {
+    @include font-size(15px);
     float: left;
-    line-height: 2;
-    margin-top: 0;
+    margin: 0;
   }
 }

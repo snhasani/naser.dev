@@ -1,29 +1,22 @@
 ---
 layout: page
-title: "Blog"
-tags:
-  - blog
-  - writing
-  - articles
+title: آخرین نوشته‌ها
+label: وبلاگ
 ---
-
-<header class="post-header">
-	<h1 class="post-title">آخرین نوشته‌ها</h1>
-</header>
 
 <ul class="articles  list">
 {% for post in paginator.posts %}
   {% unless post.preview %}
-    {% include post-list.html post=post %}
+    {% include partials/post-list.html post=post %}
   {% endunless %}
 {% endfor %}
 </ul>
 
-<ul class="pagination">
-  {% if paginator.next_page %}
-    <li><a href="{{ paginator.next_page_path }}"><span class="pagination__icon">▶</span> بعدی</a></li>
-  {% endif %}
+<ul class="pagination text-center double-mb container">
   {% if paginator.previous_page %}
-    <li><a href="{{ paginator.previous_page_path }}">قبلی <span class="pagination__icon">◀</span> </a></li>
+    <li><a href="{{ site.baseurl | urljoin: paginator.previous_page_path }}"><span class="pagination__icon">▶</span> نوشته‌های جدیدتر</a></li>
+  {% endif %}
+  {% if paginator.next_page %}
+    <li><a href="{{ site.baseurl | urljoin: paginator.next_page_path }}">نوشته‌های قبلی‌تر <span class="pagination__icon">◀</span></a></li>
   {% endif %}
 </ul>

@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<header class="page-header container text-center">
+		<p>نوشته‌های تگ شده در</p>
+	<h1 class="post-title">{{ page.tag_name }}</h1>
+</header>
+
+<div class="page-content container">
+
+	<ul class="articles  list">
+
+		{% if site.tags[page.tag] %}
+
+			{% for post in site.tags[page.tag] %}
+				{% include partials/post-list.html post=post %}
+			{% endfor %}
+
+		{% else %}
+			<p class="text-center">متاسفم، هیچ مطلبی تحت این برچست ارسال نشده است.</p>
+		{% endif %}
+
+	</ul>
+
+</div>

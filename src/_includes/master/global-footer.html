@@ -1,0 +1,34 @@
+
+		<script>
+			!function(a){var b=function(b,c){"use strict";var d=a.document.getElementsByTagName("script")[0],e=a.document.createElement("script");return e.src=b,e.async=!0,d.parentNode.insertBefore(e,d),c&&"function"==typeof c&&(e.onload=c),e};"undefined"!=typeof module?module.exports=b:a.loadJS=b}("undefined"!=typeof global?global:this);
+			loadJS( '{{ "/assets/scripts/main.js" | prepend: site.baseurl }}' );
+		</script>
+
+		{% if page.has_code == true %}
+			<script>
+				(function() {
+					var $code = document.querySelector('code[class*="language-"]');
+					if ( $code ) {
+						loadJS( '{{ "/assets/scripts/prism.js" | prepend: site.baseurl }}', function() {
+							Prism.highlightAll();
+						} );
+					}
+			    })();
+			</script>
+		{% endif %}
+
+		{% if jekyll.environment == "_production" %}
+		<script>
+			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+			e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+			e.async = true;
+			e.src='https://www.google-analytics.com/analytics.js';
+			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+			ga('create','UA-45098305-5','auto');ga('send','pageview');
+		</script>
+		{% endif %}
+
+	</body>
+
+</html>

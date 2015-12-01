@@ -1,0 +1,54 @@
+/*------------------------------------*\
+    $HEADINGS
+\*------------------------------------*/
+/**
+ * As per: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
+ *
+ * When we define a heading we also define a corresponding class to go with it.
+ * This allows us to apply, say, `class=alpha` to a `h3`; a double-stranded
+ * heading hierarchy.
+ */
+h1,.h1{
+    @include font-size($h2-size, 0);
+    line-height: ($double-spacing-unit / $h2-size);
+
+    @include mq($from: desktop) {
+      @include font-size($h1-size, 0);
+      line-height: ($double-spacing-unit / $h1-size);
+    }
+}
+
+h2,.h2{
+    @include font-size($h3-size, 0);
+    line-height: ($double-spacing-unit / $h3-size);
+
+    @include mq($from: desktop) {
+      @include font-size($h2-size, 0);
+      line-height: ($double-spacing-unit / $h2-size);
+    }
+}
+
+h3,.h3{
+    @include font-size($h4-size, 0);
+    line-height: ($double-spacing-unit / $h4-size);
+
+    @include mq($from: desktop) {
+      @include font-size($h3-size, 0);
+      line-height: ($double-spacing-unit / $h3-size);
+    }
+}
+h4,.h4{
+    @include font-size($h5-size);
+
+    @include mq($from: desktop) {
+      @include font-size($h4-size);
+    }
+}
+// h5,.h5{
+//     @include font-size($h5-size);
+//     line-height: ($double-spacing-unit / $h5-size);
+// }
+// h6,.h6{
+//     @include font-size($h6-size);
+//     line-height: ($double-spacing-unit / $h6-size);
+// }

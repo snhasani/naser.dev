@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<header class="page-header container text-center">
+	<p>نوشته‌های دسته‌ی شده در</p>
+	<h1 class="post-title">{{ page.category_name }}</h1>
+</header>
+
+<div class="page-content container">
+
+	<ul class="articles  list">
+
+		{% if site.categories[page.category] %}
+
+			{% for post in site.categories[page.category] %}
+			    {% include partials/post-list.html post=post %}
+			{% endfor %}
+
+		{% else %}
+			<p class="text-center">متاسفم، هیچ مطلبی تحت این دسته بندی منتشر نشده است.</p>
+		{% endif %}
+
+	</ul>
+
+</div>

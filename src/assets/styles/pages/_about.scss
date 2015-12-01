@@ -1,22 +1,13 @@
 
-.about-me__header {
-  margin: 10px 0 40px;
-  text-align: center;
-
-  @include respond-to('medium') {
-    margin-top: 50px;
-  }
+.page-header--about-me {
+  @extend .post-header;
 }
 
 .about-me__prologue > p {
   @extend .large-text--dark;
-  font-size: 1.4rem;
-  margin-bottom: 20px;
 }
 
-.interisting-list {
-  > dt {
-    font-size: 1.6rem;
-    margin-top: 30px;
-  }
+.interisting-list > dt {
+  @include font-size(16px);
+  font-weight: bold;
 }

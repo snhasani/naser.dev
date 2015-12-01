@@ -2,17 +2,3 @@
 // This file contains all styles related to all elements z-index property
 // ---------------------------------------------------------------------------------------------------
 
-.navbar--main {
-	z-index: 2;
-}
-
-.navbar--sub {
-	z-index: 1;
-}
-
-.catg-nav__root-wrap,
-.search-box--header,
-.panel__sidebar,
-.user-panel {
-	z-index: 10;
-}

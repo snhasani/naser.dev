@@ -1,0 +1,42 @@
+
+
+
+<aside class="sidebar text-center">
+
+	<header class="sidebar__header">
+
+		{% include partials/logo.html %}
+
+		<nav class="nav">
+			<ul class="list">
+				{% for item in site.data.header_nav %}
+					{% if  item.label != "صفحه اصلی" %}
+					<li class="nav__item"><a href="{{ site.baseurl | urljoin: item.url }}">{{ item.label }}</a></li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</nav>
+
+	</header>
+
+	<section class="sidebar__about">
+		<div class="block-inner">
+
+			<img class="avatar" src="{{ "/assets/images/naser.xyz-avatar-bw.jpg" | prepend: site.baseurl }}" alt="Photo Seyed Naser Hasani - avatar - selfi" />
+
+			<p class="large-text">سلام، من</p>
+			<h1 class="sidebar-about__title"><a href="https://twitter.com/snhasani">سید ناصر حسنی</a></h1>
+			<p class="large-text double-mb">هستم؛ یه توسعه دهنده‌ی فری‌لنس، <span class="block-text">رابط-کاربری (Front-End).</span></p>
+		</div>
+
+		<div class="block-section double-mb">
+			<p class="sidebar-about__comment">اگه خواستید بیشتر درباره‌ی من بدونید یا با من تماس بگیرید، می‌تونید به <a href="{{ site.baseurl | urljoin: "about/" }}"><b>اینجا</b></a> یه سری بزنید.</p>
+		</div>
+
+	</section><!--end / .sidebar-about -->
+
+	<footer class="home-footer" dir="ltr">
+		{% include master/footer.html %}
+	</footer>
+
+</aside>

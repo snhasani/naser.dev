@@ -1,3 +1,5 @@
+- label: صفحه اصلی
+  url: /
 - label: وبلاگ
   url: /blog/
 # - label: Coding
