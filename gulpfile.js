@@ -188,6 +188,11 @@ gulp.task('build', function(callback) {
     });
 });
 
+gulp.task('deploy', function() {
+  return gulp.src('./public/**/*')
+    .pipe($.ghPages());
+});
+
 gulp.task('default', function () {
   gulp.start('build');
 });

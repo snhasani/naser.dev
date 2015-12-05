@@ -40,7 +40,7 @@ destination:  ./public
 
 # Handling Reading
 encoding:       "utf-8"
-include:          [".htaccess"]
+include:          [".htaccess", "CNAME", "README.md"]
 keep_files:     [".git", "assets"]
 exclude:         ["assets", "node_modules", "gulpfile.js", "package.json", "bower.json", "webpack.config.js"]
 
