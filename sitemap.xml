@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://naser.xyz/blog/2015/hello-world/</loc>
+    <lastmod>2015-12-06T00:00:00+03:30</lastmod>
+  </url>
+  <url>
     <loc>https://naser.xyz/404.html</loc>
   </url>
   <url>
@@ -28,11 +32,17 @@
     <loc>https://naser.xyz/blog/tag/rwd/</loc>
   </url>
   <url>
+    <loc>https://naser.xyz/blog/category/uncategory/</loc>
+  </url>
+  <url>
     <loc>https://naser.xyz/blog/category/vication/</loc>
   </url>
   <url>
     <loc>https://naser.xyz/blog/category/vocation/</loc>
   </url>
+    <url>
+      <loc>https://naser.xyz/blog/2015/hello-world/</loc>
+    </url>
   <url>
     <loc>https://naser.xyz/googlef7f70d12f02be3a0.html</loc>
     <lastmod>2015-12-05T22:19:42+03:30</lastmod>
