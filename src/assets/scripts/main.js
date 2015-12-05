@@ -1,9 +1,8 @@
 /* jshint devel:true */
 'use strict';
 // require('./module/rAF');
-// var fastclick = require('fastclick');
+var fastclick = require('fastclick');
 // var _ = require('./helpers/helpers');
-var fontLoader = require('./module/font-loader')
 
 var _init = false
 
@@ -31,12 +30,10 @@ var app = {
     if (_init) return
     _init = true
 
-    // load webfont
-    fontLoader()
     setTheme()
 
     // Attach fastclick
-    // fastclick.attach(document.body);
+    fastclick.attach(document.body);
 
     console.log('App Initialize successfully.')
   }

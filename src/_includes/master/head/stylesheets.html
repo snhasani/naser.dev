@@ -1,0 +1,27 @@
+<!-- Stylesheets -->
+{% if jekyll.environment == "production" %}
+	{% if page.layout == "home" %}
+	<style id="above-the-fold-css">{% include assets/critical-home.css %}</style>
+	{% elsif page.layout == "post" %}
+	<style id="above-the-fold-css">{% include assets/critical-post.css %}</style>
+	{% else %}
+	<style id="above-the-fold-css">{% include assets/critical-default.css %}</style>
+	{% endif %}
+
+	<script id="loadCSS__main">
+		// load CSS fonts and icons asynchronously
+		!function(a){"use strict";a.loadCSS=function(b,c,d){var e,f=a.document,g=f.createElement("link");if(c)e=c;else{var h=(f.body||f.getElementsByTagName("head")[0]).childNodes;e=h[h.length-1]}var i=f.styleSheets;g.rel="stylesheet",g.href=b,g.media="only x",e.parentNode.insertBefore(g,c?e:e.nextSibling);var j=function(a){for(var b=g.href,c=i.length;c--;)if(i[c].href===b)return a();setTimeout(function(){j(a)})};return g.onloadcssdefined=j,j(function(){g.media=d||"all"}),g}}(this);
+		loadCSS( "{{ "/assets/styles/main.css" | prepend: site.baseurl }}", false, "all" );
+	</script>
+
+	<noscript>
+	<!-- build:css(.tmp) /assets/styles/main.css -->
+	<link rel='stylesheet' id='main-css' href="/assets/styles/main.css" type='text/css' media='all'>
+	<!-- endbuild -->
+	</noscript>
+
+{% else %}
+<!-- build:css(.tmp) /assets/styles/main.css -->
+	<link rel='stylesheet' id='main-css' href="/assets/styles/main.css" type='text/css' media='all'>
+<!-- endbuild -->
+{% endif %}

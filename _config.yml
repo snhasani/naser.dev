@@ -54,16 +54,11 @@ port:    8080
 
 
 # Outputting
-# baseurl: /barkhat
+# baseurl: /xyz
 permalink: /blog/:year/:title/
 paginate_path: /blog/page:num
 paginate: 5
 timezone: Asia/Tehran
-
-
-# Build settings
-sass:
-  style: :compressed
 
 
 # Plugins

@@ -3,83 +3,34 @@
 
 		<!-- Global stuff -->
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-
-	{% if jekyll.environment != "production" %}
-		<link rel="dns-prefetch" href="//basehold.it">
-	{% endif %}
-
-	{% if jekyll.environment == "production" %}
-		<link rel="dns-prefetch" href="//www.google-analytics.com">
-
-		<!-- Robots & indexing -->
-		<meta name="robots" content="index,follow">
-		<meta name="revisit-after" content="1 days">
-	{% endif %}
-
-		<!-- Page specific content -->
 		<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-
-	{% if jekyll.environment == "production" %}
-		<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-		{% if page.tags %}
-		<meta name="keywords" content="{{ page.tags|join: ',' }}" />
-		{% endif %}
-		<meta name="author" content="{{ site.author }}">
-		<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
-		<!-- RSS -->
-		<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/rss.xml" | prepend: site.baseurl | prepend: site.url }}" />
-	{% endif %}
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Set Theme -->
 		<script>
 		    if ( window.localStorage.theme === 'dark' )  document.documentElement.classList.add('dark')
 		</script>
 
-	{% include master/favicon.html %}
+		{% include master/head/stylesheets.html %}
 
-	{% if jekyll.environment == "production" %}
-		<!-- Open Graph data -->
-		<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
-		<meta property="og:type" content="article"/>
-		<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"/>
-		<meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"/>
-		<meta property="og:site_name" content="naser.xyz"/>
+		{% include partials/sm-fonts-loaded.html %}
 
-		<!-- Twitter Card data -->
-		<meta name="twitter:card" content="summary">
-		<meta name="twitter:site" content="@snhasani">
-		<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-		<meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-		<meta name="twitter:creator" content="@snhasani">
+		{% unless jekyll.environment == "production" %}
+		<link rel="dns-prefetch" href="//basehold.it">
+		{% endunless %}
 
-		<!-- Stylesheets -->
-		{% if page.layout == "home" %}
-		<style>{% include assets/critical-home.css %}</style>
-		{% elsif page.layout == "post" %}
-		<style>{% include assets/critical-post.css %}</style>
-		{% else %}
-		<style>{% include assets/critical-default.css %}</style>
+		{% if jekyll.environment == "production" %}
+		<link rel="dns-prefetch" href="//www.google-analytics.com">
+
+		<!-- Robots & indexing -->
+		<meta name="robots" content="index,follow">
+		<meta name="revisit-after" content="1 days">
 		{% endif %}
 
-		<script>
-			// load CSS fonts and icons asynchronously
-			!function(a){"use strict";a.loadCSS=function(b,c,d){var e,f=a.document,g=f.createElement("link");if(c)e=c;else{var h=(f.body||f.getElementsByTagName("head")[0]).childNodes;e=h[h.length-1]}var i=f.styleSheets;g.rel="stylesheet",g.href=b,g.media="only x",e.parentNode.insertBefore(g,c?e:e.nextSibling);var j=function(a){for(var b=g.href,c=i.length;c--;)if(i[c].href===b)return a();setTimeout(function(){j(a)})};return g.onloadcssdefined=j,j(function(){g.media=d||"all"}),g}}(this);
-			loadCSS( "{{ "/assets/styles/main.css" | prepend: site.baseurl }}" );
-		</script>
+		{% include master/head/head-meta.html %}
 
-		<noscript>
-		<!-- build:css(.tmp) /assets/styles/main.css -->
-		<link rel="stylesheet" href="/assets/styles/main.css">
-		<!-- endbuild -->
-		</noscript>
+		{% include master/head/favicon.html %}
 
-	{% else %}
-	<!-- build:css(.tmp) /assets/styles/main.css -->
-		<link rel="stylesheet" href="/assets/styles/main.css">
-		<!-- endbuild -->
-	{% endif %}
+		{% include master/head/sharing-cards.html %}
 
 	</head>

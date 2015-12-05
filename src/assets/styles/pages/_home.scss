@@ -35,8 +35,12 @@
 }
 
 .latest-posts {
-  margin: 0 auto;
+  margin: 0 auto rem($half-spacing-unit * 9);
   max-width: 600px;
+
+  @include mq($from: 640px) {
+    margin-bottom: 0;
+  }
 }
 
 .latest-posts__title {
@@ -49,12 +53,9 @@
   @include font-size(16px, 0);
   line-height: 2.4375; /* 39/16 */
   font-weight: normal;
-  margin-top: 0;
-  margin-bottom: rem($half-spacing-unit * 9);
 
   @include mq($from: medium) {
     line-height: 1.625; /* 26/16 */
-    margin: 0;
     text-align: left;
   }
 }

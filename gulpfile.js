@@ -116,8 +116,8 @@ gulp.task('images', function() {
 
 gulp.task('fonts', function() {
   return gulp.src(require('main-bower-files')({
-      filter: '**/*.{eot,ttf,woff,woff2}'
-    }).concat( path.src + 'fonts/**/*.{eot,ttf,woff,woff2}'))
+      filter: '**/*.{woff,woff2}'
+    }).concat( path.src + 'fonts/**/*.css'))
     .pipe(gulp.dest(path.tmp + 'fonts'))
     .pipe($.if(argv.prod, gulp.dest(path.dist + 'fonts')));
 });
@@ -149,7 +149,7 @@ gulp.task('serve', ['webpack', 'styles', 'jekyll'], function () {
   });
 
   gulp.watch([
-    'src/*.html',
+    'src/**/*.html',
      path.src + 'scripts/**/*.js',
      path.src + 'fonts/**/*',
      path.src + 'images/**/*'

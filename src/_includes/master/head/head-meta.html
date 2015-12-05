@@ -1,0 +1,14 @@
+
+		<!-- Page specific content -->
+		{% if jekyll.environment != "production" %}
+		<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+		{% if page.tags %}
+		<meta name="keywords" content="{{ page.tags|join: ',' }}" />
+		{% endif %}
+		<meta name="author" content="{{ site.author }}">
+		<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+		<link rel="publisher" href="https://plus.google.com/+NaserHassani&lrm;">
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="{{ site.title }} | Feed" href="{{ "/rss.xml" | prepend: site.baseurl | prepend: site.url }}" />
+		{% endif %}

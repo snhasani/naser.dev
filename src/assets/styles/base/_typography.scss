@@ -5,15 +5,15 @@
  * Basic typography style for copy text
  */
 html {
-  font:#{($base-font-size/16px)*1rem}/#{$line-height-ratio} $text-font-stack;
+  font:#{($base-font-size/16px)*1rem}/#{$line-height-ratio} $farsi-text-font-stack;
 }
 
 /**
  * Helper class for set web-fonts after its loaded
  */
-.fonts-loaded body {
-  font-family: $farsi-text-font-stack;
-}
+// .fonts-loaded body {
+//   font-family: $farsi-text-font-stack;
+// }
 
 /**
  * Basic styles for paragraphs

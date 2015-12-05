@@ -16,7 +16,6 @@
   @import "base/helpers";
   @import "base/reset";
   @import "base/shared";
-  @import "base/fonts";
   @import "base/typography";
 
   @import "layout/header";
@@ -49,7 +48,6 @@
 } @else {
 
   @import "utils/tools";
-  @import "base/fonts";
 
   @import "layout/footer";
 
