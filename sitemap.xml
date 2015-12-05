@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://naser.xyz/404.html</loc>
+  </url>
+  <url>
+    <loc>https://naser.xyz/blog/tag/css/</loc>
+  </url>
+  <url>
+    <loc>https://naser.xyz/blog/tag/frontend/</loc>
+  </url>
+  <url>
+    <loc>https://naser.xyz/blog/</loc>
+  </url>
+  <url>
+    <loc>https://naser.xyz/about/</loc>
+  </url>
+  <url>
+    <loc>https://naser.xyz/</loc>
+  </url>
+  <url>
+    <loc>https://naser.xyz/blog/tag/javascript/</loc>
+  </url>
+  <url>
+    <loc>https://naser.xyz/blog/tag/linux/</loc>
+  </url>
+  <url>
+    <loc>https://naser.xyz/blog/tag/rwd/</loc>
+  </url>
+  <url>
+    <loc>https://naser.xyz/blog/category/vication/</loc>
+  </url>
+  <url>
+    <loc>https://naser.xyz/blog/category/vocation/</loc>
+  </url>
+</urlset>

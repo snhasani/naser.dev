@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>naser.xyz | Seyed Naser Hasani</title>
+    <description>سایت شخصی سید ناصر حسنی - نوشته های درباره‌ی برنامه‌نویسی، هنر و اجتماع.
+</description>
+    <link>https://naser.xyz/</link>
+    <atom:link href="https://naser.xyz/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 05 Dec 2015 20:10:09 +0330</pubDate>
+    <lastBuildDate>Sat, 05 Dec 2015 20:10:09 +0330</lastBuildDate>
+    
+  </channel>
+</rss>

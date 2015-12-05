@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Seyed Naser Hasani -- Front-end developer -- @snhasani -- snhasani at gmail
+    Seyed Naser Hasani -- Designer -- @snhasani -- snhasani at gmail
+    Seyed Naser Hasani -- Author -- @snhasani -- snhasani at gmail
+
+# TECHNOLOGY COLOPHON
+
+    RWD, Mobile-First, Service Worker
+    CSS3, HTML5, Javascript
+    Jekyll, Ruby, Github Pages
+    NPM, Bower, Gulp, BrowserSync, Webpack, git
+    SCSS, Normalize.css, sass-mq
