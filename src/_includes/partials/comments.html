@@ -1,6 +1,6 @@
 
-<div class="container double-mb">
+<div class="container mb-double">
 	<div id="disqus_thread"></div>
 </div>
 
-<script>var disqus_config=function(){this.page.url='{{ site.url | prepend: site.baseurl  }}{{ page.url }}';this.page.identifier='{{ page.url }}'};(function(){var d=document,s=d.createElement('script');s.async=true;s.src ='//naserxyz.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);})()</script>
+<script id="disqus">var disqus_config=function(){this.page.url='{{ site.url | prepend: site.baseurl  }}{{ page.url }}';this.page.identifier='{{ page.url }}'};(function(w){w.addEventListener("load",function(){var d=document,s=d.createElement('script');s.async=true;s.src ='//naserxyz.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);})})(window)</script>

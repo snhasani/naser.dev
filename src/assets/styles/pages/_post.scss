@@ -12,6 +12,10 @@
   @include themify('dark') {
     color: #9e9e9e;
   }
+
+  @include mq($until: mobileLandscape) {
+    line-height: 3;
+  }
 }
 
 .post-tag {
@@ -47,8 +51,33 @@
     }
 }
 
-.post-content > p:first-of-type {
-    @extend .container;
+.post-content > .post__summary {
+  @extend .container;
+}
+
+.post__summary > p {
+  border-right: 3px solid darken($body-bgc, 7%);
+  color: darken($body-bgc, 45%);
+  margin-bottom: rem($double-spacing-unit);
+  padding: em($base-spacing-unit * 1.5) em($base-spacing-unit) em($half-spacing-unit);
+  position: relative;
+  transition: .25s;
+
+  @include themify('dark') {
+    border-color: lighten($body-bgc--dark, 7%);
+  }
+
+  &:before {
+      content: "مخلص کلام";
+      font-weight: bold;
+      position: absolute;
+      top: 0; right: 26px;
+      @include font-size(18px);
+
+      @include themify('dark') {
+        color: lighten($body-bgc--dark, 30%);
+      }
+  }
 }
 
 .post-content a {

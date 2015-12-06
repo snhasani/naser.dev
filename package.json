@@ -1,6 +1,6 @@
 {
   "name": "naser.xyz",
-  "version": "1.0.0",
+  "version": "1.2.1",
   "description": "My Personal Website",
   "main": "index.js",
   "author": "Seyed Naser Hasani",
@@ -12,7 +12,7 @@
   "scripts": {
     "stage": "surge -p public -d naser.surge.sh",
     "start": "gulp serve --dev",
-    "build": "gulp --prod",
+    "build": "gulp --prod && cd ./public && python -m SimpleHTTPServer 8080",
     "deploy": "npm run build && gulp deploy"
   },
   "dependencies": {

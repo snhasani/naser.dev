@@ -1,38 +1,55 @@
 /**
  * Blockquotes
- * 1. Clear inner floats (if any)
- * 2. Poor man's vertical rhythm
  */
 blockquote {
-  font-style: italic;
-  border-left: 5px solid $light-grey;
-  padding-left: 20px;
-  overflow: hidden; /* 1 */
-  margin: 0 0 40px; /* 2 */
-}
+  border: 1px solid darken($body-bgc, 10%);
+  border-width: 1px 0;
+  color: darken($body-bgc, 45%);
+  margin: em($half-spacing-unit * 3) auto;
+  max-width: (350/15) * 1em;
+  padding: em($base-spacing-unit) 0;
+  position: relative;
+  text-align: center;
+  width: 90%;
+  @include font-size(15px, 0);
 
-/**
- * Prevent an odd gap when the first child of blockquote as a top margin
- */
-blockquote > :first-child {
-  margin-top: 0;
-}
+  @include themify('dark') {
+    border-color: lighten($body-bgc--dark, 10%)
+  }
 
-/**
- * Prevent an odd gap when the last child of blockquote as a bottom margin
- */
-blockquote > :last-child {
-  margin-bottom: 0;
-}
+  > p { margin: 0 }
 
-/**
- * Make images inside blockquotes left floated starting medium screens
- */
-blockquote img {
-  @include mq($from: medium) {
+  @include mq($from: tablet) {
+    clear: left;
     float: left;
-    max-width: 33%;
-    margin-right: 20px;
+    margin: 0  em($base-spacing-unit) em($half-spacing-unit * 1.5) 0;
+    padding-right: em($half-spacing-unit);
+    padding-left: em($half-spacing-unit);
+    text-align: initial;
+    width: 58%;
+  }
+
+  @include mq($from: wide) {
+    margin-left: -21%;
+  }
+}
+
+/**
+ * quotes icon - set top of blockquote box
+ */
+blockquote:before {
+  background: $body-bgc url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2244.003%22%20height%3D%2231.302%22%20viewBox%3D%220%200%2044.003%2031.302%22%3E%3Cpath%20d%3D%22M16.2%200l5.3%205.5C17.9%207%2012.8%2010.2%2011%2013.9c.3-.1.9-.1%201.1-.1%203.9%200%207.2%202.5%207.2%207.5%200%205.5-5.2%2010.002-10.4%2010.002-4.6%200-8.9-3.2-8.9-9.4C0%2013.602%206.9%204.5%2016.2%200zm22.502%200l5.3%205.5c-3.6%201.5-8.7%204.7-10.5%208.4.3-.1.9-.1%201.2-.1%203.7%200%207.1%202.5%207.1%207.5%200%205.5-5.1%2010.002-10.3%2010.002-4.7%200-9-3.2-9-9.4%200-8.3%206.9-17.402%2016.2-21.902z%22%2F%3E%3C%2Fsvg%3E') no-repeat 50% 50%;
+  background-size: 22px 16px;
+  content: "";
+  margin-right: -19px;
+  position: absolute;
+  top: -19px;
+  right: 50%;
+  height: 38px;
+  width: 38px;
+
+  @include themify('dark') {
+    background-color: $body-bgc--dark
   }
 }
 
@@ -40,6 +57,6 @@ blockquote img {
  * Some legacy articles still use `.quote` for blockquotes
  * This makes them behave exactly like regular blockquotes
  */
-.quote {
-  @extend blockquote;
-}
+// .quote {
+//   @extend blockquote;
+// }

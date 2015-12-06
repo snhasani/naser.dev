@@ -35,7 +35,7 @@ module Jekyll
       end
 
       <<-HTML
-<div class="code-wrapper base-mb">
+<div class="code-wrapper mb-base">
   <div class="container">
     <pre class="#{@options["lineNumbers"]}"><code class='language-#{@lang}'>#{code}</code></pre>
   </div>

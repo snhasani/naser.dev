@@ -1,14 +1,14 @@
 
-.half-mb {
-  margin-bottom: rem($half-spacing-unit);
+.mb-half {
+  margin-bottom: rem($half-spacing-unit) !important;
 }
 
-.base-mb {
-  margin-bottom: rem($base-spacing-unit);
+.mb-base {
+  margin-bottom: rem($base-spacing-unit) !important;
 }
 
-.double-mb {
-  margin-bottom: rem($double-spacing-unit);
+.mb-double {
+  margin-bottom: rem($double-spacing-unit) !important;
 }
 
 .text-center { text-align: center }

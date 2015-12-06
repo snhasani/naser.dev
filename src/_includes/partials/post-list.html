@@ -1,14 +1,14 @@
 
-<li class="article  double-mb">
+<li class="article  mb-double">
 
 	<p class="article__date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | jdate: "%d %b %Y" | habify}}</time></p>
 
-	<h3 class="article__title half-mb">
+	<h3 class="article__title mb-half">
 		<a class="article__link" href="{{ site.baseurl | urljoin: post.url}}">{{ post.title }}</a>
 	</h3>
 
-	<p class="article__excerpt">
+	<div class="article__excerpt">
 		{{ post.excerpt | remove: '<p>' | remove: '</p>' }} <a class="article__readmore" href="{{ site.baseurl | urljoin: post.url}}">(ادامه مطلب)</a>
-	</p>
+	</div>
 
 </li>
