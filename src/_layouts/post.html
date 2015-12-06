@@ -2,19 +2,19 @@
 layout: default
 ---
 
-<article class="post double-mb" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post mb-double" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header text-center container">
+	<header class="post-header text-center container">
 
-    <h1 class="post-title half-mb" itemprop="name headline">{{ page.title }}</h1>
+		<h1 class="post-title mb-half" itemprop="name headline">{{ page.title }}</h1>
 
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | jdate: "%d %b %Y" | habify}}</time>{% if page.author %} توسط <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a href="{{ site.baseurl | urljoin: "/about" }}" itemprop="name">{{ page.author }}</a></span>{% endif %}{% if page.category_fa  %} در دسته‌ی: <a href="{{ site.baseurl | urljoin: "/blog/category/" }}{{ page.category }}">{{ page.category_fa }}</a>{% endif %}</p>
+		<p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | jdate: "%d %b %Y" | habify}}</time>{% if page.author %} توسط <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a href="{{ site.baseurl | urljoin: "/about" }}" itemprop="name">{{ page.author }}</a></span>{% endif %}{% if page.category_fa  %} در دسته‌ی: <a href="{{ site.baseurl | urljoin: "/blog/category/" }}{{ page.category }}">{{ page.category_fa }}</a>{% endif %}</p>
 
-  </header>
+	</header>
 
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+	<div class="post-content" itemprop="articleBody">
+		{{ content }}
+	</div>
 
 </article>
 
@@ -24,11 +24,11 @@ layout: default
 
 {% include partials/post-nav-links.html %}
 
-<div class="text-center double-mb"><a href="#top" class="go-top">بازگشت به بالای صفحه</a></div>
+<div class="text-center mb-double"><a href="#top" class="go-top">بازگشت به بالای صفحه</a></div>
 
 {% if jekyll.environment == "production" %}
 	{% unless page.comments == false %}
-		<p class="container double-mb">اگر نشانگر بارگزاری زیر چرخید و هیچ اتفاقی نیفتاد و کامنت‌ها لود نشد، با عرض پوزش باید عرض کنم که متاسفانه شما بدون فیلتر شکن اینجا هستید و از اونجایی که فیلترچی سرویس مورد نظر را مسدود کرده است، تا وقتی که با فیلتر شکن صفحه را مجدداْ  لود نفرمایید نمی‌توانید کامنت‌ها را مشاهده کنید :((</p>
+		<p class="container mb-double">اگر نشانگر بارگزاری زیر چرخید و هیچ اتفاقی نیفتاد و کامنت‌ها لود نشد، با عرض پوزش باید عرض کنم که متاسفانه شما بدون فیلتر شکن اینجا هستید و از اونجایی که فیلترچی سرویس مورد نظر را مسدود کرده است، تا وقتی که با فیلتر شکن صفحه را مجدداْ  لود نفرمایید نمی‌توانید کامنت‌ها را مشاهده کنید :((</p>
 		{% include partials/comments.html %}
 	{% endunless %}
 {% endif %}

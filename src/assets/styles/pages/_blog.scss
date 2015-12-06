@@ -46,3 +46,7 @@
 .article__excerpt > a {
   @extend  %bg-underline;
 }
+
+.article__excerpt > .post__summary {
+    display: inline;
+}
