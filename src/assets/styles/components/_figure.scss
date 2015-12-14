@@ -1,72 +1,73 @@
 /**
  * Figures
- * 1. Poor man's vertical rhythm
  * 2. Clear inner floats
  */
-.figure {
-  margin: 0 em(-$base-spacing-unit) rem($double-spacing-unit); /* 1 */
+figure {
+  @extend .mb-double;
   overflow: hidden; /* 2 */
-
-  @include mq($from: medium) {
-    margin: 0 -40px 40px;
-  }
 }
 
 /**
  * Figcaption
  * 1. Right aligned
  */
-.figure figcaption {
-  float: right; /* 1 */
-  font-size: 16px;
-  color: $medium-grey;
-  margin: 10px 40px 0;
+figure figcaption {
+  @extend .text-center;
+  color: #868686;
+}
+
+/**
+ * Figcaption
+ * 1. Right aligned
+ */
+figure img {
+  @extend .mb-half;
 }
 
 /**
  * Left floated figures
  */
-.figure--left {
-  @extend .figure;
+// .figure--left {
+//   @extend .figure;
 
-  @include mq($from: medium) {
-    float: left;
-    margin-right: 20px;
-  }
+//   @include mq($from: medium) {
+//     float: left;
+//     margin-right: 20px;
+//   }
 
-  /**
-   * Left align caption then
-   */
-  figcaption {
-    float: left;
-  }
-}
+//   /**
+//    * Left align caption then
+//    */
+//   figcaption {
+//     float: left;
+//   }
+// }
 
 /**
  * Right floated figures
  */
-.figure--right {
-  @extend .figure;
+// .figure--right {
+//   @extend .figure;
 
-  @include mq($from: medium) {
-    float: right;
-    margin-left: 20px;
-  }
-}
+//   @include mq($from: medium) {
+//     float: right;
+//     margin-left: 20px;
+//   }
+// }
 
 /**
  * Floated figures
  * 1. Poor man's vertical rhythm
  */
-.figure--left,
-.figure--right {
-  margin-bottom: 40px; /* 1 */
+// .figure--left,
+// .figure--right {
+//   margin-bottom: 40px; /* 1 */
 
-  @include mq($from: medium) {
-    max-width: 250px;
-  }
+//   @include mq($from: medium) {
+//     max-width: 250px;
+//   }
 
-  @media (min-width: 800px) {
-    max-width: 400px;
-  }
-}
+//   @media (min-width: 800px) {
+//     max-width: 400px;
+//   }
+// }
