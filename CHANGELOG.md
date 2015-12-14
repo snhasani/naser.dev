@@ -7,5 +7,11 @@
 - Added: blockquote style
 - Added: post summary section
 - Fixed: disqus script run order
-- Fixed: css helper class simplicity
+- Fixed: CSS helper class simplicity
 - Added: change log file
+
+# v1.2.4
+
+- Fixed: Google Analytics jekyll production ENV 
+- Added: rtl CSS helper class
+- Fixed: missing drafts folder 
