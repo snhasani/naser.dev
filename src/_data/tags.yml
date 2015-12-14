@@ -1,15 +1,36 @@
 
+- slug: browsers
+  name: مرورگرها
+
+- slug: css
+  name: CSS
+
+- slug: chrome
+  name: کروم
+
+- slug: firefox
+  name: فایرفاکس
+
 - slug: frontend
   name: Front-End
 
 - slug: javascript
   name: جاوااسکریپت
 
-- slug: rwd
-  name: ریسپانسیو
+- slug: html
+  name: HTML
 
-- slug: css
-  name: CSS
+- slug: learning
+  name: آموزشی
 
 - slug: linux
   name: لینوکس
+
+- slug: reference
+  name: مطالب مرجع
+
+- slug: rwd
+  name: ریسپانسیو
+
+- slug: webkit
+  name: WebKit
