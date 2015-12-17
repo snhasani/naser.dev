@@ -6,8 +6,8 @@
 </description>
     <link>https://naser.xyz/</link>
     <atom:link href="https://naser.xyz/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 17 Dec 2015 11:43:00 +0330</pubDate>
-    <lastBuildDate>Thu, 17 Dec 2015 11:43:00 +0330</lastBuildDate>
+    <pubDate>Thu, 17 Dec 2015 11:58:54 +0330</pubDate>
+    <lastBuildDate>Thu, 17 Dec 2015 11:58:54 +0330</lastBuildDate>
     
       
       <item>
@@ -126,7 +126,7 @@
 
 &lt;p&gt;متن پیش رو بر اساس مرورگرهای اوپن سورس فایرفاکس، کروم و سافاری(که فقط بخشی‌هایی از آن اوپن سورس است) تنظیم شده است. در حال حاضر این مرورگرها به شهادت آمار سایت &lt;a href=&quot;http://gs.statcounter.com/&quot;&gt;StatCounter&lt;/a&gt; در ۳ ماهه‌ی پاییز ۱۳۹۴ در ایران، به طور میانگین بیش از ۷۵ درصد سهام بازار مرورگرها را در تمامی دستگاه‌های رومیزی و همراه در اختیار دارند.&lt;/p&gt;
 
-&lt;figure class=&quot;lazy&quot;&gt;
+&lt;figure class=&quot;lazy text-center&quot;&gt;
   &lt;img src=&quot;/assets/images/placeholder.png&quot; data-layzr=&quot;/assets/images/content/2015/12/StatCounter-browser-IR-quarterly-q4-2015-bar.jpg&quot; alt=&quot;StatCounter-browser-IR-quarterly-q4-2015-barStatCounter-browser-IR-quarterly-q4-2015-bar&quot; /&gt;
   
   &lt;figcaption&gt;نمودار درصد سهم مرورگرها از بازار ایران در پاییز ۱۳۹۴&lt;/figcaption&gt;
@@ -146,7 +146,7 @@
   &lt;li&gt;&lt;strong&gt;انباره داده‌ها (Data Storage)&lt;/strong&gt;: این لایه وظیفه‌ی نگهداری از تمامی انواع داده‌های مرورگر از قبیل، کوکی‌ها، session-ها و غیره را بر عهده دارد. و نیز عهده دار مدیریت مکانیزم‌های دیگر نگهداری و پالایش داده‌ها نظیر LocalStorage، IndexedDB، WebSQL و FileSystem نیز هست.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;figure class=&quot;lazy&quot;&gt;
+&lt;figure class=&quot;lazy text-center&quot;&gt;
   &lt;img src=&quot;/assets/images/placeholder.png&quot; data-layzr=&quot;/assets/images/content/2015/12/browser-components.png&quot; alt=&quot;اجزای اصلی مرورگرها&quot; /&gt;
   
   &lt;figcaption&gt;اجزای اصلی مرورگرها&lt;/figcaption&gt;
@@ -181,7 +181,7 @@
 
 &lt;p&gt;پس از رسیدن داده‌ها، موتور رندر چهار مرحله‌ای را که در تصویر زیر مشاهده می‌کنید را به ترتیب برای هر درخواست در هر بار باید طی کند تا سند درخواستی کاربر برایش در پنچره مرورگر قابل مشاهده و استفاده شود.&lt;/p&gt;
 
-&lt;figure class=&quot;lazy&quot;&gt;
+&lt;figure class=&quot;lazy text-center&quot;&gt;
   &lt;img src=&quot;/assets/images/placeholder.png&quot; data-layzr=&quot;/assets/images/content/2015/12/rendering-engine-basic-flow.png&quot; alt=&quot;جریان اصلی عملیات انجام شده توسط موتور رندر مرورگر&quot; /&gt;
   
   &lt;figcaption&gt;چرخه اصلی فرآیند رندر یک صفحه‌ی HTML توسط موتور رندر مرورگرها&lt;/figcaption&gt;
@@ -199,13 +199,13 @@
 
 &lt;h3 id=&quot;browser-rendering-main-flow-examples&quot;&gt;مثال‌های شماتیکی از فرآیند اصلی رندر&lt;/h3&gt;
 
-&lt;figure class=&quot;lazy&quot;&gt;
+&lt;figure class=&quot;lazy text-center&quot;&gt;
   &lt;img src=&quot;/assets/images/placeholder.png&quot; data-layzr=&quot;/assets/images/content/2015/12/WebKit-engine-main-flow.png&quot; alt=&quot;فرآیند اصلی رندر در موتور وب‌کیت&quot; /&gt;
   
   &lt;figcaption&gt;فرآیند اصلی رندر در موتور وب‌کیت&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;figure class=&quot;lazy&quot;&gt;
+&lt;figure class=&quot;lazy text-center&quot;&gt;
   &lt;img src=&quot;/assets/images/placeholder.png&quot; data-layzr=&quot;/assets/images/content/2015/12/firefox-Gecko-rendering-engine-main-flow.png&quot; alt=&quot;فرآیند اصلی رندر در موتور Gecko موزیلا&quot; /&gt;
   
   &lt;figcaption&gt;فرآیند اصلی رندر در موتور Gecko موزیلا&lt;/figcaption&gt;
@@ -224,7 +224,7 @@
 
 &lt;p&gt;برای مثال، تجزیه‌ی عبارت ۱ - ۳ + ۲  به صورت درخت زیر می‌تواند در بیاید:&lt;/p&gt;
 
-&lt;figure class=&quot;lazy&quot;&gt;
+&lt;figure class=&quot;lazy text-center&quot;&gt;
   &lt;img src=&quot;/assets/images/placeholder.png&quot; data-layzr=&quot;/assets/images/content/2015/12/basic-parsing-mathematical-expression-tree-node.png&quot; alt=&quot;اگره‌های درخت تجزیه شده‌ی یک عبارت ریاضی&quot; /&gt;
   
   &lt;figcaption&gt;گره‌های درخت تجزیه شده‌ی یک عبارت ریاضی&lt;/figcaption&gt;
@@ -240,7 +240,7 @@
 
 &lt;p&gt;مسولیت عملیات تجزیه بر عهده‌ی ۲ بخش مجزا است. اولی &lt;strong&gt;lexer&lt;/strong&gt; (به خوانید لِگزر) (که گاهی نیز به آن «tokenizer» می‌گویند) مسول شکستن داده‌های ورودی به توکن‌های معتبر است و دومی، پارسر/تجزیه‌گر &lt;strong&gt;parser&lt;/strong&gt; نام دارد که مسؤل ساخت درخت تجزیه بر پایه‌ی قواعد نحویی زبانی است که داده‌های ورودی با آن تنظیم شده‌اند. هوشمندی لِگزرها در حدی است که کارکترهای زايد مانند فاصله‌ها و خط شکن‌ها را تشخیص دهند.&lt;/p&gt;
 
-&lt;figure class=&quot;lazy&quot;&gt;
+&lt;figure class=&quot;lazy text-center&quot;&gt;
   &lt;img src=&quot;/assets/images/placeholder.png&quot; data-layzr=&quot;/assets/images/content/2015/12/from-source-document-to-parse-trees.png&quot; alt=&quot;مراحل تبدیل یه سند ورودی به درخت تجزیه شده&quot; /&gt;
   
   &lt;figcaption&gt;مراحل تبدیل یه سند ورودی به درخت تجزیه شده&lt;/figcaption&gt;
@@ -254,7 +254,7 @@
 
 &lt;p&gt;در بسیاری از موارد، درخت تجزیه شده، محصول نهایی نیست. ورودی تجزیه شده اغلب به مصرف یک مترجم می‌رسد که آن را به فرمت دیگری تبدیل می‌کند. کامپایلر برای تبدیل کد منبع ورودی به کد ماشین نهایی، در ابتدا ورودی را به درخت تجزیه شده تبدیل می‌کند و سپس آن را به کد ماشین ترجمه می‌کند.&lt;/p&gt;
 
-&lt;figure class=&quot;lazy&quot;&gt;
+&lt;figure class=&quot;lazy text-center&quot;&gt;
   &lt;img src=&quot;/assets/images/placeholder.png&quot; data-layzr=&quot;/assets/images/content/2015/12/from-source-document-to-parse-trees.png&quot; alt=&quot;چرخه‌ی تالیف کد ماشین&quot; /&gt;
   
   &lt;figcaption&gt;چرخه‌ی تالیف کد ماشین&lt;/figcaption&gt;
@@ -387,7 +387,7 @@ term := INTEGER | expression&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&quot;container&quot;&gt;
 &lt;p&gt;قطعه کد وقتی به درخت DOM‌ تبدیل شود، به شکل زیر در می‌آید:&lt;/p&gt;
 
-&lt;figure class=&quot;lazy&quot;&gt;
+&lt;figure class=&quot;lazy text-center&quot;&gt;
   &lt;img src=&quot;/assets/images/placeholder.png&quot; data-layzr=&quot;/assets/images/content/2015/12/dom-tree-of-html-markup.png&quot; alt=&quot;درخت DOM تشکیل شده از مارک‌آپ مثال قبلی&quot; /&gt;
   
   &lt;figcaption&gt;درخت DOM تشکیل شده از قطعه کد بالا&lt;/figcaption&gt;
@@ -407,7 +407,7 @@ term := INTEGER | expression&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;این الگوریتم از دو بخش تشکیل شده است: علامت گذاری «tokenization» و ساخت درخت «tree construction».&lt;/p&gt;
 
-&lt;figure class=&quot;lazy&quot;&gt;
+&lt;figure class=&quot;lazy text-center&quot;&gt;
   &lt;img src=&quot;/assets/images/placeholder.png&quot; data-layzr=&quot;/assets/images/content/2015/12/html-parsing-flowchart.png&quot; alt=&quot;نمودار چرخه‌ی تجزیه‌ی HTML&quot; /&gt;
   
   &lt;figcaption&gt;نمودار چرخه‌ی تجزیه‌ی HTML&lt;/figcaption&gt;
@@ -417,7 +417,7 @@ term := INTEGER | expression&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;علامت‌گذار، تُکنی را شناسایی می‌کند و بعد آن را به سازنده‌ی درخت می‌دهد. این چرخه تا جای تکرار می‌شود که تمامی ورودی‌ها علامت‌گذاری و در درخت جانمایی شده باشند. نمودار جریان زیر نشان دهنده‌ی همین چرخه‌ است.&lt;/p&gt;
 
-&lt;figure class=&quot;lazy&quot;&gt;
+&lt;figure class=&quot;lazy text-center&quot;&gt;
   &lt;img src=&quot;/assets/images/placeholder.png&quot; data-layzr=&quot;/assets/images/content/2015/12/html-parsing-flow.png&quot; alt=&quot;چرخه‌ی تجزیه‌ی HTML&quot; /&gt;
   
   &lt;figcaption&gt;چرخه‌ی تجزیه‌ی HTML&lt;/figcaption&gt;
@@ -462,7 +462,7 @@ term := INTEGER | expression&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;دیدیم که وب‌کیت از دو ایجاد کننده‌ی خودکار تجزیه‌گر به نام‌های فلیگس و بایسون استفاده می‌کند؛ که برای برای ساختن خودکار تجزیه‌گر CSS، تنها کافی است که فایل‌های گرامر زبان CSS را به آنها بخوراند. اگر به یاد داشته باشید، گفتیم که بایسون یک پارسر پایین به بالایِ شیفتیِ-کاهنده می‌سازد؛ اما در مقابل فایرفاکس از یک پارسر بالا به پایین که خودش درست کرده است استفاده می‌کند. در هر دو مورد، فایل CSS به یک شی StyleSheet تجزیه و تبدیل می‌شود. هر کدام از اشیا در بر گیرنده‌ی قواعد CSS هستند. این اشیایِ قواعد CSS علاوه‌ بر اینکه شامل اشیایِ انتخابگرها «selector» و خصوصیاتشان «declaration» هستند، شامل دیگر اشیای مرتبطشان در گرامر CSS نیز می‌شوند. شکل زیر به طور کامل گویای این است که ما به چه چیزی یک شی StyleSheet‌ می‌گوییم و آن دربردارنده‌ی چه اشیایی است.&lt;/p&gt;
 
-&lt;figure class=&quot;lazy&quot;&gt;
+&lt;figure class=&quot;lazy text-center&quot;&gt;
   &lt;img src=&quot;/assets/images/placeholder.png&quot; data-layzr=&quot;/assets/images/content/2015/12/parsing-css-style-tree.png&quot; alt=&quot;درخت حاصل از تجزیه‌ی CSS&quot; /&gt;
   
   &lt;figcaption&gt;درخت حاصل از تجزیه‌ی CSS&lt;/figcaption&gt;
@@ -557,7 +557,7 @@ term := INTEGER | expression&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;بعضی از اشیای رندر «فریم» هم هستند که به یک گره از DOM مرتبط شده‌اند؛ ولی نه به همان ترتیبی که در درخت رندر قرار گرفته‌اند. عناصر &lt;code&gt;float&lt;/code&gt; و  &lt;code&gt;absolute&lt;/code&gt;-ی که خارج از جریان کلی صفحه موقعیت دهی شده باشند؛ در جای دیگری، از آنجایی که در درخت رندر برایشان تعریف شده است، جانمایی می‌شوند.&lt;/p&gt;
 
-&lt;figure class=&quot;lazy&quot;&gt;
+&lt;figure class=&quot;lazy text-center&quot;&gt;
   &lt;img src=&quot;/assets/images/placeholder.png&quot; data-layzr=&quot;/assets/images/content/2015/12/the-render-tree-and-the-corresponding-dom-tree.png&quot; alt=&quot;the-render-tree-and-the-corresponding-dom-tree&quot; /&gt;
   
   &lt;figcaption&gt;درخت رند و درخت DOM متناظر با آن. &lt;code&gt;Viewport&lt;/code&gt; یک بلاک در برگیرنده‌ای اولیه است که به صورت پیش فرض فراخوانی می‌شود. در وب‌کیت به عنوان یک شی &lt;code&gt;RenderView&lt;/code&gt; شناخته می‌شود.&lt;/figcaption&gt;
@@ -605,7 +605,7 @@ term := INTEGER | expression&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;سند HTML از یک مدلی شبیه حرکت جریان رود «flow» برای صفحه بندی استفاده می‌کند. بدان معنی که بیشتر اوقات ممکن است که محاسبات هندسی تنها در یک جهت صورت بگیرد (اشاره به جریان آب رودخانه دارد که تنها به یک سو و جهت شناور است). عناصری که بعداً به جریان صفحه اضافه ‌می‌شوند، عناصری که از قبل در جریان بوده‌اند را از لحاظ مقادیر هندسی‌شان، تحت تاثیر قرار نمی‌دهند. به همین دلیل از آنجایی که جهت متون در HTML به خاطر زبان انگلیسی به طور پیش فرض چپ به راست در نظر گرفته شده است، این جریان صفحه بندی عناصر صفحه نیز تحت تاثیر آن به طور پیش فرض به صورت «چپ به راست» و از «بالا به پایین» است.&lt;/p&gt;
 
-&lt;figure class=&quot;lazy&quot;&gt;
+&lt;figure class=&quot;lazy text-center&quot;&gt;
   &lt;img src=&quot;/assets/images/placeholder.png&quot; data-layzr=&quot;/assets/images/content/2015/12/layout-rect-calculate-the-position-size.jpg&quot; alt=&quot;layout-rect-calculate-the-position-size&quot; /&gt;
   
   &lt;figcaption&gt;مثالی از نحوه‌ی محاسبه مختصات یک پاراگراف و صفحه بندی آن&lt;/figcaption&gt;
@@ -633,7 +633,7 @@ term := INTEGER | expression&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;نوع دیگر از صفحه بندی، صفحه بندی به صورت &lt;strong&gt;تدریجی&lt;/strong&gt; «incremental»است؛ که وقتی که تغییرات رخ داده در حد یک ناحیه‌ی محلی باشد، که باعث تنها آلوده شدن یک فریم خاص از درخت رندر شده باشد بر روی درخت رندر اِعمال می‌شود. این نوع صفحه بندی به صورت موازی «asynchronously» بر فریم‌ها اعمال می‌شود. برای مثال وقتی که یک فریم جدید به درخت رندر اضافه می‌شود، فرآیند صفحه بندی صبر می‌کند تا اگر محتوای دیگری هم از لایه شبکه قرار است برسد به طور کامل بارگذاری و به درخت DOM‌ اضافه شود و بعد از آن فریم‌ جدید را صفحه بندی کند.&lt;/p&gt;
 
-&lt;figure class=&quot;lazy&quot;&gt;
+&lt;figure class=&quot;lazy text-center&quot;&gt;
   &lt;img src=&quot;/assets/images/placeholder.png&quot; data-layzr=&quot;/assets/images/content/2015/12/Incremental-layout.png&quot; alt=&quot;Incremental-layout&quot; /&gt;
   
   &lt;figcaption&gt;صفحه بندی تدریجی - تنها فریم‌های کثیف و فرزندانشان صفحه بندی می‌شوند.&lt;/figcaption&gt;
