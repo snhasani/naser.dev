@@ -6,8 +6,8 @@
 </description>
     <link>https://naser.xyz/</link>
     <atom:link href="https://naser.xyz/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 17 Dec 2015 12:06:30 +0330</pubDate>
-    <lastBuildDate>Thu, 17 Dec 2015 12:06:30 +0330</lastBuildDate>
+    <pubDate>Thu, 17 Dec 2015 12:57:12 +0330</pubDate>
+    <lastBuildDate>Thu, 17 Dec 2015 12:57:12 +0330</lastBuildDate>
     
       
       <item>
@@ -613,9 +613,9 @@ term := INTEGER | expression&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;سیستم مختصات دهی عناصر صفحه، وابسته به فریم ریشه است؛ که به طور پیش فرض مبدا آن در گوشه‌ی بالایی سمت چپ صفحه مرورگر است در زبان‌های چپ به راست. این نقطه با مختصات 0,0 مشخص می‌شود.&lt;/p&gt;
 
-&lt;p&gt;فرآیند پردازشی مربود به صفحه بندی به صورت بازگشتی است. این فرآیند از شی رندر ریشه که به تگ «html» اشاره می‌کند، شروع می‌شود و به صورت بازگشتی با پیمایش بعضی یا تمامی فریم‌های زیر مجموعه‌ای خود و محاسبه اطلاعات هندسی هر کدام از فریم‌ها که نیاز بود ادامه پیدا می‌کند. تمامی فریم‌ها دارای یک متد &lt;code&gt;layout&lt;/code&gt; یا &lt;code&gt;reflow&lt;/code&gt; هستند، که در صورت نیاز این وظیفه‌ی والد است که متد صفحه بندی فرزندانش را فراخوانی کند. در ویدیوی زیر به راحتی می‌توانید فرآیند صفحه بندی در مرورگر فایرفاکس را مشاهده کنید.&lt;/p&gt;
+&lt;p&gt;فرآیند پردازشی مربود به صفحه بندی به صورت بازگشتی است. این فرآیند از شی رندر ریشه که به تگ «html» اشاره می‌کند، شروع می‌شود و به صورت بازگشتی با پیمایش بعضی یا تمامی فریم‌های زیر مجموعه‌ای خود و محاسبه اطلاعات هندسی هر کدام از فریم‌ها که نیاز بود ادامه پیدا می‌کند. تمامی فریم‌ها دارای یک متد &lt;code&gt;layout&lt;/code&gt; یا &lt;code&gt;reflow&lt;/code&gt; هستند، که در صورت نیاز این وظیفه‌ی والد است که متد صفحه بندی فرزندانش را فراخوانی کند. در ویدیوی زیر به راحتی می‌توانید فرآیند صفحه بندی در مرورگر فایرفاکس را مشاهده کنید. (ویدیو بر روی سرویس یوتوب آپلود شده و برای دیدن آن نیاز به ف-ی-ل-ت-ر-ش-ک-ن دارید، متاسفانه.)&lt;/p&gt;
 
-&lt;div class=&quot;video-wrapper text-center&quot;&gt;&lt;iframe src=&quot;&quot; width=&quot;640&quot; height=&quot;360&quot; data-layzr=&quot;http://www.aparat.com/video/video/embed/videohash/UgJO3/vt/frame&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;div class=&quot;video-wrapper text-center&quot;&gt;&lt;iframe src=&quot;&quot; width=&quot;560&quot; height=&quot;420&quot; data-layzr=&quot;https://www.youtube.com/embed/V6skIBKk0Js?color=white&amp;amp;theme=light&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;dirty-bit-system&quot;&gt;سیستم کمی آلوده «dirty bit»&lt;/h3&gt;
 &lt;p&gt;صفحه بندی فرآیند پر هزینه‌ است، خصوصا برای دستگاه‌های که از منابع پردازشی پایین‌تری بهره می‌برند؛ مانند گوشی‌های همراه. مرورگر برای اینکه برای هر تغییر کوچکی در صفحه مجبور نشود که کلا صفحه را دوباره صفحه بندی کند، از سیستم «کمی/مقداری/ذره‌ای-چرک/کثیف/آلوده» استفاده می‌کند. این سیستم هر فریمی که تغییر یا اضافه می‌شود به درخت رندر را، خودش و فرزندانش را به عنوان «آلوده» علامت گذاری می‌کند؛ که این یعنی، این ناحیه (فریم) نیاز به صفحه بندی مجدد دارد.&lt;/p&gt;
