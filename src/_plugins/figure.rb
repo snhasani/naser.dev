@@ -85,9 +85,11 @@ module Jekyll
         end
 
         # Class name(s)
-        unless @class.nil?
+        if @class
           figure_class = @class.gsub!(/\A"|"\Z/, '')
-          figure_class = " class\=\"#{figure_class}\""
+          figure_class = " class\=\"lazy #{figure_class}\""
+        else
+          figure_class = " class\=\"lazy\""
         end
 
         # Content: convert markdown and remove paragraphs containing images

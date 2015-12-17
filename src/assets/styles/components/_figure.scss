@@ -24,6 +24,35 @@ figure img {
   @extend .mb-half;
 }
 
+figure.lazy {
+  position: relative;
+  max-width: 400px;
+  max-height: 300px;
+  margin-right: auto;
+  margin-left: auto;
+
+  &:before {
+    content: '';
+    background: url('../images/spin.gif') center center no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+}
+
+.lazy.loaded {
+  max-width: none;
+  max-height: none;
+  position: static;
+
+   &:before {
+    content: '';
+    width: 0;
+    height: 0;
+  }
+}
+
 /**
  * Left floated figures
  */

@@ -16,7 +16,8 @@
     "deploy": "npm run build && gulp deploy"
   },
   "dependencies": {
-    "fastclick": "~1.0.6"
+    "fastclick": "~1.0.6",
+    "layzr.js": "~1.4.3"
   },
   "devDependencies": {
     "autoprefixer-core": "~5.2.1",

@@ -19,6 +19,7 @@
 # v1.5.0
 
 - Added: jekyll figure tag plugin
-- Added: jekyll video tag plugin
+- Added: jekyll aparat video tag plugin
+- Added: lazy load to image and iframe
 - Updated: some css typography styles
 - Update: post summary style and markup
