@@ -273,6 +273,17 @@ code {
   font-family: $code-font-stack !important;
 }
 
+
+p > code {
+  background-color: darken($body-bgc, 5%);
+  padding: .2em .4em;
+
+  @include themify('dark') {
+    background-color: lighten($body-bgc--dark, 7%)
+  }
+}
+
+
 /**
  * Make code blocks slightly smaller
  */

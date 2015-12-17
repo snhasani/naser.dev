@@ -15,3 +15,10 @@
 - Fixed: Google Analytics jekyll production ENV 
 - Added: rtl CSS helper class
 - Fixed: missing drafts folder 
+
+# v1.5.0
+
+- Added: jekyll figure tag plugin
+- Added: jekyll video tag plugin
+- Updated: some css typography styles
+- Update: post summary style and markup

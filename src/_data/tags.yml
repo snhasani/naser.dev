@@ -14,11 +14,11 @@
 - slug: frontend
   name: Front-End
 
-- slug: javascript
-  name: جاوااسکریپت
-
 - slug: html
   name: HTML
+
+- slug: javascript
+  name: جاوااسکریپت
 
 - slug: learning
   name: آموزشی

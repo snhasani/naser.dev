@@ -1,6 +1,6 @@
 {
   "name": "naser.xyz",
-  "version": "1.2.1",
+  "version": "1.5.0",
   "description": "My Personal Website",
   "main": "index.js",
   "author": "Seyed Naser Hasani",
@@ -16,9 +16,7 @@
     "deploy": "npm run build && gulp deploy"
   },
   "dependencies": {
-    "critical": "~0.6.0",
-    "fastclick": "~1.0.6",
-    "fontfaceobserver": "~1.5.4"
+    "fastclick": "~1.0.6"
   },
   "devDependencies": {
     "autoprefixer-core": "~5.2.1",

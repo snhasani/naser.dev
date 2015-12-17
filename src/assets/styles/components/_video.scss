@@ -1,0 +1,10 @@
+
+.video-container {
+  @extend .text-center;
+  margin: rem(3 * $half-spacing-unit) auto;
+
+  > video {
+    max-width: 100%;
+    overflow: hidden;
+  }
+}

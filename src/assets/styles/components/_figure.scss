@@ -3,7 +3,7 @@
  * 2. Clear inner floats
  */
 figure {
-  @extend .mb-double;
+  margin: rem(3 * $half-spacing-unit) 0;
   overflow: hidden; /* 2 */
 }
 

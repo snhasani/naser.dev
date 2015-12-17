@@ -53,10 +53,16 @@ blockquote:before {
   }
 }
 
-/**
- * Some legacy articles still use `.quote` for blockquotes
- * This makes them behave exactly like regular blockquotes
- */
-// .quote {
-//   @extend blockquote;
-// }
+.notice-quote.notice-quote {
+    @extend .mb-double;
+    background-color: darken($body-bgc, 1%);
+    border-right: 6px solid darken($body-bgc, 6%);
+    padding: em($base-spacing-unit);
+    transition: all .25s;
+    @include font-size(12px);
+
+    @include themify('dark') {
+      background-color: darken($body-bgc--dark, 1%);
+      border-color: lighten($body-bgc--dark, 3%);
+    }
+}
