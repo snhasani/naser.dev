@@ -96,9 +96,10 @@ a:hover {
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
 
-abbr[title] {
-  border-bottom: 1px dotted;
-}
+// p abbr[title] {
+//   border-bottom: 1px dotted;
+//   cursor: help;
+// }
 
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
@@ -190,9 +191,9 @@ svg:not(:root) {
  * Address margin not present in IE 8/9 and Safari.
  */
 
-figure {
-  margin: 1em 40px;
-}
+// figure {
+//   margin: 1em 40px;
+// }
 
 /**
  * Address differences between Firefox and other browsers.

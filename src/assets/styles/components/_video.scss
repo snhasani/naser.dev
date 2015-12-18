@@ -1,0 +1,17 @@
+
+// .video-container {
+//   @extend .text-center;
+//   margin: rem(3 * $half-spacing-unit) auto;
+
+//   > video {
+//     max-width: 100%;
+//     overflow: hidden;
+//   }
+// }
+
+.video-wrapper > iframe {
+  border-width: 0;
+  margin: em($half-spacing-unit) auto rem(3 * $half-spacing-unit);
+  overflow: hidden;
+  max-width: 100%;
+}

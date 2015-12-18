@@ -3,6 +3,62 @@
   margin: 0 auto rem($base-spacing-unit * 3);
 }
 
+.post-content p {
+    @include mq($from: desktop) {
+      @include font-size(14px);
+    }
+}
+
+.post-content > p {
+  @extend %visually-hidden;
+}
+
+.post-content li {
+  @extend .mb-half;
+}
+
+.post-content a {
+  color: $secondary-color;
+
+  @include themify('dark') {
+    color: $secondary-color--dark;
+  }
+}
+
+.post__summary{
+  border-right: 3px solid darken($body-bgc, 7%);
+  color: darken($body-bgc, 55%);
+  margin-bottom: rem($double-spacing-unit);
+  padding: em($base-spacing-unit * 1.5) em($base-spacing-unit) em($half-spacing-unit);
+  position: relative;
+  transition: .25s;
+
+  @include themify('dark') {
+    border-color: lighten($body-bgc--dark, 7%);
+    color: darken($body-bgc, 45%);
+  }
+
+  &:before {
+    content: "مخلص کلام";
+    font-weight: bold;
+    position: absolute;
+    top: 0; right: 26px;
+    white-space: nowrap;
+    @include font-size(18px);
+
+    @include themify('dark') {
+      color: lighten($body-bgc--dark, 30%);
+    }
+  }
+}
+
+.toc li,
+.post__summary li {
+  @include mq($from: medium) {
+    margin-bottom: 0;
+  }
+}
+
 /**
  * Date from in the post page
  */
@@ -42,49 +98,6 @@
       background-color: darken($body-bgc--dark, 6%);
       color: #ccc;
     }
-  }
-}
-
-.post-content p {
-    @include mq($from: desktop) {
-      @include font-size(14px);
-    }
-}
-
-.post-content > .post__summary {
-  @extend .container;
-}
-
-.post__summary > p {
-  border-right: 3px solid darken($body-bgc, 7%);
-  color: darken($body-bgc, 45%);
-  margin-bottom: rem($double-spacing-unit);
-  padding: em($base-spacing-unit * 1.5) em($base-spacing-unit) em($half-spacing-unit);
-  position: relative;
-  transition: .25s;
-
-  @include themify('dark') {
-    border-color: lighten($body-bgc--dark, 7%);
-  }
-
-  &:before {
-      content: "مخلص کلام";
-      font-weight: bold;
-      position: absolute;
-      top: 0; right: 26px;
-      @include font-size(18px);
-
-      @include themify('dark') {
-        color: lighten($body-bgc--dark, 30%);
-      }
-  }
-}
-
-.post-content a {
-  color: $secondary-color;
-
-  @include themify('dark') {
-    color: $secondary-color--dark;
   }
 }
 

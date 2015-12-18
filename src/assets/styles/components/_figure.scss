@@ -1,72 +1,94 @@
 /**
  * Figures
- * 1. Poor man's vertical rhythm
  * 2. Clear inner floats
  */
-.figure {
-  margin: 0 em(-$base-spacing-unit) rem($double-spacing-unit); /* 1 */
+figure {
+  margin: rem(3 * $half-spacing-unit) 0;
   overflow: hidden; /* 2 */
-
-  @include mq($from: medium) {
-    margin: 0 -40px 40px;
-  }
 }
 
 /**
  * Figcaption
- * 1. Right aligned
  */
-.figure figcaption {
-  float: right; /* 1 */
-  font-size: 16px;
-  color: $medium-grey;
-  margin: 10px 40px 0;
+figure figcaption {
+  color: #868686;
+  margin-top: em($base-spacing-unit);
+}
+
+figure.lazy {
+  position: relative;
+  max-width: 400px;
+  max-height: 300px;
+  margin-right: auto;
+  margin-left: auto;
+
+  &:before {
+    content: '';
+    background: url('../images/spin.gif') center center no-repeat;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+}
+
+.lazy.loaded {
+  max-width: none;
+  max-height: none;
+  position: static;
+
+   &:before {
+    content: '';
+    width: 0;
+    height: 0;
+  }
 }
 
 /**
  * Left floated figures
  */
-.figure--left {
-  @extend .figure;
+// .figure--left {
+//   @extend .figure;
 
-  @include mq($from: medium) {
-    float: left;
-    margin-right: 20px;
-  }
+//   @include mq($from: medium) {
+//     float: left;
+//     margin-right: 20px;
+//   }
 
-  /**
-   * Left align caption then
-   */
-  figcaption {
-    float: left;
-  }
-}
+//   /**
+//    * Left align caption then
+//    */
+//   figcaption {
+//     float: left;
+//   }
+// }
 
 /**
  * Right floated figures
  */
-.figure--right {
-  @extend .figure;
+// .figure--right {
+//   @extend .figure;
 
-  @include mq($from: medium) {
-    float: right;
-    margin-left: 20px;
-  }
-}
+//   @include mq($from: medium) {
+//     float: right;
+//     margin-left: 20px;
+//   }
+// }
 
 /**
  * Floated figures
  * 1. Poor man's vertical rhythm
  */
-.figure--left,
-.figure--right {
-  margin-bottom: 40px; /* 1 */
+// .figure--left,
+// .figure--right {
+//   margin-bottom: 40px; /* 1 */
 
-  @include mq($from: medium) {
-    max-width: 250px;
-  }
+//   @include mq($from: medium) {
+//     max-width: 250px;
+//   }
 
-  @media (min-width: 800px) {
-    max-width: 400px;
-  }
-}
+//   @media (min-width: 800px) {
+//     max-width: 400px;
+//   }
+// }

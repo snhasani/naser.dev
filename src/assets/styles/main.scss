@@ -24,7 +24,7 @@
   @import "layout/nav";
   @import "layout/footer";
 
-  // @import "components/figure";
+  @import "components/figure";
   @import "components/pagination";
   // @import "components/images";
   @import "components/list";
@@ -34,6 +34,7 @@
   @import "components/light-switch";
   @import "components/share-links";
   @import "components/post-nav-links";
+    @import "components/video";
 
   @import "pages/page";
   @import "pages/home";
@@ -51,7 +52,7 @@
 
   @import "layout/footer";
 
-  // @import "components/figure";
+  @import "components/figure";
   @import "components/pagination";
   // @import "components/images";
   @import "components/list";
@@ -61,6 +62,7 @@
   @import "components/light-switch";
   @import "components/share-links";
   @import "components/post-nav-links";
+  @import "components/video";
 
   @import "base/shame";
 }

@@ -44,3 +44,12 @@ dd {
     display: inline;
   }
 }
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+p abbr[title],
+li abbr[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
