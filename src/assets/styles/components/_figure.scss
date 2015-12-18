@@ -9,19 +9,10 @@ figure {
 
 /**
  * Figcaption
- * 1. Right aligned
  */
 figure figcaption {
-  @extend .text-center;
   color: #868686;
-}
-
-/**
- * Figcaption
- * 1. Right aligned
- */
-figure img {
-  @extend .mb-half;
+  margin-top: em($base-spacing-unit);
 }
 
 figure.lazy {
@@ -35,6 +26,7 @@ figure.lazy {
     content: '';
     background: url('../images/spin.gif') center center no-repeat;
     position: absolute;
+    top: 0; left: 0;
     width: 100%;
     height: 100%;
     z-index: 1;

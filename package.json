@@ -11,9 +11,7 @@
   },
   "scripts": {
     "stage": "surge -p public -d naser.surge.sh",
-    "start": "gulp serve --dev",
-    "build": "gulp --prod && cd ./public && python -m SimpleHTTPServer 8080",
-    "deploy": "npm run build && gulp deploy"
+    "start": "gulp serve --dev"
   },
   "dependencies": {
     "fastclick": "~1.0.6",

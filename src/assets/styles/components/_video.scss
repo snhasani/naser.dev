@@ -11,7 +11,7 @@
 
 .video-wrapper > iframe {
   border-width: 0;
-  margin: rem(3 * $half-spacing-unit) auto;
+  margin: em($half-spacing-unit) auto rem(3 * $half-spacing-unit);
   overflow: hidden;
   max-width: 100%;
 }

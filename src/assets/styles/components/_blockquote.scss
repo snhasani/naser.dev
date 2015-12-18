@@ -54,7 +54,6 @@ blockquote:before {
 }
 
 .notice-quote.notice-quote {
-    @extend .mb-double;
     background-color: darken($body-bgc, 1%);
     border-right: 6px solid darken($body-bgc, 6%);
     padding: em($base-spacing-unit);

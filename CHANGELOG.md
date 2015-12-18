@@ -21,5 +21,8 @@
 - Added: jekyll figure tag plugin
 - Added: jekyll aparat video tag plugin
 - Added: lazy load to image and iframe
+- Added: social sharing card image mata tag
 - Updated: some css typography styles
 - Update: post summary style and markup
+- Fixed: list item margin bottom style in article
+- Fixed: youtube Tag plugin markup (responsive)

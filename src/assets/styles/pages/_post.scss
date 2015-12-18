@@ -13,6 +13,10 @@
   @extend %visually-hidden;
 }
 
+.post-content li {
+  @extend .mb-half;
+}
+
 .post-content a {
   color: $secondary-color;
 
@@ -45,6 +49,13 @@
     @include themify('dark') {
       color: lighten($body-bgc--dark, 30%);
     }
+  }
+}
+
+.toc li,
+.post__summary li {
+  @include mq($from: medium) {
+    margin-bottom: 0;
   }
 }
 
