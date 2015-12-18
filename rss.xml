@@ -6,8 +6,8 @@
 </description>
     <link>https://naser.xyz/</link>
     <atom:link href="https://naser.xyz/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 18 Dec 2015 20:11:07 +0330</pubDate>
-    <lastBuildDate>Fri, 18 Dec 2015 20:11:07 +0330</lastBuildDate>
+    <pubDate>Fri, 18 Dec 2015 21:21:30 +0330</pubDate>
+    <lastBuildDate>Fri, 18 Dec 2015 21:21:30 +0330</lastBuildDate>
     
       
       <item>
@@ -28,8 +28,9 @@
 &lt;p&gt;بعد از طی این چهار مرحله است که کاربر می‌توان محتوای درخواستی خود را بر روی صفحه نمایشگرش ببیند.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;h4 class=&quot;toc&quot; id=&quot;section&quot;&gt;فهرست مطالب&lt;/h4&gt;
-&lt;ol&gt;
+&lt;h4 id=&quot;section&quot;&gt;فهرست مطالب&lt;/h4&gt;
+
+&lt;ol class=&quot;toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#intro&quot;&gt;مقدمه&lt;/a&gt;
     &lt;ol&gt;
       &lt;li&gt;&lt;a href=&quot;#the-browsers-we-will-talk-about&quot;&gt;مقصدمان کدام مرورگرها هستند؟&lt;/a&gt;&lt;/li&gt;
@@ -140,7 +141,7 @@
   &lt;li&gt;&lt;strong&gt;رابط کاربری (&lt;abbr title=&quot;User Interface&quot;&gt;UI&lt;/abbr&gt;)&lt;/strong&gt;: این لایه شامل آدرس بار، دکمه‌های عقب و جلو، منوی بوکمارک و غیره است. در کل این رابط به جز قالب پنجره‌ی مرورگر (یعنی همان ۳-۴ دکمه‌ای که در گوشه‌ی بالایی سمت راست یا چپ کادر در برگیرنده‌ی مرورگر خود می‌بینید) را شامل می‌شود. که این یعنی تمامی بخش‌های ظاهری مرورگر و عناصر موجود در محتوای درخواستی کاربر که به عنوان یک صفحه‌ی وب نمایش داده می‌شود.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;موتور مرورگر&lt;/strong&gt;: مسول اصلی رسیدگی به عملیات‌های صورت گرفته بین لایه‌های &lt;abbr title=&quot;User Interface&quot;&gt;UI&lt;/abbr&gt; و موتور رندر است.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;موتور رندر&lt;/strong&gt;: مسولیت نمایش محتوای درخواست شده بر عهده‌ی ایشان است. برای مثال اگر محتوای درخواست شده یک سند HTML باشد، موتور رندر کدهای HTML و CSS مربوطه را بعد از تجزیه کردن (Parse) بر روی صفحه نمایش کاربر، همان طور که در حال حاضر در حال خواندن این جملات هستید، نمایش می‌دهد.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;شبکه&lt;/strong&gt;: مسول عملیات‌های شبکه‌ای مانند یک در خواست &lt;abbr title=&quot;The Hypertext Transfer Protocol&quot;&gt;HTTP&lt;/abbr&gt; است. ایشان علاوه بر اینکه خود یک رابط(Interface) مستقل از پلتفرم هستند، از پیاده سازی‌های مختلفی نیز در پلتفرم‌های مختلف، در لایه‌های پایین‌تر از خود استفاده می‌کند.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;شبکه&lt;/strong&gt;: مسول عملیات‌های شبکه‌ای مانند یک در خواست &lt;abbr title=&quot;The Hypertext Transfer Protocol&quot;&gt;HTTP&lt;/abbr&gt; است. ایشان علاوه بر اینکه خود یک رابط (Interface) مستقل از پلتفرم هستند، از پیاده سازی‌های مختلفی نیز در پلتفرم‌های مختلف، در لایه‌های پایین‌تر از خود استفاده می‌کند.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;بستر رابط کاربری (&lt;abbr title=&quot;User Interface&quot;&gt;UI&lt;/abbr&gt; backend)&lt;/strong&gt;: به منظور رسم و نمایش عناصری مثل کومبو باگس‌ها، دکمه‌ها، فیلدها و غیره استفاده می‌شوند. این لایه هم مثل لایه‌ی شبکه از یک رابط عمومی بهره می‌برد که مختص پلتفرم خاصی نیست؛ ولی در سطوح پایین از متدهای رابط کاربری مختص همان پلتفرم هم استفاده می‌کند.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;مترجم جاوا اسکریپت&lt;/strong&gt;: همان طور که از اسمش معلوم است، وظیفه‌ی تجزیه و اجرای کدهای جاوا اسکریپت را بر عهده دارد.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;انباره داده‌ها (Data Storage)&lt;/strong&gt;: این لایه وظیفه‌ی نگهداری از تمامی انواع داده‌های مرورگر از قبیل، کوکی‌ها، session-ها و غیره را بر عهده دارد. و نیز عهده دار مدیریت مکانیزم‌های دیگر نگهداری و پالایش داده‌ها نظیر LocalStorage، IndexedDB، WebSQL و FileSystem نیز هست.&lt;/li&gt;
@@ -187,7 +188,7 @@
   &lt;figcaption&gt;چرخه اصلی فرآیند رندر یک صفحه‌ی HTML توسط موتور رندر مرورگرها&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;موتور رندر کننده با تجزیه و تبدیل سند HTML‌ به گره‌های(node) درختی به نام «درخت محتوا» کار خود را آغاز می‌کند. موتور هم چنین داده‌های مربوط به برگه‌های استایل(stylesheet) این گره‌ها را نیز تجزیه می‌کند که شامل تمامی انواع استایل‌ها، از خارجی(external) گرفته تا درونی(inline) می‌شود. این اطلاعات بدست آماده از تجزیه داده‌های استایل‌ها به همراه دستورات گرافیکی آمده در سند HTML توسط موتور رندر برای ساخت یک درخت دیگر، به نام «درخت رندر» استفاده می‌شود.&lt;/p&gt;
+&lt;p&gt;موتور رندر کننده با تجزیه و تبدیل سند HTML‌ به گره‌های (node) درختی به نام «درخت محتوا» کار خود را آغاز می‌کند. موتور هم چنین داده‌های مربوط به برگه‌های استایل (stylesheet) این گره‌ها را نیز تجزیه می‌کند که شامل تمامی انواع استایل‌ها، از خارجی (external) گرفته تا درونی (inline) می‌شود. این اطلاعات بدست آماده از تجزیه داده‌های استایل‌ها به همراه دستورات گرافیکی آمده در سند HTML توسط موتور رندر برای ساخت یک درخت دیگر، به نام «درخت رندر» استفاده می‌شود.&lt;/p&gt;
 
 &lt;p&gt;درخت رندر، شامل نواحی مستطیلی شکلی است که مشخص کننده‌ی مختصات هر عنصر در صفحه و خصوصیات آنها مانند رنگ، نوع و اندازه قلم و غیره است. این نواحی درست به ترتیبی که قرار است این عناصر بر روی صفحه نمایش نقش ببندند، بر روی درخت از بالا به پایین چیده می‌شوند.&lt;/p&gt;
 
@@ -200,9 +201,9 @@
 &lt;h3 id=&quot;browser-rendering-main-flow-examples&quot;&gt;مثال‌های شماتیکی از فرآیند اصلی رندر&lt;/h3&gt;
 
 &lt;figure class=&quot;lazy text-center&quot;&gt;
-  &lt;img src=&quot;/assets/images/placeholder.png&quot; data-layzr=&quot;/assets/images/content/2015/12/WebKit-engine-main-flow.png&quot; alt=&quot;فرآیند اصلی رندر در موتور وب‌کیت&quot; /&gt;
+  &lt;img src=&quot;/assets/images/placeholder.png&quot; data-layzr=&quot;/assets/images/content/2015/12/WebKit-engine-main-flow.png&quot; alt=&quot;فرآیند اصلی رندر در موتور WebKit&quot; /&gt;
   
-  &lt;figcaption&gt;فرآیند اصلی رندر در موتور وب‌کیت&lt;/figcaption&gt;
+  &lt;figcaption&gt;فرآیند اصلی رندر در موتور WebKit&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;figure class=&quot;lazy text-center&quot;&gt;
@@ -472,7 +473,7 @@ term := INTEGER | expression&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h4 id=&quot;scripts&quot;&gt;اسکریپت‌ها&lt;/h4&gt;
 
-&lt;p&gt;(نکته: زین پس ما به جای synchronous خواهیم گفت: &lt;strong&gt;ترتیبی&lt;/strong&gt; و به جای asynchronous می‌گوییم: &lt;strong&gt;موازی&lt;/strong&gt;)&lt;/p&gt;
+&lt;p class=&quot;notice-quote&quot;&gt;نکته: زین پس ما به جای synchronous خواهیم گفت: &lt;strong&gt;ترتیبی&lt;/strong&gt; و به جای asynchronous می‌گوییم: &lt;strong&gt;موازی&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;فرآیند کلی پردازش در وب، به صورت ترتیبی و پشت سر هم است. توسعه دهندگان انتظار دارند که اسکریپت‌ها به محض اینکه تجزیه‌گر به تگ آغازین &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; می‌رسد، تجزیه و اجرا شوند. به همین دلیل تجزیه‌گر HTML تا زمانی که اجرای اسکریپت به پایان برسد، متوقف خواهد ماند. در صورتی هم که اسکریپت از نوع خارجی باشد که به یک فایل بیرونی ارجاع داده شده باشد، تجزیه‌گر باید صبر کند تا داده‌های اسکریپت از طریق لایه‌ی شبکه دریافت و تحویل داده شود تا بعد از تجزیه و اجرای اسکریپت، تجزیه‌گر اصلی HTML دوباره کارش را بتواند ادامه دهد. که خود این عمل دریافت داده‌ها از لایه شبکه هم پردازشش به صورت ترتیبی خواهد بود. این مدل از فرآیند پردازشی برای سالیان متمادی است که وجود دارد و در مستندات نسخه‌های ۴ و ۵ HTML شرحش هم آمده است.&lt;/p&gt;
 
