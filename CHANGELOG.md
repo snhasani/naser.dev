@@ -26,3 +26,4 @@
 - Update: post summary style and markup
 - Fixed: list item margin bottom style in article
 - Fixed: youtube Tag plugin markup (responsive)
+- Fixed: about page content typo
