@@ -27,3 +27,9 @@
 - Fixed: list item margin bottom style in article
 - Fixed: youtube Tag plugin markup (responsive)
 - Fixed: about page content typo
+
+# v1.5.3
+
+- Updated: iran sans font - v4
+- Update: avatar picture
+- Update: post summary style

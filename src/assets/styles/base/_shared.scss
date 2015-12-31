@@ -49,7 +49,7 @@ ul,ol,dd{
  * Avatar
  */
 .avatar {
-    border-radius: 50%;
+    border-radius: 30% 5% 5%;
     max-height: 6 * $base-spacing-unit;
     margin: 0 auto rem($base-spacing-unit);
 }

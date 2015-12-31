@@ -27,24 +27,25 @@
 
 .post__summary{
   border-right: 3px solid darken($body-bgc, 7%);
-  color: darken($body-bgc, 55%);
+  color: #555;
+  font-weight: bold;
   margin-bottom: rem($double-spacing-unit);
-  padding: em($base-spacing-unit * 1.5) em($base-spacing-unit) em($half-spacing-unit);
+  padding: em($base-spacing-unit * 2) em($base-spacing-unit) em($half-spacing-unit);
   position: relative;
   transition: .25s;
 
   @include themify('dark') {
     border-color: lighten($body-bgc--dark, 7%);
-    color: darken($body-bgc, 45%);
+    color: darken($body-bgc, 30%);
   }
 
   &:before {
     content: "مخلص کلام";
-    font-weight: bold;
+    color: #aaa;
     position: absolute;
     top: 0; right: 26px;
     white-space: nowrap;
-    @include font-size(18px);
+    @include font-size(22px);
 
     @include themify('dark') {
       color: lighten($body-bgc--dark, 30%);

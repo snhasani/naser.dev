@@ -1,7 +1,7 @@
 
-.page-header--about-me {
-  @extend .post-header;
-}
+// .page-header--about-me {
+//   @extend .post-header;
+// }
 
 .about-me__prologue > p {
   @extend .large-text--dark;
@@ -10,4 +10,16 @@
 .interisting-list > dt {
   @include font-size(16px);
   font-weight: bold;
+}
+
+.avatar--about-page {
+  margin: 0 auto 4rem;
+  border-radius: 30% 3% 3%;
+  max-height: 260px;
+
+  @include mq($from: tablet) {
+    float: left;
+    margin-right: em($base-spacing-unit);
+    margin-bottom: rem($base-spacing-unit);
+  }
 }

@@ -5,7 +5,7 @@
   margin-bottom: rem($half-spacing-unit * 5);
 
   @include mq($from: medium) {
-    margin-bottom: rem($half-spacing-unit * 7);
+    margin-bottom: rem($half-spacing-unit * 6);
     text-align: initial;
   }
 }
