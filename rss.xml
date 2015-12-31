@@ -6,8 +6,54 @@
 </description>
     <link>https://naser.xyz/</link>
     <atom:link href="https://naser.xyz/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 19 Dec 2015 09:52:40 +0330</pubDate>
-    <lastBuildDate>Sat, 19 Dec 2015 09:52:40 +0330</lastBuildDate>
+    <pubDate>Thu, 31 Dec 2015 20:26:47 +0330</pubDate>
+    <lastBuildDate>Thu, 31 Dec 2015 20:26:47 +0330</lastBuildDate>
+    
+      
+      <item>
+        <title>چگونه نسخه‌های مختلف nodejs‌ را رام کنیم؟</title>
+        <description>&lt;p&gt;نگهداری و کنترل پروژه‌های که از nodejs استفاده می‌کنن، حتی در بازه‌‌های چند ماه هم پر از سر درده. برای اینکه کمی از درد این کار کمتر بشه و بتونیم پکیج‌های node رام کنید، می‌توانید از ابزاری به اسم «&lt;strong&gt;nvm&lt;/strong&gt;» استفاده کنید.&lt;/p&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+&lt;p&gt;بدون مقدمه میرم سر اصل مطلب؛ اونایی که از nodejs‌ توی پروژه‌هاشون استفاده کردن، حالا توی هر سطحی، واقفن که نگهداری این پروژها با توجه به ورژن‌های بی‌شمار nodejs و پکیج‌های اون، کار اشک آوریه. حالا یه سری توسعه دهنده‌ی بیکار اجنبی که احساس تکلیف کردن، برای اینکه کمی از درد نگهداری بچه‌های عزیز nodejs کم کنن، جمع شدن و یه چیزی به اسم &lt;a href=&quot;https://github.com/creationix/nvm&quot;&gt;NVM&lt;/a&gt; یا به عبارتی Node Version Manager ساختن.&lt;/p&gt;
+
+&lt;p&gt;همین طور که از اسم ایشون مشخصه، کارشون مدیریت و رام کردن نسخه‌های مختلف nodejs‌-ای (و io.js) که بر روی سیستم شما نصب شده. یعنی دیگه لازم نیست که وقتی یه پروژه‌ای که در زمان نادر شاه با نسخه 0.10 توسعه داده شده بوده و حالا که دارید با نسخه‌ی شماره 5.0‌ خدایی می‌کنید سر و کله‌اش پیدا شده و نیاز به تغییر داره، عزا بگیرید. با nvm، فقط با ۲ تا دستور می‌تونید برید زمان نادر شاه و برگردید. با دستور اول نسخه مورد نظر نصب می‌کنید (&lt;code&gt;nvm install v0.10.34&lt;/code&gt;) و با دستور دوم (&lt;code&gt;nvm use 0.10.34&lt;/code&gt;)، مسیر اجرایی nodejs‌ (آره، منظور همون PATH-عه) روی سیستم تغییر بدید و سوییج کنید روی نسخه‌ی مورد نظر و به کارهای خفن‌تون ادامه بدید.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/creationix/nvm#node-version-manager-&quot;&gt;مستندات مخزن nvm&lt;/a&gt; به خوبی گویای مراحل نصب و باقی قضایا هستن. فقط یه نکته اینکه اگر احیانا موقعه نصب با روش &lt;a href=&quot;https://github.com/creationix/nvm#install-script&quot;&gt;اسکریپتی&lt;/a&gt; رفتین تو دیوار (به خاطر انگولک‌های ف‌ل‌ت‌رچی)، از روش &lt;a href=&quot;https://github.com/creationix/nvm#manual-install&quot;&gt;دستی&lt;/a&gt; برای نصب استفاده کنید.&lt;/p&gt;
+
+&lt;p&gt;دوستانی که سیستم‌هاشون بر پایه‌ی یونیکسه که مشکلی نخواهند داشت و از همون روش‌های گفته شده کارشون راه میفته؛ ویندوزیای ناعزیز هم نگران نباشن، برای اون هم آبنبات داریم و می‌تونن از &lt;a href=&quot;https://github.com/coreybutler/nvm-windows&quot;&gt;nvm-windows&lt;/a&gt; یا &lt;a href=&quot;https://github.com/marcelklehr/nodist&quot;&gt;nodist&lt;/a&gt; استفاده کنن (من از هیچ کدومشون استفاده نکردم، ولی به نظر nodist‌ با توجه به پشتیبانی از io.js، موجه تر به نظر میرسه).&lt;/p&gt;
+
+&lt;p&gt;++ &lt;strong&gt;فوت کوزه گری&lt;/strong&gt;: برای جلوگیری از فلج شدن انگشتاتون موقع تایپ اسم نسخه‌ها وقتی که قرار مدام بینشون سوییج کنید، می‌تونید برای هر نسخه یه اسم مستعار کوتاه شده بزارید (آره، همون alias). مثل اینا:&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;code-wrapper mb-base&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;pre class=&quot;&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;# nvm alias &amp;lt;name&amp;gt; &amp;lt;version&amp;gt;
+nvm alias v0.10.26 10
+nvm alias v4.2.1 421&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+&lt;p&gt;حالا هر سوالی یا مشکلی درباره‌ی این عزیز داشتید می‌تونید توی همین بخش نظرات، این پایین بپرسید. عزت زیاد.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 31 Dec 2015 00:00:00 +0330</pubDate>
+        <link>https://naser.xyz/blog/2015/nvm/</link>
+        <guid isPermaLink="true">https://naser.xyz/blog/2015/nvm/</guid>
+        
+        <category>tools</category>
+        
+        <category>nodejs</category>
+        
+        <category>npm</category>
+        
+        
+        <category>vocation</category>
+        
+      </item>
+      
     
       
       <item>

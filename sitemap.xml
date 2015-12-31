@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://naser.xyz/blog/2015/nvm/</loc>
+    <lastmod>2015-12-31T00:00:00+03:30</lastmod>
+  </url>
+  <url>
     <loc>https://naser.xyz/blog/2015/how-browsers-work/</loc>
     <lastmod>2015-12-17T00:00:00+03:30</lastmod>
   </url>
@@ -48,10 +52,19 @@
     <loc>https://naser.xyz/blog/tag/linux/</loc>
   </url>
   <url>
+    <loc>https://naser.xyz/blog/tag/nodejs/</loc>
+  </url>
+  <url>
+    <loc>https://naser.xyz/blog/tag/npm/</loc>
+  </url>
+  <url>
     <loc>https://naser.xyz/blog/tag/reference/</loc>
   </url>
   <url>
     <loc>https://naser.xyz/blog/tag/rwd/</loc>
+  </url>
+  <url>
+    <loc>https://naser.xyz/blog/tag/tools/</loc>
   </url>
   <url>
     <loc>https://naser.xyz/blog/category/uncategory/</loc>
@@ -70,6 +83,9 @@
     </url>
     <url>
       <loc>https://naser.xyz/blog/2015/how-browsers-work/</loc>
+    </url>
+    <url>
+      <loc>https://naser.xyz/blog/2015/nvm/</loc>
     </url>
   <url>
     <loc>https://naser.xyz/googlef7f70d12f02be3a0.html</loc>
