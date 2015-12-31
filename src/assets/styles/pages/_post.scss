@@ -5,7 +5,7 @@
 
 .post-content p {
     @include mq($from: desktop) {
-      @include font-size(14px);
+      @include font-size(16px);
     }
 }
 

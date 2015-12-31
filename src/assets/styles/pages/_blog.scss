@@ -2,10 +2,6 @@
  * List item on the home page
  */
 
-[data-page=default] .article {
-  margin-bottom: rem($base-spacing-unit * 3);
-}
-
 .article__title > a {
     @extend %animation-underline;
     @extend %sass-hover-underline-color;
