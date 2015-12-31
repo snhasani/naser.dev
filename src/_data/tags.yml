@@ -26,11 +26,20 @@
 - slug: linux
   name: لینوکس
 
+- slug: nodejs
+  name: node.js
+
+- slug: npm
+  name: NPM
+
 - slug: reference
   name: مطالب مرجع
 
 - slug: rwd
   name: ریسپانسیو
+
+- slug: tools
+  name: ابزارها
 
 - slug: webkit
   name: WebKit
