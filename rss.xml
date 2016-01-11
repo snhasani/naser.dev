@@ -6,8 +6,90 @@
 </description>
     <link>https://naser.xyz/</link>
     <atom:link href="https://naser.xyz/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 31 Dec 2015 20:41:10 +0330</pubDate>
-    <lastBuildDate>Thu, 31 Dec 2015 20:41:10 +0330</lastBuildDate>
+    <pubDate>Mon, 11 Jan 2016 22:46:34 +0330</pubDate>
+    <lastBuildDate>Mon, 11 Jan 2016 22:46:34 +0330</lastBuildDate>
+    
+      
+      <item>
+        <title>هاستی رایگان برای انتشار فایل‌های استاتیک</title>
+        <description>&lt;p&gt;یه راهی نشونتون میدم که بدون سردرد کشیدن بابت ساختن ساب دامین و درگیری با FTP، فقط با یه دستور، بتونید فایل‌های استاتیکتونو منتشرشون کنید؛ اونم روی یه سرویس رایگان به اسم surge.&lt;/p&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+&lt;p&gt;خداییش دیگه کی توی سال ۲۰۱۶ حوصله داره هلک هلک پاشه بره روی هاست یا سرورش یه ساب دامین یا دایرکتوری بسازه، تا بعدش تازه با FTP هر بار فایل‌ها رو از روی هارد بکشه بندازه روی سرور و دوباره دوباره هی این چرخه رو برای هر بار پیش نمایش و منتشر کردن چند تا فایل HTML طی کنه. اگه حوصله‌اش ندارین پس بخونید.&lt;/p&gt;
+
+&lt;p&gt;این بار هم یه سری از جوانان بیکار ممالک غربی، وقتی که داشتن به سیر و سلوک در عوالم اسمشونبر می‌پرداختن، برای اینکه هم از شر این FTP بازی‌ها خلاص بشن و هم مهم‌تر از اون اینکه بتونن زمان بیشتری برای پلی استیشن کردن ذخیره کنن، ایده ساختن سرویسی به اسم surge.sh به ذهن پلیدشون خطور کرد. اینطوری که بتونن فقط با یه دستور توی ترمینال، فایل‌های استاتیکشون رو منتشر (deploy) کنن روی سرور، اونم تازه با یه دامین مختص به خود اون پروژه!&lt;/p&gt;
+
+&lt;p&gt;بله، این جوانان بیکار در حالی که نعره می‌زدند، «ما زنده به آنیم که آرام نگیریم؛ موجیم که آسودگی ما عدم ماست…» به افکار پلیدشون جامه عمل پوشوندن و سرویس زیبای زاییدن که اسمش به افتخار صائب تبریزی (جدی نگیرید) گذاشتن &lt;a href=&quot;https://surge.sh&quot;&gt;موج خروشان&lt;/a&gt; (همون surge).&lt;/p&gt;
+
+&lt;p&gt;اگه &lt;a href=&quot;https://nodejs.org&quot;&gt;nodejs&lt;/a&gt; روی سیستمتون نصب داشته باشید (&lt;a href=&quot;https://naser.xyz/blog/2015/nvm/&quot;&gt;اگه ندارید این مطلب بخونید&lt;/a&gt;) تنها با همین دو تا دستور زیر می‌تونید پوشه‌ای که حاوی فایل‌های استاتیک مورد نظرتون هست رو سرورهای surge منتشر کنید.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;code-wrapper mb-base&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;pre class=&quot;&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ npm install --global surge
+# In your project directory, just run…
+$ surge&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+&lt;p&gt;این surge بلا گرفته، کلی امکانات قشنگ قشنگ داره که از جمله‌ی اونا میشه به &lt;a href=&quot;https://surge.sh/help/adding-a-custom-domain&quot;&gt;اختصاص دادن یه نام دامنه سفارشی به یه پروژه&lt;/a&gt;، &lt;a href=&quot;https://surge.sh/help/adding-a-200-page-for-client-side-routing&quot;&gt;پشتیبانی از router های سمت کاربر برای پروژه‌هایی که از فریم‌ورک‌های جاوا اسکریپتی مثل reactjs و angularjs استفاده می‌کنن&lt;/a&gt;، &lt;a href=&quot;https://surge.sh/help/deploying-a-jekyll-project&quot;&gt;امکان آپلود پروژه‌های جکیل&lt;/a&gt; اشاره کرد. کلی راهنمای تر و تمیزم، آن جوانان بیکار برای امکانات این سرویس نوشتن که می‌تونید &lt;a href=&quot;https://surge.sh/help&quot;&gt;اینجا&lt;/a&gt; ببینیدشون.&lt;/p&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;فوت‌های کوزه گری:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;برای سلامت روان خودتون هم که شده تا اونجایی که امکانش هست از نصب کردن بسته‌های nodejs‌ به صورت global (همون پارامتر g-) پرهیز کنید و اونا رو به صورت لوکال و مخصوص به هر پروژه نصب کنید. تا بعدها اگه توی یه پروژه دیگه یه ورژن بالا پایین شد این surge، برای سازگار کردنش زخم و زیلی نشید.&lt;/li&gt;
+  &lt;li&gt;اگه از فوت بالایی بخواهید استفاده کنید در نتیجه مجبورید که یه تسک (&lt;a href=&quot;https://docs.npmjs.com/misc/scripts&quot;&gt;npm script&lt;/a&gt;) هم برای اجراش توی فایل package.json پروژه درست کنید که وقتی اجراش کردید بره دنبال surge بگرده و فایل‌هاتون تحویلش بده تا براتون منتشر کنه.&lt;/li&gt;
+  &lt;li&gt;surge به طور پیش فرض وقتی فراخونی میشه همون پوشه‌ی جاری که ترمینال توش هست رو مبدا خودش در نظر می‌گیره و یه ساب دامین عیناً با همون اسم براتون روی سرورهاش درست میکنه و روی اون منتشر میکنه فایل‌هاتونو. اگه یه وقت خواستید که اسم اون ساب دامین با اسم فولدرتون فرق داشته باشه می‌تونید اسم ساب دامین رو به انواع یه پارمتر مثل دستور زیر بدید تا براتون  دیگه همیشه روی اون ساب دامین فایل‌های اون پروژه رو منتشر کنه.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;code-wrapper mb-base&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;pre class=&quot;&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;# Frist install surge locally
+$ npm install surge&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+&lt;p&gt;توی دستور بالا، بسته surge به صورت لوکال روی پروژه نصب کردیم و بعد از اون هم توی دستور پایینی اسکریپت انتشارش توی فایل packaje.json‌ اضافه می‌کنیم. توی این دستور «public» اسم دایرکتوریی هست که می‌خواهیم آپلودش کنیم و «project-name.surge.sh» هم اون ساب دامین مورد نظرمون هست که انتخاب کردیک تا surge فایل‌هامونو تحت اون منتشر کنه.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;code-wrapper mb-base&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;pre class=&quot;&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;// Then add below script in project&amp;#39;s package.json file
+&amp;quot;scripts&amp;quot;: {
+  &amp;quot;stage&amp;quot;: &amp;quot;surge -p public -d project-name.surge.sh&amp;quot;
+}&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+&lt;p&gt;در آخر هم فقط کافیه که دستور زیر اجرا کنیم تا surge کار خودش شروع کنه&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;code-wrapper mb-base&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;pre class=&quot;&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;# Finally in your project directory, just run…
+$ npm run stage&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+&lt;p&gt;++ پی نوشت: این جوونای که وصفشون رفت، خب مشخصاً، خیلی اهل حال هستن؛ اگه یه وقت ایده یا سوالی در رابطه با surge داشتید می‌تونید به راحتی توی &lt;a href=&quot;https://surge.sh/help/chat&quot;&gt;کانال‌های اِسلکشون&lt;/a&gt; یا توی &lt;a href=&quot;https://twitter.com/surge_sh&quot;&gt;تویتترشون&lt;/a&gt; مطرح کنید. از اون جایی که بیکارن، خیلی سریع جوابتونو میدن.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 11 Jan 2016 00:00:00 +0330</pubDate>
+        <link>https://naser.xyz/blog/2016/surge/</link>
+        <guid isPermaLink="true">https://naser.xyz/blog/2016/surge/</guid>
+        
+        <category>tools</category>
+        
+        
+        <category>vocation</category>
+        
+      </item>
+      
     
       
       <item>

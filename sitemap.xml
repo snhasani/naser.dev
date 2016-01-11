@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://naser.xyz/blog/2016/surge/</loc>
+    <lastmod>2016-01-11T00:00:00+03:30</lastmod>
+  </url>
+  <url>
     <loc>https://naser.xyz/blog/2015/nvm/</loc>
     <lastmod>2015-12-31T00:00:00+03:30</lastmod>
   </url>
@@ -86,6 +90,9 @@
     </url>
     <url>
       <loc>https://naser.xyz/blog/2015/nvm/</loc>
+    </url>
+    <url>
+      <loc>https://naser.xyz/blog/2016/surge/</loc>
     </url>
   <url>
     <loc>https://naser.xyz/googlef7f70d12f02be3a0.html</loc>
