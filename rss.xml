@@ -6,8 +6,8 @@
 </description>
     <link>https://naser.xyz/</link>
     <atom:link href="https://naser.xyz/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 11 Jan 2016 22:46:34 +0330</pubDate>
-    <lastBuildDate>Mon, 11 Jan 2016 22:46:34 +0330</lastBuildDate>
+    <pubDate>Tue, 12 Jan 2016 20:32:40 +0330</pubDate>
+    <lastBuildDate>Tue, 12 Jan 2016 20:32:40 +0330</lastBuildDate>
     
       
       <item>
@@ -15,13 +15,13 @@
         <description>&lt;p&gt;یه راهی نشونتون میدم که بدون سردرد کشیدن بابت ساختن ساب دامین و درگیری با FTP، فقط با یه دستور، بتونید فایل‌های استاتیکتونو منتشرشون کنید؛ اونم روی یه سرویس رایگان به اسم surge.&lt;/p&gt;
 
 &lt;div class=&quot;container&quot;&gt;
-&lt;p&gt;خداییش دیگه کی توی سال ۲۰۱۶ حوصله داره هلک هلک پاشه بره روی هاست یا سرورش یه ساب دامین یا دایرکتوری بسازه، تا بعدش تازه با FTP هر بار فایل‌ها رو از روی هارد بکشه بندازه روی سرور و دوباره دوباره هی این چرخه رو برای هر بار پیش نمایش و منتشر کردن چند تا فایل HTML طی کنه. اگه حوصله‌اش ندارین پس بخونید.&lt;/p&gt;
+&lt;p&gt;خداییش دیگه کی توی سال ۲۰۱۶ حوصله داره هِلک هِلک پاشه بره روی هاست یا سرورش یه ساب دامین یا دایرکتوری بسازه، تا بعدش تازه با FTP هر بار فایل‌ها رو از روی هارد بکشه بندازه روی سرور و دوباره دوباره هی این چرخه رو برای هر بار پیش نمایش و منتشر کردن چند تا فایل HTML طی کنه. اگه حوصله‌اش ندارین پس بخونید.&lt;/p&gt;
 
 &lt;p&gt;این بار هم یه سری از جوانان بیکار ممالک غربی، وقتی که داشتن به سیر و سلوک در عوالم اسمشونبر می‌پرداختن، برای اینکه هم از شر این FTP بازی‌ها خلاص بشن و هم مهم‌تر از اون اینکه بتونن زمان بیشتری برای پلی استیشن کردن ذخیره کنن، ایده ساختن سرویسی به اسم surge.sh به ذهن پلیدشون خطور کرد. اینطوری که بتونن فقط با یه دستور توی ترمینال، فایل‌های استاتیکشون رو منتشر (deploy) کنن روی سرور، اونم تازه با یه دامین مختص به خود اون پروژه!&lt;/p&gt;
 
-&lt;p&gt;بله، این جوانان بیکار در حالی که نعره می‌زدند، «ما زنده به آنیم که آرام نگیریم؛ موجیم که آسودگی ما عدم ماست…» به افکار پلیدشون جامه عمل پوشوندن و سرویس زیبای زاییدن که اسمش به افتخار صائب تبریزی (جدی نگیرید) گذاشتن &lt;a href=&quot;https://surge.sh&quot;&gt;موج خروشان&lt;/a&gt; (همون surge).&lt;/p&gt;
+&lt;p&gt;بله، این جوانان بیکار، در حالی که نعره می‌زدند «ما زنده به آنیم که آرام نگیریم؛ موجیم که آسودگی ما عدم ماست»، به افکار پلیدشون جامه عمل پوشوندن و سرویس زیبایی زاییدن که اسمش به افتخار صائب تبریزی، شاعر بلند آوازه‌ی ایرانی سبک هندی (جدی نگیرید) گذاشتن &lt;a href=&quot;https://surge.sh&quot;&gt;موج خروشان&lt;/a&gt; (همون surge).&lt;/p&gt;
 
-&lt;p&gt;اگه &lt;a href=&quot;https://nodejs.org&quot;&gt;nodejs&lt;/a&gt; روی سیستمتون نصب داشته باشید (&lt;a href=&quot;https://naser.xyz/blog/2015/nvm/&quot;&gt;اگه ندارید این مطلب بخونید&lt;/a&gt;) تنها با همین دو تا دستور زیر می‌تونید پوشه‌ای که حاوی فایل‌های استاتیک مورد نظرتون هست رو سرورهای surge منتشر کنید.&lt;/p&gt;
+&lt;p&gt;اگه &lt;a href=&quot;https://nodejs.org&quot;&gt;nodejs&lt;/a&gt; روی سیستمتون نصب داشته باشید (&lt;a href=&quot;https://naser.xyz/blog/2015/nvm/&quot;&gt;اگه ندارید این مطلب بخونید&lt;/a&gt;) تنها با همین دو تا دستور زیر می‌تونید پوشه‌ای که حاوی فایل‌های استاتیک مورد نظرتون هست روی سرورهای surge منتشر کنید.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;code-wrapper mb-base&quot;&gt;
@@ -46,7 +46,7 @@ $ surge&lt;/code&gt;&lt;/pre&gt;
 
 &lt;div class=&quot;code-wrapper mb-base&quot;&gt;
   &lt;div class=&quot;container&quot;&gt;
-    &lt;pre class=&quot;&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;# Frist install surge locally
+    &lt;pre class=&quot;&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;# First install surge locally
 $ npm install surge&lt;/code&gt;&lt;/pre&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -57,7 +57,7 @@ $ npm install surge&lt;/code&gt;&lt;/pre&gt;
 
 &lt;div class=&quot;code-wrapper mb-base&quot;&gt;
   &lt;div class=&quot;container&quot;&gt;
-    &lt;pre class=&quot;&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;// Then add below script in project&amp;#39;s package.json file
+    &lt;pre class=&quot;&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;// Then add this script in package.json file
 &amp;quot;scripts&amp;quot;: {
   &amp;quot;stage&amp;quot;: &amp;quot;surge -p public -d project-name.surge.sh&amp;quot;
 }&lt;/code&gt;&lt;/pre&gt;
