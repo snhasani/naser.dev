@@ -1,4 +1,4 @@
-# naserhassani.com
+# nasserhassani.com
 
 Here lay the uncompiled source from [my site](https://nasserhassani.com) running on Jekyll.
 
