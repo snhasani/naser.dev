@@ -1,13 +1,13 @@
 {
-  "name": "naser.xyz",
+  "name": "naser.dev",
   "version": "1.5.3",
   "description": "My Personal Website",
   "main": "index.js",
   "author": "Seyed Naser Hasani",
-  "homepage": "http://naser.xyz",
+  "homepage": "http://naser.dev",
   "repository": {
     "type": "git",
-    "url": "git@github.com:snhasani/naser.xyz.git"
+    "url": "git@github.com:snhasani/blog.git"
   },
   "scripts": {
     "stage": "surge -p public -d naser.surge.sh",

@@ -1,20 +1,20 @@
 
 # Site settings
-title: "naser.xyz | Seyed Naser Hasani"
-url: "https://naser.xyz"
+title: "naser.dev"
+url: "https://naser.dev"
 logo: "/assets/images/fav/android-touch-icon.png"
 
-author: Seyed Naser Hasani
-fullname: "سید ناصر حسنی"
+author: Naser
+fullname: Naser Hassani
 email: snhasani@gmail.com
 author_twitter: snhasani
 author_avatar: '/assets/images/snh_winter-avatar_grayscale.jpg'
 
-keywords: "کامپیوتر، بوتسترپ, بوتستراپ, فریمورک، لینوکس, برنامه‌نویسی، جاوااسکریپت، علم, اینترنت, آموزش, طاحی, css, html, scss, sass, javascript, nodejs, frontend, front-end, application, mobile, native, vanilla, cordova, bootstrap, phongap, android, npm, git, app, ios, linux, opensource, framework, dev-tools"
+keywords: "HTML, CSS, Javascript, React.js, React, Frontend, Opensource, Web, Software"
 description: >
-  سایت شخصی سید ناصر حسنی - نوشته های درباره‌ی برنامه‌نویسی، هنر و اجتماع.
+  A personal blog about software and programming
 long_description: >
-  می‌نویسم؛ بیشترش درباره‌ی تجربیاتم توی حوزه‌ی فرونت اند و برنامه سازی توسط جاوااسکریپته. گاه گداری هم از سنیما، تیاتر، ادبیات و کلا هر چیزی که به هنر و اجتماع مربوط باشه و نباشه.
+  Throughout this blog, I've tried to keep track of all that I learn each day
 
 copyright: "Commons Attribution 4.0 International"
 
@@ -25,20 +25,19 @@ defaults:
       type: "posts"
     values:
       layout: post
-      author: "سید ناصر حسنی"
+      author: Naser
   -
     scope:
       path: "" # an empty string here means all files in the project
       type: "drafts" # previously `post` in Jekyll 2.2.
     values:
       layout: post
-      author: "سید ناصر حسنی"
+      author: Naser
 
 
 # Where things are
 source:          ./src
 destination:  ./public
-#favicon: "img/favicon.png"
 
 
 # Handling Reading
@@ -57,7 +56,6 @@ port:    8080
 
 
 # Outputting
-# baseurl: /xyz
 permalink: /blog/:year/:title/
 paginate_path: /blog/page:num
 paginate: 5

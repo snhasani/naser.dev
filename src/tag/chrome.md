@@ -1,6 +1,6 @@
 ---
 layout: blog_by_tag
-title: کروم | سید ناصر حسنی
+title: کروم | برچسب
 tag: chrome
 tag_name: کروم
 permalink: /blog/tag/chrome/
