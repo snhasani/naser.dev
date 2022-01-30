@@ -1,101 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://naser.xyz/blog/2016/surge/</loc>
+    <loc>https://naser.dev/blog/2016/surge/</loc>
     <lastmod>2016-01-11T00:00:00+03:30</lastmod>
   </url>
   <url>
-    <loc>https://naser.xyz/blog/2015/nvm/</loc>
+    <loc>https://naser.dev/blog/2015/nvm/</loc>
     <lastmod>2015-12-31T00:00:00+03:30</lastmod>
   </url>
   <url>
-    <loc>https://naser.xyz/blog/2015/how-browsers-work/</loc>
+    <loc>https://naser.dev/blog/2015/how-browsers-work/</loc>
     <lastmod>2015-12-17T00:00:00+03:30</lastmod>
   </url>
   <url>
-    <loc>https://naser.xyz/blog/2015/hello-world/</loc>
+    <loc>https://naser.dev/blog/2015/hello-world/</loc>
     <lastmod>2015-12-06T00:00:00+03:30</lastmod>
   </url>
   <url>
-    <loc>https://naser.xyz/404.html</loc>
+    <loc>https://naser.dev/404.html</loc>
   </url>
   <url>
-    <loc>https://naser.xyz/blog/tag/browsers/</loc>
+    <loc>https://naser.dev/blog/tag/browsers/</loc>
   </url>
   <url>
-    <loc>https://naser.xyz/blog/tag/chrome/</loc>
+    <loc>https://naser.dev/blog/tag/chrome/</loc>
   </url>
   <url>
-    <loc>https://naser.xyz/blog/tag/css/</loc>
+    <loc>https://naser.dev/blog/tag/css/</loc>
   </url>
   <url>
-    <loc>https://naser.xyz/blog/tag/firefox/</loc>
+    <loc>https://naser.dev/blog/tag/firefox/</loc>
   </url>
   <url>
-    <loc>https://naser.xyz/blog/tag/frontend/</loc>
+    <loc>https://naser.dev/blog/tag/frontend/</loc>
   </url>
   <url>
-    <loc>https://naser.xyz/blog/tag/html/</loc>
+    <loc>https://naser.dev/blog/tag/html/</loc>
   </url>
   <url>
-    <loc>https://naser.xyz/blog/</loc>
+    <loc>https://naser.dev/blog/</loc>
   </url>
   <url>
-    <loc>https://naser.xyz/about/</loc>
+    <loc>https://naser.dev/about/</loc>
   </url>
   <url>
-    <loc>https://naser.xyz/</loc>
+    <loc>https://naser.dev/</loc>
   </url>
   <url>
-    <loc>https://naser.xyz/blog/tag/javascript/</loc>
+    <loc>https://naser.dev/blog/tag/javascript/</loc>
   </url>
   <url>
-    <loc>https://naser.xyz/blog/tag/learning/</loc>
+    <loc>https://naser.dev/blog/tag/learning/</loc>
   </url>
   <url>
-    <loc>https://naser.xyz/blog/tag/linux/</loc>
+    <loc>https://naser.dev/blog/tag/linux/</loc>
   </url>
   <url>
-    <loc>https://naser.xyz/blog/tag/nodejs/</loc>
+    <loc>https://naser.dev/blog/tag/nodejs/</loc>
   </url>
   <url>
-    <loc>https://naser.xyz/blog/tag/npm/</loc>
+    <loc>https://naser.dev/blog/tag/npm/</loc>
   </url>
   <url>
-    <loc>https://naser.xyz/blog/tag/reference/</loc>
+    <loc>https://naser.dev/blog/tag/reference/</loc>
   </url>
   <url>
-    <loc>https://naser.xyz/blog/tag/rwd/</loc>
+    <loc>https://naser.dev/blog/tag/rwd/</loc>
   </url>
   <url>
-    <loc>https://naser.xyz/blog/tag/tools/</loc>
+    <loc>https://naser.dev/blog/tag/tools/</loc>
   </url>
   <url>
-    <loc>https://naser.xyz/blog/category/uncategory/</loc>
+    <loc>https://naser.dev/blog/category/uncategory/</loc>
   </url>
   <url>
-    <loc>https://naser.xyz/blog/category/vication/</loc>
+    <loc>https://naser.dev/blog/category/vication/</loc>
   </url>
   <url>
-    <loc>https://naser.xyz/blog/category/vocation/</loc>
+    <loc>https://naser.dev/blog/category/vocation/</loc>
   </url>
   <url>
-    <loc>https://naser.xyz/blog/tag/webkit/</loc>
+    <loc>https://naser.dev/blog/tag/webkit/</loc>
   </url>
     <url>
-      <loc>https://naser.xyz/blog/2015/hello-world/</loc>
+      <loc>https://naser.dev/blog/2015/hello-world/</loc>
     </url>
     <url>
-      <loc>https://naser.xyz/blog/2015/how-browsers-work/</loc>
+      <loc>https://naser.dev/blog/2015/how-browsers-work/</loc>
     </url>
     <url>
-      <loc>https://naser.xyz/blog/2015/nvm/</loc>
+      <loc>https://naser.dev/blog/2015/nvm/</loc>
     </url>
     <url>
-      <loc>https://naser.xyz/blog/2016/surge/</loc>
+      <loc>https://naser.dev/blog/2016/surge/</loc>
     </url>
   <url>
-    <loc>https://naser.xyz/googlef7f70d12f02be3a0.html</loc>
+    <loc>https://naser.dev/googlef7f70d12f02be3a0.html</loc>
     <lastmod>2015-12-14T20:45:22+03:30</lastmod>
   </url>
 </urlset>

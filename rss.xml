@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>naser.xyz | Seyed Naser Hasani</title>
+    <title>naser.dev | Seyed Naser Hasani</title>
     <description>سایت شخصی سید ناصر حسنی - نوشته های درباره‌ی برنامه‌نویسی، هنر و اجتماع.
 </description>
-    <link>https://naser.xyz/</link>
-    <atom:link href="https://naser.xyz/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>https://naser.dev/</link>
+    <atom:link href="https://naser.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>Tue, 12 Jan 2016 20:32:40 +0330</pubDate>
     <lastBuildDate>Tue, 12 Jan 2016 20:32:40 +0330</lastBuildDate>
     
@@ -21,7 +21,7 @@
 
 &lt;p&gt;بله، این جوانان بیکار، در حالی که نعره می‌زدند «ما زنده به آنیم که آرام نگیریم؛ موجیم که آسودگی ما عدم ماست»، به افکار پلیدشون جامه عمل پوشوندن و سرویس زیبایی زاییدن که اسمش به افتخار صائب تبریزی، شاعر بلند آوازه‌ی ایرانی سبک هندی (جدی نگیرید) گذاشتن &lt;a href=&quot;https://surge.sh&quot;&gt;موج خروشان&lt;/a&gt; (همون surge).&lt;/p&gt;
 
-&lt;p&gt;اگه &lt;a href=&quot;https://nodejs.org&quot;&gt;nodejs&lt;/a&gt; روی سیستمتون نصب داشته باشید (&lt;a href=&quot;https://naser.xyz/blog/2015/nvm/&quot;&gt;اگه ندارید این مطلب بخونید&lt;/a&gt;) تنها با همین دو تا دستور زیر می‌تونید پوشه‌ای که حاوی فایل‌های استاتیک مورد نظرتون هست روی سرورهای surge منتشر کنید.&lt;/p&gt;
+&lt;p&gt;اگه &lt;a href=&quot;https://nodejs.org&quot;&gt;nodejs&lt;/a&gt; روی سیستمتون نصب داشته باشید (&lt;a href=&quot;https://naser.dev/blog/2015/nvm/&quot;&gt;اگه ندارید این مطلب بخونید&lt;/a&gt;) تنها با همین دو تا دستور زیر می‌تونید پوشه‌ای که حاوی فایل‌های استاتیک مورد نظرتون هست روی سرورهای surge منتشر کنید.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;code-wrapper mb-base&quot;&gt;
@@ -80,8 +80,8 @@ $ npm run stage&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Mon, 11 Jan 2016 00:00:00 +0330</pubDate>
-        <link>https://naser.xyz/blog/2016/surge/</link>
-        <guid isPermaLink="true">https://naser.xyz/blog/2016/surge/</guid>
+        <link>https://naser.dev/blog/2016/surge/</link>
+        <guid isPermaLink="true">https://naser.dev/blog/2016/surge/</guid>
         
         <category>tools</category>
         
@@ -122,8 +122,8 @@ nvm alias v4.2.1 421&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Thu, 31 Dec 2015 00:00:00 +0330</pubDate>
-        <link>https://naser.xyz/blog/2015/nvm/</link>
-        <guid isPermaLink="true">https://naser.xyz/blog/2015/nvm/</guid>
+        <link>https://naser.dev/blog/2015/nvm/</link>
+        <guid isPermaLink="true">https://naser.dev/blog/2015/nvm/</guid>
         
         <category>tools</category>
         
@@ -825,8 +825,8 @@ term := INTEGER | expression&lt;/code&gt;&lt;/pre&gt;
 
 </description>
         <pubDate>Thu, 17 Dec 2015 00:00:00 +0330</pubDate>
-        <link>https://naser.xyz/blog/2015/how-browsers-work/</link>
-        <guid isPermaLink="true">https://naser.xyz/blog/2015/how-browsers-work/</guid>
+        <link>https://naser.dev/blog/2015/how-browsers-work/</link>
+        <guid isPermaLink="true">https://naser.dev/blog/2015/how-browsers-work/</guid>
         
         <category>learning</category>
         
@@ -870,8 +870,8 @@ term := INTEGER | expression&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Sun, 06 Dec 2015 00:00:00 +0330</pubDate>
-        <link>https://naser.xyz/blog/2015/hello-world/</link>
-        <guid isPermaLink="true">https://naser.xyz/blog/2015/hello-world/</guid>
+        <link>https://naser.dev/blog/2015/hello-world/</link>
+        <guid isPermaLink="true">https://naser.dev/blog/2015/hello-world/</guid>
         
         
         <category>uncategory</category>
