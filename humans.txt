@@ -3,9 +3,9 @@
 
 # TEAM
 
-    Seyed Naser Hasani -- Front-end developer -- @snhasani -- snhasani at gmail
-    Seyed Naser Hasani -- Designer -- @snhasani -- snhasani at gmail
-    Seyed Naser Hasani -- Author -- @snhasani -- snhasani at gmail
+    Naser -- Front-end developer -- snhasani at gmail
+    Naser -- Designer -- snhasani at gmail
+    Naser -- Author -- snhasani at gmail
 
 # TECHNOLOGY COLOPHON
 
